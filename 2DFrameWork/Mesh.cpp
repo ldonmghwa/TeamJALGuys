@@ -7,7 +7,7 @@ Mesh::Mesh()
     byteWidth = sizeof(VertexPT);
 
 
-
+    //¿ø±âµÕ
     vertexCount = 360 * 2;
     indexCount = 360 * 2 * 3;
 
