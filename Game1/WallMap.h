@@ -4,9 +4,9 @@ class WallMap : public Map
 public:
     static WallMap* Create(string name = "WallMap");
 private:
-    bool* isUp = nullptr;
+    bool* isUp;
     int count = 0;
-    float* wallSpeed = nullptr;
+    float* wallSpeed;
     list<GameObject*> movePillarList;
 private:
     WallMap();
