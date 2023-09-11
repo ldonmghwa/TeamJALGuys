@@ -9,7 +9,9 @@
     <ClInclude Include="Map.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="WallMap.h" />
+    <ClInclude Include="WallMap.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -19,7 +21,9 @@
     <ClCompile Include="Map.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="WallMap.cpp" />
+    <ClCompile Include="WallMap.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameObject">
