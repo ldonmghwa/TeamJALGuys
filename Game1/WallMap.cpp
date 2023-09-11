@@ -47,6 +47,8 @@ void WallMap::LoadFile(string _file)
 	int pillarCount = 0;
 	while (this->root->Find("Pillar1_under" + to_string(pillarCount))) {
 		movePillarList.push_back(this->root->Find("Pillar1_under" + to_string(pillarCount)));
+		//movePillarList.front()->collider->scale = movePillarList.front()->scale;
+		//movePillarList.front()->collider->visible = true;
 		pillarCount++;
 	}
 	wallSpeed = new float[pillarCount]; 

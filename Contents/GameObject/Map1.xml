@@ -147,9 +147,14 @@
         <Child11 Name="Pillar1_under0" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-45" Y="-2.5999999" Z="0"/>
+                <Position X="-45" Y="-2.8582652" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -158,9 +163,14 @@
         <Child12 Name="Pillar1_under1" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-35" Y="-2.5999999" Z="0"/>
+                <Position X="-35" Y="-0.066588171" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -169,9 +179,14 @@
         <Child13 Name="Pillar1_under2" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-25" Y="-2.5999999" Z="0"/>
+                <Position X="-25" Y="-2.0440123" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -180,9 +195,14 @@
         <Child14 Name="Pillar1_under3" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="-2.5999999" Z="0"/>
+                <Position X="-15" Y="-0.81973219" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -191,9 +211,14 @@
         <Child15 Name="Pillar1_under4" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="-2.5999999" Z="0"/>
+                <Position X="-5" Y="-0.22408022" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -202,9 +227,14 @@
         <Child16 Name="Pillar1_under5" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="-2.5999999" Z="0"/>
+                <Position X="5" Y="-0.36203125" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -213,9 +243,14 @@
         <Child17 Name="Pillar1_under6" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="-2.5999999" Z="0"/>
+                <Position X="15" Y="2.041327" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -224,9 +259,14 @@
         <Child18 Name="Pillar1_under7" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="25" Y="-2.5999999" Z="0"/>
+                <Position X="25" Y="0.013619537" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -235,9 +275,14 @@
         <Child19 Name="Pillar1_under8" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="35" Y="-2.5999999" Z="0"/>
+                <Position X="35" Y="-2.3073804" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -246,9 +291,14 @@
         <Child20 Name="Pillar1_under9" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="45" Y="-2.5999999" Z="0"/>
+                <Position X="45" Y="1.0446583" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
