@@ -18,6 +18,12 @@ Main::Main()
     cam1->height = App.GetHeight();
 
     map = Map::Create();
+    map->LoadFile("Map1.xml");
+    map->name = "Map";
+
+    temp = Actor::Create();
+    temp->name = "temp";
+   
 }
 
 Main::~Main()
@@ -37,12 +43,17 @@ void Main::Release()
 
 void Main::Update()
 {
+    Camera::main->ControlMainCam();
     ImGui::Begin("Hierarchy");
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
+    map->RenderHierarchy();
+    temp->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
+    map->Update();
+    temp->Update();
     Camera::main->Update();
 }
 
@@ -55,8 +66,10 @@ void Main::PreRender()
 
 void Main::Render()
 {
-    cam1->Set();
+    Camera::main->Set();
     grid->Render();
+    map->Render();
+    temp->Render();
 }
 
 void Main::ResizeScreen()
