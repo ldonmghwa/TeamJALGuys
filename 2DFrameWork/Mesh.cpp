@@ -7,31 +7,23 @@ Mesh::Mesh()
     byteWidth = sizeof(VertexPT);
 
 
-
-    vertexCount = 4;
-    //ÀÎµ¦½º °¹¼ö
-    indexCount = 6;
+    //¿ø±âµÕ
+    vertexCount = 360 * 2;
+    indexCount = 360 * 2 * 3;
 
     VertexPT* Vertex = new VertexPT[vertexCount];
     indices = new UINT[indexCount];
 
-    Vertex[0].position = Vector3(-1, -1, 0);
-    Vertex[0].uv = Vector2(0, 1);
-    Vertex[1].position = Vector3(-1, 1, 0);
-    Vertex[1].uv = Vector2(0, 0);
-    Vertex[2].position = Vector3(1, -1, 0);
-    Vertex[2].uv = Vector2(1, 1);
-    Vertex[3].position = Vector3(1, 1, 0);
-    Vertex[3].uv = Vector2(1, 0);
+    for (int i = 0; i < 360; i++) {
+        Vertex[i * 2].position = Vector3(cos(i * ToRadian) * 1.0f, 0, sin(i * ToRadian) * 1.0f);
+        Vertex[i * 2 + 1].position = Vector3(cos(i * ToRadian) * 2.0f, 0, sin(i * ToRadian) * 2.0f);
+    }
 
-    indices[0] = 0;
-    indices[1] = 1;
-    indices[2] = 2;
-
-    indices[3] = 1;
-    indices[4] = 3;
-    indices[5] = 2;
-
+    for (int i = 0; i < 360 * 2; i++) {
+        indices[i * 3] = i;
+        indices[i * 3 + 1] = i + 1;
+        indices[i * 3 + 2] = i + 2;
+    }
     vertices = Vertex;
 
     //CreateVertexBuffer
