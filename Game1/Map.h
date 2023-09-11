@@ -1,13 +1,17 @@
 #pragma once
 class Map :public Actor
 {
-public:
+protected:
     static Map* Create(string name = "Map");
-private:
+protected:
+    int obstacleNum;
+    list<GameObject*> obstacleList;
+protected:
     Map();
     virtual ~Map();
 public:
-    void	Update() override;
-
+    void	Update();
+    void    LoadFile(string _file);
+    void    AddObstacle(string _file);
 };
 

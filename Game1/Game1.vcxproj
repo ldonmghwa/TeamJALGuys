@@ -23,14 +23,13 @@
     <ClInclude Include="Main.h" />
     <ClInclude Include="Map.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WallMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="window.ini" />
+    <ClCompile Include="WallMap.cpp" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
