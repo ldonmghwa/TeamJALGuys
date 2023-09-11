@@ -24,12 +24,12 @@ Main::Main()
     map->LoadFile("Map1.xml");
     map->name = "Map";
     
-    //pillar1Ob = Actor::Create();
-    //pillar1Ob->LoadFile("Pillar1.xml");
-    //pillar1Ob->name = "temp";
-    //pillar1Root = Actor::Create();
-    ////pillar1Root->LoadFile("Pillar1Root.xml");
-    //pillar1Root->name = "Pillar1Root";
+    pillar1Ob = Actor::Create();
+    pillar1Ob->LoadFile("Pillar1.xml");
+    pillar1Ob->name = "temp";
+    pillar1Root = Actor::Create();
+    //pillar1Root->LoadFile("Pillar1Root.xml");
+    pillar1Root->name = "Pillar1Root";
     //map->AddObstacle("Pillar1Root.xml");
 
     //for (int i = 0; i < PillarMax; i++) {
@@ -60,7 +60,6 @@ Main::Main()
     //    temp->scale.y = 6.0f;
     //    temp->scale.x = (pillar1Root->root->Find("Pillar1_" + to_string(i + 1))->GetLocalPos().x
     //        - pillar1Root->root->Find("Pillar1_" + to_string(i))->GetLocalPos().x) * 0.5f - pillar1Root->root->Find("Pillar1_" + to_string(i))->scale.x;
-    //    temp->collider->scale = temp->scale;
     //    temp->SetLocalPosY(3.0f);
     //    pillar1Root->AddChild(temp);
     //    //vMapOb.push_back(temp);
@@ -72,8 +71,8 @@ Main::~Main()
     grid->Release();
     cam1->Release();
     map->Release();
-    //pillar1Ob->Release();
-    //pillar1Root->Release();
+    pillar1Ob->Release();
+    pillar1Root->Release();
 }
 
 void Main::Init()
@@ -93,14 +92,14 @@ void Main::Update()
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
     map->RenderHierarchy();
-    //pillar1Ob->RenderHierarchy();
-    //pillar1Root->RenderHierarchy();
+    pillar1Ob->RenderHierarchy();
+    pillar1Root->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
-    //pillar1Ob->Update();
-    //pillar1Root->Update();
+    pillar1Ob->Update();
+    pillar1Root->Update();
     Camera::main->Update();
 }
 
@@ -116,8 +115,8 @@ void Main::Render()
     Camera::main->Set();
     grid->Render();
     map->Render();
-    //pillar1Ob->Render();
-    //pillar1Root->Render();
+    pillar1Ob->Render();
+    pillar1Root->Render();
 }
 
 void Main::ResizeScreen()
