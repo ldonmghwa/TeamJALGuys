@@ -23,6 +23,9 @@ Main::Main()
     map = WallMap::Create();
     map->LoadFile("Map1.xml");
     map->name = "Map";
+
+    obstacle = Actor::Create();
+    obstacle->LoadFile("fallworld.xml");
     
     //pillar1Ob = Actor::Create();
     //pillar1Ob->LoadFile("Pillar1.xml");
@@ -88,17 +91,23 @@ void Main::Release()
 
 void Main::Update()
 {
+    obstacle->Find("obstacle1")->rotation.y += 0.3 * DELTA;
+    obstacle->Find("obchild1")->rotation.y -= 2 * DELTA;
+
+
     Camera::main->ControlMainCam();
     ImGui::Begin("Hierarchy");
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
     map->RenderHierarchy();
+    obstacle->RenderHierarchy();
     //pillar1Ob->RenderHierarchy();
     //pillar1Root->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
+    obstacle->Update();
     //pillar1Ob->Update();
     //pillar1Root->Update();
     Camera::main->Update();
@@ -116,6 +125,7 @@ void Main::Render()
     Camera::main->Set();
     grid->Render();
     map->Render();
+    obstacle->Render();
     //pillar1Ob->Render();
     //pillar1Root->Render();
 }
