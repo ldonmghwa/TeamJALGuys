@@ -52,9 +52,15 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "GameObject", "GameObject", 
 		Contents\GameObject\bullet.xml = Contents\GameObject\bullet.xml
 		Contents\GameObject\Cam.xml = Contents\GameObject\Cam.xml
 		Contents\GameObject\Grid.xml = Contents\GameObject\Grid.xml
+		Contents\GameObject\Map1.xml = Contents\GameObject\Map1.xml
+		Contents\GameObject\Map1_1.xml = Contents\GameObject\Map1_1.xml
+		Contents\GameObject\Pillar1.xml = Contents\GameObject\Pillar1.xml
+		Contents\GameObject\Pillar1Root.xml = Contents\GameObject\Pillar1Root.xml
 		Contents\GameObject\Robot.xml = Contents\GameObject\Robot.xml
+		Contents\GameObject\Spear.xml = Contents\GameObject\Spear.xml
 		Contents\GameObject\Sun.xml = Contents\GameObject\Sun.xml
 		Contents\GameObject\Target.xml = Contents\GameObject\Target.xml
+		Contents\GameObject\UI.xml = Contents\GameObject\UI.xml
 	EndProjectSection
 EndProject
 Global
