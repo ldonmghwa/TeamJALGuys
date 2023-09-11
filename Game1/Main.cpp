@@ -10,7 +10,7 @@ Main::Main()
     grid = Grid::Create();
 
     cam1 = Camera::Create();
-    cam1->LoadFile("Cam.xml");//1
+    cam1->LoadFile("Cam.xml");//12
     Camera::main = cam1;
 
     cam1->viewport.x = 0.0f;
