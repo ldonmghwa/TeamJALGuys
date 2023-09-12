@@ -1,7 +1,8 @@
 #include "stdafx.h"
 #include "Map.h"
-#include "Main.h"
+#include "WallMap.h"
 #include "Player.h"
+#include "Main.h"
 
 Main::Main()
 {
@@ -18,11 +19,9 @@ Main::Main()
     cam1->width = App.GetWidth();
     cam1->height = App.GetHeight();
 
-    map = Map::Create();
+    map = WallMap::Create();
     map->LoadFile("Map1.xml");
     map->name = "Map";
-
-    temp = Actor::Create();
     
     
 }
@@ -49,13 +48,11 @@ void Main::Update()
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
     map->RenderHierarchy();
-    temp->RenderHierarchy();
     player->body->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
-    temp->Update();
     Camera::main->Update();
     player->Update();
 }
@@ -76,7 +73,6 @@ void Main::Render()
     Camera::main->Set();
     grid->Render();
     map->Render();
-    temp->Render();
     player->Render();
 }
 

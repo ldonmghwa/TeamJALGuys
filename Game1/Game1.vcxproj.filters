@@ -9,6 +9,7 @@
     <ClInclude Include="Map.h">
       <Filter>GameObject</Filter>
     </ClInclude>
+    <ClInclude Include="Player.h" />
     <ClInclude Include="WallMap.h" />
   </ItemGroup>
   <ItemGroup>
@@ -19,6 +20,7 @@
     <ClCompile Include="Map.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
+    <ClCompile Include="Player.cpp" />
     <ClCompile Include="WallMap.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -28,5 +30,8 @@
     <Filter Include="Scene">
       <UniqueIdentifier>{e0c428c6-0d94-4784-bb3a-59d8180b610b}</UniqueIdentifier>
     </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="window.ini" />
   </ItemGroup>
 </Project>

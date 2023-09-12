@@ -24,12 +24,14 @@
     <ClInclude Include="Map.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="stdafx.h" />
+    <ClInclude Include="WallMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
     <ClCompile Include="Player.cpp" />
+    <ClCompile Include="WallMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="window.ini" />
