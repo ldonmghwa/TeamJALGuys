@@ -9,7 +9,7 @@ private:
 	Map* map;
 	Actor* temp;
 	//UI* ui;
-
+	
 public:
 	Main();
 	~Main();

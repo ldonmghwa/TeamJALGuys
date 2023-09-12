@@ -1,6 +1,7 @@
 #include "stdafx.h"
 #include "Map.h"
 #include "Main.h"
+#include "Player.h"
 
 Main::Main()
 {
@@ -22,8 +23,8 @@ Main::Main()
     map->name = "Map";
 
     temp = Actor::Create();
-    temp->name = "temp";
-   
+    
+    
 }
 
 Main::~Main()
@@ -33,7 +34,7 @@ Main::~Main()
 
 void Main::Init()
 {
-
+    player->Init();
 }
 
 void Main::Release()
@@ -49,16 +50,22 @@ void Main::Update()
     cam1->RenderHierarchy();
     map->RenderHierarchy();
     temp->RenderHierarchy();
+    player->body->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
     temp->Update();
     Camera::main->Update();
+    player->Update();
 }
 
 void Main::LateUpdate()
 {
+    if (player->GetWorldPos().y<=6.0f)
+    {
+        player->isLand = true;
+    }
 }
 void Main::PreRender()
 {
@@ -70,6 +77,7 @@ void Main::Render()
     grid->Render();
     map->Render();
     temp->Render();
+    player->Render();
 }
 
 void Main::ResizeScreen()

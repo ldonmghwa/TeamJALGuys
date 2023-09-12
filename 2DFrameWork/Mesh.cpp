@@ -7,22 +7,53 @@ Mesh::Mesh()
     byteWidth = sizeof(VertexPT);
 
 
-    //¿ø±âµÕ
-    vertexCount = 360 * 2;
-    indexCount = 360 * 2 * 3;
+    //¸îÁ¶°¢?
+    //°æµµ(0~360)
+    int seta = 37;
+    //À§µµ(0~180)
+    int pi = 18;
+
+    //Á¤Á¡ °¹¼ö
+    vertexCount = seta * pi;
+    //ÀÎµ¦½º °¹¼ö
+    indexCount = seta * pi * 6;
 
     VertexPT* Vertex = new VertexPT[vertexCount];
     indices = new UINT[indexCount];
 
-    for (int i = 0; i < 360; i++) {
-        Vertex[i * 2].position = Vector3(cos(i * ToRadian) * 1.0f, 0, sin(i * ToRadian) * 1.0f);
-        Vertex[i * 2 + 1].position = Vector3(cos(i * ToRadian) * 2.0f, 0, sin(i * ToRadian) * 2.0f);
+    for (int i = 0; i < pi; i++)
+    {
+        for (int j = 0; j < seta; j++)
+        {
+            Vertex[i * seta + j].position =
+                Vector3(
+                    cos(j * 10.0f * ToRadian) * sin(i * 10.0f * ToRadian),
+                    cos(i * 10.0f * ToRadian),
+                    sin(j * 10.0f * ToRadian) * sin(i * 10.0f * ToRadian));
+            Vertex[i * seta + j].uv.y = (float)i / (float)pi;
+
+            float offset = (i % 2 == 0) ? 0.0f : 0.01f;
+
+            Vertex[i * seta + j].uv.x = (float)j / (float)seta + offset;
+        }
     }
 
-    for (int i = 0; i < 360 * 2; i++) {
-        indices[i * 3] = i;
-        indices[i * 3 + 1] = i + 1;
-        indices[i * 3 + 2] = i + 2;
+    for (int i = 0; i < pi; i++)
+    {
+        for (int j = 0; j < seta; j++)
+        {
+            int rect = i * seta + j;
+
+            indices[rect * 6 + 0] = rect;
+            indices[rect * 6 + 1] = rect + seta + 1;
+            indices[rect * 6 + 2] = rect + seta;
+
+            indices[rect * 6 + 3] = rect;
+            indices[rect * 6 + 4] = rect + 1;
+            indices[rect * 6 + 5] = rect + seta + 1;
+
+
+        }
     }
     vertices = Vertex;
 

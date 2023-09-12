@@ -1,0 +1,47 @@
+<Root Name="Player" Visible="true" ObType="1">
+    <Mesh File="6.Cube.mesh"/>
+    <Shader File="6.Cube.hlsl"/>
+    <Collider ColliderType="1" Visible="true">
+        <Position X="0" Y="-0.23076926" Z="0"/>
+        <Scale X="1" Y="1.25" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Collider>
+    <Transform>
+        <Position X="4.3499999" Y="2.7" Z="0"/>
+        <Scale X="0.80000001" Y="1.3" Z="0.80000001"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="3"/>
+    <Child0 Name="Face" Visible="true" ObType="1">
+        <Mesh File="6.Rect.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="Face.png"/>
+        <Transform>
+            <Position X="0" Y="0.42307693" Z="0.050000001"/>
+            <Scale X="0.5" Y="0.40000001" Z="1"/>
+            <Rotation X="0" Y="3.1415927" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="LFoot" Visible="true" ObType="1">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="watermelon.png"/>
+        <Transform>
+            <Position X="-0.5" Y="-1.2307693" Z="0"/>
+            <Scale X="0.25" Y="0.25" Z="0.25"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="RFoot" Visible="true" ObType="1">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Transform>
+            <Position X="0.5" Y="-1.2307693" Z="0"/>
+            <Scale X="0.25" Y="0.25" Z="0.25"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+</Root>
