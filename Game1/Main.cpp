@@ -3,8 +3,6 @@
 #include "WallMap.h"
 #include "Main.h"
 
-#define PillarMax 11
-
 Main::Main()
 {
     grid = Grid::Create();
@@ -24,24 +22,46 @@ Main::Main()
     map->LoadFile("Map1.xml");
     map->name = "Map";
     
-    //pillar1Ob = Actor::Create();
-    //pillar1Ob->LoadFile("Pillar1.xml");
-    //pillar1Ob->name = "temp";
-    //pillar1Root = Actor::Create();
-    ////pillar1Root->LoadFile("Pillar1Root.xml");
-    //pillar1Root->name = "Pillar1Root";
-    //map->AddObstacle("Pillar1Root.xml");
+    //obstacle1 = Actor::Create();
+    //obstacle1->LoadFile("board.xml");
+    //obstacle1->name = "temp";
+    //obstacle2 = Actor::Create();
+    //obstacle2->LoadFile("board2.xml");
+    //obstacle2->name = "temp2";
+    /*obstacle1Root = Actor::Create();
+    obstacle1Root->LoadFile("Pillar1Root.xml");
+    obstacle1Root->name = "Pillar1Root";*/
+    map->AddObstacle("BoardRoot.xml");
 
-    //for (int i = 0; i < PillarMax; i++) {
+    //for (int i = 0; i < 20; i++) {
     //    GameObject* temp = GameObject::Create();
-    //    temp->texture = pillar1Ob->root->Find("Mesh")->texture;
-    //    temp->mesh = pillar1Ob->root->Find("Mesh")->mesh;
-    //    temp->shader = pillar1Ob->root->Find("Mesh")->shader;
-    //    temp->scale = pillar1Ob->root->Find("Mesh")->scale;
-    //    temp->name = "Pillar1_" + to_string(i);
-    //    temp->SetWorldPosX(-map->root->Find("Ground")->scale.x + i * 10.0f);
-    //    temp->SetWorldPosY(3.5f);
-    //    pillar1Root->AddChild(temp);
+    //    if (i < 10) {
+    //        temp->texture = obstacle1->root->texture;
+    //        temp->mesh = obstacle1->root->mesh;
+    //        temp->shader = obstacle1->root->shader;
+    //        temp->scale = obstacle1->root->scale;
+    //        temp->name = "Board_" + to_string(i);
+    //        temp->collider = obstacle1->collider;
+    //        temp->SetWorldPosX(-map->root->Find("Ground")->scale.x + i * temp->scale.x * 2.0f + temp->scale.x);
+    //        if (i % 2 == 0) {
+    //            temp->SetWorldPosZ(temp->scale.z * 2.0f);
+    //        }
+    //    }
+    //    else {
+    //        temp->texture = obstacle2->root->texture;
+    //        temp->mesh = obstacle2->root->mesh;
+    //        temp->shader = obstacle2->root->shader;
+    //        temp->scale = obstacle2->root->scale;
+    //        temp->name = "Board_" + to_string(i);
+    //        temp->collider = obstacle2->collider;
+    //        temp->SetWorldPosX(-map->root->Find("Ground")->scale.x + (i - 10) * temp->scale.x * 2.0f + temp->scale.x);
+    //        if (i % 2 != 0) {
+    //            temp->SetWorldPosZ(temp->scale.z * 2.0f);
+    //        }
+    //    }
+    //    obstacle1Root->AddChild(temp);
+    //   
+    //    
     //    //vMapOb.push_back(temp);
     //}
 
@@ -71,8 +91,9 @@ Main::~Main()
     grid->Release();
     cam1->Release();
     map->Release();
-    //pillar1Ob->Release();
-    //pillar1Root->Release();
+    /*obstacle1->Release();
+    obstacle2->Release();
+    obstacle1Root->Release();*/
 }
 
 void Main::Init()
@@ -92,14 +113,16 @@ void Main::Update()
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
     map->RenderHierarchy();
-    //pillar1Ob->RenderHierarchy();
-    //pillar1Root->RenderHierarchy();
+    /*obstacle1->RenderHierarchy();
+    obstacle2->RenderHierarchy();
+    obstacle1Root->RenderHierarchy();*/
     ImGui::End();
 
     grid->Update();
     map->Update();
-    //pillar1Ob->Update();
-    //pillar1Root->Update();
+    /*obstacle1->Update();
+    obstacle2->Update();
+    obstacle1Root->Update();*/
     Camera::main->Update();
 }
 
@@ -115,8 +138,9 @@ void Main::Render()
     Camera::main->Set();
     grid->Render();
     map->Render();
-    //pillar1Ob->Render();
-    //pillar1Root->Render();
+    /*obstacle1->Render();
+    obstacle2->Render();
+    obstacle1Root->Render();*/
 }
 
 void Main::ResizeScreen()

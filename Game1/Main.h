@@ -7,8 +7,9 @@ private:
 	Camera* cam1;
 	Grid* grid;
 	WallMap* map;
-	/*Actor* pillar1Ob;
-	Actor* pillar1Root;*/
+	Actor* obstacle1;
+	Actor* obstacle2;
+	Actor* obstacle1Root;
 	//UI* ui;
 
 public:

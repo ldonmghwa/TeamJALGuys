@@ -21,7 +21,7 @@ WallMap::~WallMap()
 
 void WallMap::Update()
 {
-	for (auto it = movePillarList.begin(); it != movePillarList.end(); it++) {
+	for (auto it = moveObsColliderList.begin(); it != moveObsColliderList.end(); it++) {
 		//float ranNum = RANDOM->Float(1.0f, 10.0f);
 		if (isUp[count]) {
 			(*it)->MoveWorldPos(Vector3(0, 1, 0) * wallSpeed[count] * DELTA);
@@ -36,7 +36,7 @@ void WallMap::Update()
 			}
 		}
 		count++;
-		if (count == movePillarList.size()) count = 0;
+		if (count == moveObsColliderList.size()) count = 0;
 	}
 	Map::Update();
 }
@@ -46,7 +46,8 @@ void WallMap::LoadFile(string _file)
 	Map::LoadFile(_file);
 	int pillarCount = 0;
 	while (this->root->Find("Pillar1_under" + to_string(pillarCount))) {
-		movePillarList.push_back(this->root->Find("Pillar1_under" + to_string(pillarCount)));
+		moveObsColliderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarCount)));
+		obsColliderList2.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
 		pillarCount++;
 	}
 	wallSpeed = new float[pillarCount]; 
