@@ -22,16 +22,16 @@ Main::Main()
     map->LoadFile("Map1.xml");
     map->name = "Map";
     
-    //obstacle1 = Actor::Create();
+    obstacle1 = Actor::Create();
     //obstacle1->LoadFile("board.xml");
-    //obstacle1->name = "temp";
+    obstacle1->name = "temp";
     //obstacle2 = Actor::Create();
     //obstacle2->LoadFile("board2.xml");
     //obstacle2->name = "temp2";
     /*obstacle1Root = Actor::Create();
     obstacle1Root->LoadFile("Pillar1Root.xml");
     obstacle1Root->name = "Pillar1Root";*/
-    map->AddObstacle("BoardRoot.xml");
+    //map->AddObstacle("BoardRoot.xml");
 
     //for (int i = 0; i < 20; i++) {
     //    GameObject* temp = GameObject::Create();
@@ -91,9 +91,9 @@ Main::~Main()
     grid->Release();
     cam1->Release();
     map->Release();
-    /*obstacle1->Release();
-    obstacle2->Release();
-    obstacle1Root->Release();*/
+    obstacle1->Release();
+    //obstacle2->Release();
+    //obstacle1Root->Release();
 }
 
 void Main::Init()
@@ -113,16 +113,16 @@ void Main::Update()
     grid->RenderHierarchy();
     cam1->RenderHierarchy();
     map->RenderHierarchy();
-    /*obstacle1->RenderHierarchy();
-    obstacle2->RenderHierarchy();
-    obstacle1Root->RenderHierarchy();*/
+    obstacle1->RenderHierarchy();
+    //obstacle2->RenderHierarchy();
+    //obstacle1Root->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
-    /*obstacle1->Update();
-    obstacle2->Update();
-    obstacle1Root->Update();*/
+    obstacle1->Update();
+    //obstacle2->Update();
+    //obstacle1Root->Update();
     Camera::main->Update();
 }
 
@@ -138,9 +138,9 @@ void Main::Render()
     Camera::main->Set();
     grid->Render();
     map->Render();
-    /*obstacle1->Render();
-    obstacle2->Render();
-    obstacle1Root->Render();*/
+    obstacle1->Render();
+    //obstacle2->Render();
+    //obstacle1Root->Render();
 }
 
 void Main::ResizeScreen()
