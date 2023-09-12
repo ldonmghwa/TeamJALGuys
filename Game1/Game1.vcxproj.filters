@@ -6,14 +6,20 @@
     <ClInclude Include="Fruit.h">
       <Filter>GameObject</Filter>
     </ClInclude>
-    <ClInclude Include="Map.h" />
+    <ClInclude Include="Map.h">
+      <Filter>GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="WallMap.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Fruit.cpp">
       <Filter>GameObject</Filter>
     </ClCompile>
-    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Map.cpp">
+      <Filter>GameObject</Filter>
+    </ClCompile>
+    <ClCompile Include="WallMap.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameObject">
@@ -22,8 +28,5 @@
     <Filter Include="Scene">
       <UniqueIdentifier>{e0c428c6-0d94-4784-bb3a-59d8180b610b}</UniqueIdentifier>
     </Filter>
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="window.ini" />
   </ItemGroup>
 </Project>
