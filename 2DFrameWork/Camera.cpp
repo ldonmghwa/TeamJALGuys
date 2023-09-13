@@ -54,7 +54,7 @@ void Camera::ControlMainCam()
 	{
 		main->MoveWorldPos(main->GetUp() * DELTA * mainCamSpeed);
 	}
-
+	
 	//마우스 우클릭시
 	if (INPUT->KeyPress(VK_RBUTTON))
 	{

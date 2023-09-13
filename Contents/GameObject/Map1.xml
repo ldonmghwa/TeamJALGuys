@@ -8,6 +8,11 @@
     <Child0 Name="Ground" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="1" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
         <Texture File="watermelon.jpg"/>
         <Transform>
             <Position X="0" Y="0" Z="0"/>
@@ -154,7 +159,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-45" Y="-2.8582652" Z="0"/>
+                <Position X="-45" Y="1.0683665" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -170,7 +175,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-35" Y="-0.066588171" Z="0"/>
+                <Position X="-35" Y="-1.8090461" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -186,7 +191,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-25" Y="-2.0440123" Z="0"/>
+                <Position X="-25" Y="0.63085425" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -202,7 +207,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="-0.81973219" Z="0"/>
+                <Position X="-15" Y="1.2942959" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -218,7 +223,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="-0.22408022" Z="0"/>
+                <Position X="-5" Y="1.6581588" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -234,7 +239,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="-0.36203125" Z="0"/>
+                <Position X="5" Y="0.57021511" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -250,7 +255,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="2.041327" Z="0"/>
+                <Position X="15" Y="-2.7865241" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -266,7 +271,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="25" Y="0.013619537" Z="0"/>
+                <Position X="25" Y="0.58049476" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -282,7 +287,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="35" Y="-2.3073804" Z="0"/>
+                <Position X="35" Y="-1.374913" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -298,7 +303,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="45" Y="1.0446583" Z="0"/>
+                <Position X="45" Y="-1.8479954" Z="0"/>
                 <Scale X="4.5" Y="3" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
