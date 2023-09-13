@@ -75,7 +75,7 @@ void Main::Update()
 void Main::LateUpdate()
 {
     //Ground Ãæµ¹
-    if (player->body->Intersect(map->Find("Ground"))) player->isLand = true;
+    if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
     else player->isLand = false;
 }
 void Main::PreRender()

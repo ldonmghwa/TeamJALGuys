@@ -83,7 +83,7 @@ void WallMap::LoadFile(string _file)
 	while (this->root->Find("Board_" + to_string(boardCount))) {
 
 		boardColliderList.push_back(this->root->Find("Board_" + to_string(boardCount)));
-		if (boardCount < 10) boardList1.push_back(this->root->Find("Board_" + to_string(boardCount)));
+		if (boardCount < 4) boardList1.push_back(this->root->Find("Board_" + to_string(boardCount)));
 		else boardList2.push_back(this->root->Find("Board_" + to_string(boardCount)));
 		boardCount++;
 	}
