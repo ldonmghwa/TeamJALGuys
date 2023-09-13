@@ -22,7 +22,7 @@ WallMap::~WallMap()
 
 void WallMap::Update()
 {
-	for (auto it = moveObsColliderList.begin(); it != moveObsColliderList.end(); it++) {
+	for (auto it = pillarUnderColliderList.begin(); it != pillarUnderColliderList.end(); it++) {
 		//float ranNum = RANDOM->Float(1.0f, 10.0f);
 		if (isUp[count]) {
 			(*it)->MoveWorldPos(Vector3(0, 1, 0) * wallSpeed[count] * DELTA);
@@ -37,7 +37,7 @@ void WallMap::Update()
 			}
 		}
 		count++;
-		if (count == moveObsColliderList.size()) count = 0;
+		if (count == pillarUnderColliderList.size()) count = 0;
 	}
 
 	boardActiveTime -= DELTA;
@@ -70,19 +70,19 @@ void WallMap::LoadFile(string _file)
 	Map::LoadFile(_file);
 	int pillarUnderCount = 0;
 	while (this->root->Find("Pillar1_under" + to_string(pillarUnderCount))) {
-		moveObsColliderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarUnderCount)));
+		pillarUnderColliderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarUnderCount)));
 		pillarUnderCount++;
 	}
 	int pillarCount = 0;
 	while (this->root->Find("Pillar1_" + to_string(pillarCount))) {
-		obsColliderList2.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
+		pillarColliderList.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
 		pillarCount++;
 	}
 	int boardCount = 0;
 	while (this->root->Find("Board_"+to_string(boardCount))){
 
 		boardColliderList.push_back(this->root->Find("Board_" + to_string(boardCount)));
-		if (boardCount < 10) boardList1.push_back(this->root->Find("Board_" + to_string(boardCount)));
+		if (boardCount < 4) boardList1.push_back(this->root->Find("Board_" + to_string(boardCount)));
 		else boardList2.push_back(this->root->Find("Board_" + to_string(boardCount)));
 		boardCount++;
 	}

@@ -5,8 +5,8 @@ public:
     static WallMap* Create(string name = "WallMap");
 
 public:
-    list<GameObject*> moveObsColliderList;
-    list<GameObject*> obsColliderList2;
+    list<GameObject*> pillarUnderColliderList;
+    list<GameObject*> pillarColliderList;
     list<GameObject*> boardColliderList;
 private:
     bool* isUp;
