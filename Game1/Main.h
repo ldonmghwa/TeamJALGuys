@@ -3,14 +3,16 @@
 class Main : public Scene
 {
 private:
-
-	Camera* cam1;
 	Grid* grid;
 	WallMap* map;
 	Actor* obstacle;
+	UI* ui;
+	UI* mouse;
+	UI* cursor;
+	
 	/*Actor* pillar1Ob;
 	Actor* pillar1Root;*/
-	//UI* ui;
+	
 	
 public:
 	Main();

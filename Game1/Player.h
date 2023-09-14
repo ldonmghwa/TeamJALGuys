@@ -6,14 +6,18 @@ class Player : public Singleton<Player>
 {
 private:
 	PlayerState state = PlayerState::IDLE;
+	Vector3 oldPosition = Vector3();
+
 	float moveSpeed = 0;
 	float gravity = 0;
-	const float diveTime = 0.7f;
+	float diveTime = 0.3f;
+	float diveCool = 0;
 	const float jumpPower = 15.0f;
 	const float divePower = 30.0f;
-	Vector3 oldPosition = Vector3();
+
 public:
 	Actor* body;
+
 	bool isLand = 0;
 	bool PCamActive = 1;
 public:
