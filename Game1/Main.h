@@ -3,11 +3,14 @@
 class Main : public Scene
 {
 private:
-
-	Camera* cam1;
+	Scene* SCIntro;
+	Scene* SC1;
+	Scene* SC2;
+	/*Camera* cam1;
 	Grid* grid;
 	WallMap* map;
-	Actor* obstacle;
+	Actor* obstacle;*/
+	
 	/*Actor* pillar1Ob;
 	Actor* pillar1Root;*/
 	//UI* ui;
