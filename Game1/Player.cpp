@@ -85,13 +85,6 @@ void Player::Move()
 			body->MoveWorldPos(body->GetRight() * moveSpeed * DELTA);
 		}
 		break;
-	case PlayerState::DIVE:
-		diveTime -= DELTA;
-		diveCool = 0.8f;
-		if (diveTime > 0) {
-			body->MoveWorldPos(body->GetForward() * divePower * DELTA);
-		}
-		break;
 	}
 	//점프
 	if (INPUT->KeyDown(VK_SPACE)) {
@@ -100,8 +93,10 @@ void Player::Move()
 		//점프파워 음수로 할당
 		gravity = -jumpPower;
 	}
-
-
+	//다이빙
+	if (INPUT->KeyDown('F')) {
+		body->MoveWorldPos(body->GetForward() * divePower * DELTA);
+	}
 }
 
 void Player::Motion()

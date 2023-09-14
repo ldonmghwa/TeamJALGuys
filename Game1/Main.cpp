@@ -17,15 +17,20 @@ Main::Main()
     SC2 = new Scene2();
    /* grid = Grid::Create();*/
 
-   /* Camera::main = static_cast<Camera*>(player->body->Find("PCam"));*/
+    Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
   
+   /* cam1 = Camera::Create();
+    cam1->LoadFile("Cam.xml");*/
+   /* cam1->viewport.x = 0.0f;
+    cam1->viewport.y = 0.0f;
+    cam1->viewport.width = App.GetWidth();
+    cam1->viewport.height = App.GetHeight();
+    cam1->width = App.GetWidth();
+    cam1->height = App.GetHeight();*/
 
-   /* map = WallMap::Create();
+    map = WallMap::Create();
     map->LoadFile("Map1.xml");
     map->name = "Map";*/
-    
-    /*GM->obstacleList.push_back(new Obstacle1());
-    GM->obstacleList.push_back(new Obstacle2());*/
     
     
 }
@@ -58,21 +63,16 @@ void Main::Release()
 void Main::Update()
 {
     //Camera::main->ControlMainCam();
-    //ImGui::Begin("Hierarchy");
-    //grid->RenderHierarchy();
-    ////cam1->RenderHierarchy();
-    //map->RenderHierarchy();
-    //player->body->RenderHierarchy();
-    //
-    ////안준환 장애물 장애물 리스트순회
-    //for (auto& it : GM->obstacleList)
-    //{
-    //    it->root->RenderHierarchy();
-    //}
-    //ImGui::End();
-     
+    ImGui::Begin("Hierarchy");
+    grid->RenderHierarchy();
+    //cam1->RenderHierarchy();
+    map->RenderHierarchy();
+    player->body->RenderHierarchy();
+    ImGui::End();
 
-   /* if (player->PCamActive) {
+    
+
+    if (player->PCamActive) {
         POINT ptMouse;
         ptMouse.x = App.GetHalfWidth();
         ptMouse.y = App.GetHalfHeight();
@@ -89,29 +89,13 @@ void Main::Update()
     map->Update();
     Camera::main->Update();
     player->Update();
-    for (auto& it : GM->obstacleList)
-    {
-        it->Update();
-    }*/
-
-    if (INPUT->KeyDown(VK_F1))
-    {
-        SCENE->ChangeScene("SC1");
-    }
-    if (INPUT->KeyDown(VK_F2))
-    {
-        SCENE->ChangeScene("SC2");
-    }
-    
-    SCENE->Update();
-
 }
 
 void Main::LateUpdate()
 {
-    ////Ground 충돌
-    //if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    //else player->isLand = false;
+    //Ground 충돌
+    if (player->body->Intersect(map->Find("Ground"))) player->isLand = true;
+    else player->isLand = false;
 }
 void Main::PreRender()
 {
@@ -123,11 +107,6 @@ void Main::Render()
     grid->Render();
     map->Render();
     player->Render();
-    for (auto& it : GM->obstacleList)
-    {
-        it->Render();
-    }*/
-    SCENE->Render();
 }
 
 void Main::ResizeScreen()

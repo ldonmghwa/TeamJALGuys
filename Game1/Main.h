@@ -13,7 +13,7 @@ private:
 	
 	/*Actor* pillar1Ob;
 	Actor* pillar1Root;*/
-	//UI* ui;
+	
 	
 public:
 	Main();
