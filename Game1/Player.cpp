@@ -140,7 +140,9 @@ void Player::Update()
 	ClientToScreen(App.GetHandle(), &ptMouse);
 	SetCursorPos(ptMouse.x, ptMouse.y);
 
-	if (player->PCamActive) {
+	if (INPUT->KeyDown(VK_F10)) PCamActive = not PCamActive;
+
+	if (PCamActive) {
 		Move();
 
 		// cursor->visible = false;
