@@ -1,4 +1,7 @@
 #include "stdafx.h"
+#include "SceneIntro.h"
+#include "Scene1.h"
+#include "Scene2.h"
 #include "Obstacle.h"
 #include "Obstacle1.h"
 #include "Obstacle2.h"
@@ -9,25 +12,20 @@
 
 Main::Main()
 {
-    grid = Grid::Create();
+    SCIntro = new SceneIntro();
+    SC1 = new Scene1();
+    SC2 = new Scene2();
+   /* grid = Grid::Create();*/
 
-    Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+   /* Camera::main = static_cast<Camera*>(player->body->Find("PCam"));*/
   
-   /* cam1 = Camera::Create();
-    cam1->LoadFile("Cam.xml");*/
-   /* cam1->viewport.x = 0.0f;
-    cam1->viewport.y = 0.0f;
-    cam1->viewport.width = App.GetWidth();
-    cam1->viewport.height = App.GetHeight();
-    cam1->width = App.GetWidth();
-    cam1->height = App.GetHeight();*/
 
-    map = WallMap::Create();
+   /* map = WallMap::Create();
     map->LoadFile("Map1.xml");
-    map->name = "Map";
+    map->name = "Map";*/
     
-    GM->obstacleList.push_back(new Obstacle1());
-    GM->obstacleList.push_back(new Obstacle2());
+    /*GM->obstacleList.push_back(new Obstacle1());
+    GM->obstacleList.push_back(new Obstacle2());*/
     
     
 }
@@ -39,35 +37,42 @@ Main::~Main()
 
 void Main::Init()
 {
-    player->Init();
+    
+    SCENE->AddScene("SCIntro", SCIntro);
+    SCENE->AddScene("SC1", SC1);
+    SCENE->AddScene("SC2", SC2);
+
+    
+    SCENE->ChangeScene("SC1");
+    
 }
 
 void Main::Release()
 {
-    for (auto& it : GM->obstacleList)
+    /*for (auto& it : GM->obstacleList)
     {
         it->Release();
-    }
+    }*/
 }
 
 void Main::Update()
 {
     //Camera::main->ControlMainCam();
-    ImGui::Begin("Hierarchy");
-    grid->RenderHierarchy();
-    //cam1->RenderHierarchy();
-    map->RenderHierarchy();
-    player->body->RenderHierarchy();
-    
-    //안준환 장애물 장애물 리스트순회
-    for (auto& it : GM->obstacleList)
-    {
-        it->root->RenderHierarchy();
-    }
-    ImGui::End();
+    //ImGui::Begin("Hierarchy");
+    //grid->RenderHierarchy();
+    ////cam1->RenderHierarchy();
+    //map->RenderHierarchy();
+    //player->body->RenderHierarchy();
+    //
+    ////안준환 장애물 장애물 리스트순회
+    //for (auto& it : GM->obstacleList)
+    //{
+    //    it->root->RenderHierarchy();
+    //}
+    //ImGui::End();
      
 
-    if (player->PCamActive) {
+   /* if (player->PCamActive) {
         POINT ptMouse;
         ptMouse.x = App.GetHalfWidth();
         ptMouse.y = App.GetHalfHeight();
@@ -87,21 +92,33 @@ void Main::Update()
     for (auto& it : GM->obstacleList)
     {
         it->Update();
+    }*/
+
+    if (INPUT->KeyDown(VK_F1))
+    {
+        SCENE->ChangeScene("SC1");
     }
+    if (INPUT->KeyDown(VK_F2))
+    {
+        SCENE->ChangeScene("SC2");
+    }
+    
+    SCENE->Update();
+
 }
 
 void Main::LateUpdate()
 {
-    //Ground 충돌
-    if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    else player->isLand = false;
+    ////Ground 충돌
+    //if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
+    //else player->isLand = false;
 }
 void Main::PreRender()
 {
 }
 
 void Main::Render()
-{
+{/*
     Camera::main->Set();
     grid->Render();
     map->Render();
@@ -109,17 +126,19 @@ void Main::Render()
     for (auto& it : GM->obstacleList)
     {
         it->Render();
-    }
+    }*/
+    SCENE->Render();
 }
 
 void Main::ResizeScreen()
 {
-    Camera::main->viewport.x = 0.0f;
+   /* Camera::main->viewport.x = 0.0f;
     Camera::main->viewport.y = 0.0f;
     Camera::main->viewport.width = App.GetWidth();
     Camera::main->viewport.height = App.GetHeight();
     Camera::main->width = App.GetWidth();
-    Camera::main->height = App.GetHeight();
+    Camera::main->height = App.GetHeight();*/
+    SCENE->ResizeScreen();
 }
 
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, LPWSTR param, int command)
