@@ -1,0 +1,40 @@
+<Root Name="Actor" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="2"/>
+    <Child0 Name="obchild1" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="watermelon.jpg"/>
+        <Transform>
+            <Position X="0" Y="3" Z="0"/>
+            <Scale X="2" Y="2" Z="2"/>
+            <Rotation X="0" Y="-790.44733" Z="0"/>
+        </Transform>
+        <Children Size="1"/>
+        <Child0 Name="obson1" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Transform>
+                <Position X="0" Y="0" Z="8.2250004"/>
+                <Scale X="0.30000001" Y="0.30000001" Z="9"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+    </Child0>
+    <Child1 Name="obstacle1" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="bono.png"/>
+        <Transform>
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="30" Y="1" Z="30"/>
+            <Rotation X="0" Y="117.71231" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+</Root>

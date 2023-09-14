@@ -166,6 +166,7 @@
     <ClInclude Include="Direct3D11.h" />
     <ClInclude Include="Dwrite.h" />
     <ClInclude Include="framework.h" />
+    <ClInclude Include="GameManager.h" />
     <ClInclude Include="GameObject.h" />
     <ClInclude Include="Grid.h" />
     <ClInclude Include="Gui.h" />
@@ -195,6 +196,7 @@
     <ClCompile Include="DepthState.cpp" />
     <ClCompile Include="Direct3D11.cpp" />
     <ClCompile Include="Dwrite.cpp" />
+    <ClCompile Include="GameManager.cpp" />
     <ClCompile Include="GameObject.cpp" />
     <ClCompile Include="GameObjectGui.cpp" />
     <ClCompile Include="GameObjectSaveLoad.cpp" />

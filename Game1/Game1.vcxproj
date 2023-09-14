@@ -22,6 +22,9 @@
     <ClInclude Include="Fruit.h" />
     <ClInclude Include="Main.h" />
     <ClInclude Include="Map.h" />
+    <ClInclude Include="Obstacle.h" />
+    <ClInclude Include="Obstacle1.h" />
+    <ClInclude Include="Obstacle2.h" />
     <ClInclude Include="Player.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="WallMap.h" />
@@ -30,6 +33,9 @@
     <ClCompile Include="Fruit.cpp" />
     <ClCompile Include="Main.cpp" />
     <ClCompile Include="Map.cpp" />
+    <ClCompile Include="Obstacle.cpp" />
+    <ClCompile Include="Obstacle1.cpp" />
+    <ClCompile Include="Obstacle2.cpp" />
     <ClCompile Include="Player.cpp" />
     <ClCompile Include="WallMap.cpp" />
   </ItemGroup>

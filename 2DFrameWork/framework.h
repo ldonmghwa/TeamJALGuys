@@ -107,6 +107,7 @@ extern Application App;//Extern Global
 #include "Camara.h"
 #include "UI.h"
 #include "Utility.h"
+#include "GameManager.h"
 
 //Singleton Macro
 #define	D3D			Direct3D11::GetInstance()
@@ -124,3 +125,4 @@ extern Application App;//Extern Global
 #define DEPTH		DepthState::GetInstance()
 #define BLEND		BlendState::GetInstance()
 #define RESOURCE	ResourceManager::GetInstance()
+#define GM			GameManager::GetInstance()

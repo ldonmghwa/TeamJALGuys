@@ -1,4 +1,7 @@
 #include "stdafx.h"
+#include "Obstacle.h"
+#include "Obstacle1.h"
+#include "Obstacle2.h"
 #include "Map.h"
 #include "WallMap.h"
 #include "Player.h"
@@ -23,6 +26,9 @@ Main::Main()
     map->LoadFile("Map1.xml");
     map->name = "Map";
     
+    GM->obstacleList.push_back(new Obstacle1());
+    GM->obstacleList.push_back(new Obstacle2());
+    
     
 }
 
@@ -38,7 +44,10 @@ void Main::Init()
 
 void Main::Release()
 {
-
+    for (auto& it : GM->obstacleList)
+    {
+        it->Release();
+    }
 }
 
 void Main::Update()
@@ -49,9 +58,14 @@ void Main::Update()
     //cam1->RenderHierarchy();
     map->RenderHierarchy();
     player->body->RenderHierarchy();
-    ImGui::End();
-
     
+    //안준환 장애물 장애물 리스트순회
+    for (auto& it : GM->obstacleList)
+    {
+        it->root->RenderHierarchy();
+    }
+    ImGui::End();
+     
 
     if (player->PCamActive) {
         POINT ptMouse;
@@ -70,6 +84,10 @@ void Main::Update()
     map->Update();
     Camera::main->Update();
     player->Update();
+    for (auto& it : GM->obstacleList)
+    {
+        it->Update();
+    }
 }
 
 void Main::LateUpdate()
@@ -88,6 +106,10 @@ void Main::Render()
     grid->Render();
     map->Render();
     player->Render();
+    for (auto& it : GM->obstacleList)
+    {
+        it->Render();
+    }
 }
 
 void Main::ResizeScreen()
