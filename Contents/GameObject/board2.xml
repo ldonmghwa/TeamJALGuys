@@ -1,15 +1,10 @@
-<Root Name="temp2" Visible="true" ObType="1">
+<Root Name="temp" Visible="true" ObType="1">
     <Mesh File="6.Cube.mesh"/>
     <Shader File="6.Cube.hlsl"/>
-    <Collider ColliderType="2" Visible="true">
-        <Position X="0" Y="0" Z="0"/>
-        <Scale X="1" Y="1" Z="1"/>
-        <Rotation X="0" Y="0" Z="0"/>
-    </Collider>
-    <Texture File="bono.jpg"/>
+    <Texture File="bono3.png"/>
     <Transform>
-        <Position X="0" Y="0" Z="0"/>
-        <Scale X="5" Y="0.5" Z="3"/>
+        <Position X="0" Y="0" Z="10.9"/>
+        <Scale X="1.5" Y="0.5" Z="1.5"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <Children Size="0"/>

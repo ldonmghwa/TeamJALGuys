@@ -23,46 +23,52 @@ Main::Main()
     map->name = "Map";
     
     obstacle1 = Actor::Create();
-    //obstacle1->LoadFile("board.xml");
+    obstacle1->LoadFile("glitingBoard1.xml");
     obstacle1->name = "temp";
-    //obstacle2 = Actor::Create();
-    //obstacle2->LoadFile("board2.xml");
-    //obstacle2->name = "temp2";
-    /*obstacle1Root = Actor::Create();
-    obstacle1Root->LoadFile("Pillar1Root.xml");
-    obstacle1Root->name = "Pillar1Root";*/
-    //map->AddObstacle("BoardRoot.xml");
-
-    //for (int i = 0; i < 20; i++) {
+    obstacle2 = Actor::Create();
+    obstacle2->LoadFile("glitingBoard2.xml");
+    obstacle2->name = "temp2";
+    obstacle1Root = Actor::Create();
+    //obstacle1Root->LoadFile("UpDownBoard.xml");
+    obstacle1Root->name = "boardRoot";
+    //map->AddObstacle("UpDownBoard.xml");
+    for (int i = 0; i < 12; i++) {
+        GameObject* temp = GameObject::Create();
+        temp->mesh = obstacle1->root->mesh;
+        temp->shader = obstacle1->root->shader;
+        temp->scale = obstacle1->root->scale;
+        temp->name = "GlitingBoard_" + to_string(i);
+        temp->collider = obstacle1->collider;
+        if (i % 2 == 0) {
+            temp->texture = obstacle1->root->texture;
+            temp->SetLocalPosX(-20.0f + obstacle1->scale.x * 2.0f * i);
+            temp->SetLocalPosZ(obstacle1->scale.z);
+        }
+        else {
+            temp->texture = obstacle2->root->texture;
+            temp->SetLocalPosX(-20.0f + obstacle1->scale.x * 2.0f * i);
+        }
+        //temp->SetLocalPosZ(-obstacle1->scale.z * 5.0f + obstacle1->scale.z * 5.0f * i);
+        obstacle1Root->AddChild(temp);
+    }
+    
+    //for (int i = 0; i < 12; i++) {
     //    GameObject* temp = GameObject::Create();
-    //    if (i < 10) {
-    //        temp->texture = obstacle1->root->texture;
-    //        temp->mesh = obstacle1->root->mesh;
-    //        temp->shader = obstacle1->root->shader;
-    //        temp->scale = obstacle1->root->scale;
-    //        temp->name = "Board_" + to_string(i);
-    //        temp->collider = obstacle1->collider;
-    //        temp->SetWorldPosX(-map->root->Find("Ground")->scale.x + i * temp->scale.x * 2.0f + temp->scale.x);
-    //        if (i % 2 == 0) {
-    //            temp->SetWorldPosZ(temp->scale.z * 2.0f);
-    //        }
+    //    temp->texture = obstacle1->root->texture;
+    //    temp->mesh = obstacle1->root->mesh;
+    //    temp->shader = obstacle1->root->shader;
+    //    temp->scale = obstacle1->root->scale;
+    //    temp->name = "UpDownBoard_" + to_string(i);
+    //    temp->collider = obstacle1->collider;
+    //    if (i % 2 == 0) {
+    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * i / 2);
+    //        temp->SetLocalPosZ(obstacle1->scale.z * 4.5f);
     //    }
     //    else {
-    //        temp->texture = obstacle2->root->texture;
-    //        temp->mesh = obstacle2->root->mesh;
-    //        temp->shader = obstacle2->root->shader;
-    //        temp->scale = obstacle2->root->scale;
-    //        temp->name = "Board_" + to_string(i);
-    //        temp->collider = obstacle2->collider;
-    //        temp->SetWorldPosX(-map->root->Find("Ground")->scale.x + (i - 10) * temp->scale.x * 2.0f + temp->scale.x);
-    //        if (i % 2 != 0) {
-    //            temp->SetWorldPosZ(temp->scale.z * 2.0f);
-    //        }
+    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * (i - 1) / 2);
     //    }
+    //    //temp->SetLocalPosZ(-obstacle1->scale.z * 5.0f + obstacle1->scale.z * 5.0f * i);
     //    obstacle1Root->AddChild(temp);
-    //   
-    //    
-    //    //vMapOb.push_back(temp);
     //}
 
     //for (int i = 0; i < PillarMax - 1; i++) {
@@ -92,7 +98,7 @@ Main::~Main()
     cam1->Release();
     map->Release();
     obstacle1->Release();
-    //obstacle2->Release();
+    obstacle2->Release();
     //obstacle1Root->Release();
 }
 
@@ -114,15 +120,15 @@ void Main::Update()
     cam1->RenderHierarchy();
     map->RenderHierarchy();
     obstacle1->RenderHierarchy();
-    //obstacle2->RenderHierarchy();
-    //obstacle1Root->RenderHierarchy();
+    obstacle2->RenderHierarchy();
+    obstacle1Root->RenderHierarchy();
     ImGui::End();
 
     grid->Update();
     map->Update();
     obstacle1->Update();
-    //obstacle2->Update();
-    //obstacle1Root->Update();
+    obstacle2->Update();
+    obstacle1Root->Update();
     Camera::main->Update();
 }
 
@@ -139,8 +145,8 @@ void Main::Render()
     grid->Render();
     map->Render();
     obstacle1->Render();
-    //obstacle2->Render();
-    //obstacle1Root->Render();
+    obstacle2->Render();
+    obstacle1Root->Render();
 }
 
 void Main::ResizeScreen()
