@@ -9,7 +9,7 @@ Main::Main()
 
     cam1 = Camera::Create();
     cam1->LoadFile("Cam.xml");
-    Camera::main = cam1;
+    Camera::main = cam1;//
 
     cam1->viewport.x = 0.0f;
     cam1->viewport.y = 0.0f;
