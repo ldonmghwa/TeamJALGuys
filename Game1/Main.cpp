@@ -48,6 +48,7 @@ void Main::Update()
 
 void Main::LateUpdate()
 {
+    SCENE->LateUpdate();
 }
 void Main::PreRender()
 {
@@ -55,6 +56,7 @@ void Main::PreRender()
 
 void Main::Render()
 {
+    Camera::main->Set();
     SCENE->Render();
 }
 
