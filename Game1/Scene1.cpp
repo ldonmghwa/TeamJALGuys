@@ -34,7 +34,7 @@ void Scene1::Release()
 
 void Scene1::Update()
 {
-    Camera::main->ControlMainCam();
+    //Camera::main->ControlMainCam();
 
     ImGui::Begin("Hierarchy");
     grid->RenderHierarchy();
@@ -44,8 +44,8 @@ void Scene1::Update()
 
     ImGui::End();
 
-
-    if (player->PCamActive) {
+    cout << player->isLand;
+    /*if (player->PCamActive) {
         POINT ptMouse;
         ptMouse.x = App.GetHalfWidth();
         ptMouse.y = App.GetHalfHeight();
@@ -56,7 +56,9 @@ void Scene1::Update()
         Camera::main->rotation.x += Rot.x;
         ClientToScreen(App.GetHandle(), &ptMouse);
         SetCursorPos(ptMouse.x, ptMouse.y);
-    }
+    }*/
+
+  
 
     grid->Update();
     map->Update();

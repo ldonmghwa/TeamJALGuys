@@ -14,7 +14,7 @@ Player::~Player()
 
 void Player::Init()
 {
-	body->SetWorldPosY(5.0f);
+	body->SetWorldPosY(8.0f);
 	moveSpeed = 10.0f;
 	gravity = 0;
 }
@@ -121,21 +121,23 @@ void Player::Update()
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
 	if (isLand) gravity = 0;
 	else gravity += 25.0f * DELTA;
-	//카메라 고정 풀기
-	if (INPUT->KeyDown(VK_F1)) PCamActive = not PCamActive;
+	
+	
 
-	POINT ptMouse;
-	ptMouse.x = App.GetHalfWidth();
-	ptMouse.y = App.GetHalfHeight();
-	Vector3 Rot;
-	Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-	Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-	player->body->rotation.y += Rot.y;
-	Camera::main->rotation.x += Rot.x;
-	ClientToScreen(App.GetHandle(), &ptMouse);
-	SetCursorPos(ptMouse.x, ptMouse.y);
+	//POINT ptMouse;
+	//ptMouse.x = App.GetHalfWidth();
+	//ptMouse.y = App.GetHalfHeight();
+	//Vector3 Rot;
+	//Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
+	//Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
+	//player->body->rotation.y += Rot.y;
+	//Camera::main->rotation.x += Rot.x;
+	//ClientToScreen(App.GetHandle(), &ptMouse);
+	//SetCursorPos(ptMouse.x, ptMouse.y);
 
 	if (INPUT->KeyDown(VK_F10)) PCamActive = not PCamActive;
+
+	ShowCursor(true);
 
 	if (PCamActive) {
 		Move();
@@ -143,6 +145,8 @@ void Player::Update()
 		// cursor->visible = false;
 	}
 	else {
+		gravity = 0;
+
 		if (INPUT->KeyPress('W')) {
 			body->MoveWorldPos(body->GetForward() * 50 * DELTA);
 		}
