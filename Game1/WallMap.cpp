@@ -11,52 +11,33 @@ WallMap* WallMap::Create(string name)
 
 WallMap::WallMap() : Map()
 {
-	boardActiveTime = 1.5f;
+	glitingBoardActiveTime = 1.5f;
 }
 
 WallMap::~WallMap()
 {
-	delete[] wallSpeed;
-	delete[] isUp;
+	delete[] pillarUnderSpeed;
+	delete[] isPillarUnderUp;
 }
 
 void WallMap::Update()
 {
-	for (auto it = pillarUnderList.begin(); it != pillarUnderList.end(); it++) {
-		//float ranNum = RANDOM->Float(1.0f, 10.0f);
-		if (isUp[count]) {
-			(*it)->MoveWorldPos(Vector3(0, 1, 0) * wallSpeed[count] * DELTA);
-			if ((*it)->GetLocalPos().y > 3.0f) {
-				isUp[count] = false;
-			}
+	for (int i = 0; i < pillarUnderList.size(); i++) {
+		if (isPillarUnderUp[i]) {
+			pillarUnderList[i]->MoveWorldPos(Vector3(0, 1, 0) * pillarUnderSpeed[i] * DELTA);
+			if (pillarUnderList[i]->GetLocalPos().y > 3.0f) isPillarUnderUp[i] = false;
 		}
 		else {
-			(*it)->MoveWorldPos(Vector3(0, -1, 0) * wallSpeed[count] * DELTA);
-			if ((*it)->GetLocalPos().y < -3.0f) {
-				isUp[count] = true;
-			}
+			pillarUnderList[i]->MoveWorldPos(Vector3(0, -1, 0) * pillarUnderSpeed[i] * DELTA);
+			if (pillarUnderList[i]->GetLocalPos().y < -3.0f) isPillarUnderUp[i] = true;
 		}
-		count++;
-		if (count == pillarUnderList.size()) count = 0;
 	}
 
-	boardActiveTime -= DELTA;
-
-	if (isBoardChange) {
-		for (int i = 0; i < glitingBoardList.size(); i++) {
-			if (i < 4) glitingBoardList[i]->visible = true;
-			else glitingBoardList[i]->visible = false;
-		}
-	}
-	else {
-		for (int i = 0; i < glitingBoardList.size(); i++) {
-			if (i < 4) glitingBoardList[i]->visible = false;
-			else glitingBoardList[i]->visible = true;
-		}
-	}
-	if (boardActiveTime < 0) {
-		boardActiveTime = 1.5f;
-		isBoardChange = not isBoardChange;
+	glitingBoardActiveTime -= DELTA;
+	if (glitingBoardActiveTime < 0) {
+		for (int i = 0; i < 30; i++) glitingBoardList[i]->visible = not glitingBoardList[i]->visible;
+		glitingBoardActiveTime = 1.5f;
+		isGlitingBoardChange = not isGlitingBoardChange;
 	}
 
 	Map::Update();
@@ -65,36 +46,95 @@ void WallMap::Update()
 void WallMap::LoadFile(string _file)
 {
 	Map::LoadFile(_file);
-	int pillarUnderCount = 0;
-	while (this->root->Find("Pillar1_under" + to_string(pillarUnderCount))) {
-		pillarUnderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarUnderCount)));
-		pillarUnderCount++;
-	}
-	int pillarCount = 0;
-	while (this->root->Find("Pillar1_" + to_string(pillarCount))) {
-		pillarList.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
-		pillarCount++;
-	}
-	int boardCount = 0;
-	while (this->root->Find("Board_" + to_string(boardCount))) {
-		glitingBoardList.push_back(this->root->Find("Board_" + to_string(boardCount)));
-		if (boardCount < 4) glitingBoardList1.push_back(this->root->Find("Board_" + to_string(boardCount)));
-		else glitingBoardList2.push_back(this->root->Find("Board_" + to_string(boardCount)));
-		boardCount++;
-	}
-	int upDownBoardCount = 0;
-	/*while (this->root->Find("UpDownBoard_" + to_string(upDownBoardCount))){
-		upDownBoardList.push_back(this->root->Find("UpDownBoard_" + to_string(upDownBoardCount)));
-		if (upDownBoardCount % 2 == 0) {
-
+	{
+		int pillarUnderCount = 0;
+		while (this->root->Find("Pillar1_under" + to_string(pillarUnderCount))) {
+			pillarUnderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarUnderCount)));
+			pillarUnderCount++;
 		}
+		pillarUnderCount = 0;
+		while (this->root->Find("Pillar2_under" + to_string(pillarUnderCount))) {
+			pillarUnderList.push_back(this->root->Find("Pillar2_under" + to_string(pillarUnderCount)));
+			pillarUnderCount++;
+		}
+		pillarUnderCount = 0;
+		while (this->root->Find("Pillar3_under" + to_string(pillarUnderCount))) {
+			pillarUnderList.push_back(this->root->Find("Pillar3_under" + to_string(pillarUnderCount)));
+			pillarUnderCount++;
+		}
+		pillarUnderCount = 0;
+		while (this->root->Find("Pillar4_under" + to_string(pillarUnderCount))) {
+			pillarUnderList.push_back(this->root->Find("Pillar4_under" + to_string(pillarUnderCount)));
+			pillarUnderCount++;
+		}
+		int pillarCount = 0;
+		while (this->root->Find("Pillar1_" + to_string(pillarCount))) {
+			pillarList.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
+			pillarCount++;
+		}
+		pillarCount = 0;
+		while (this->root->Find("Pillar2_" + to_string(pillarCount))) {
+			pillarList.push_back(this->root->Find("Pillar2_" + to_string(pillarCount)));
+			pillarCount++;
+		}
+		pillarCount = 0;
+		while (this->root->Find("Pillar3_" + to_string(pillarCount))) {
+			pillarList.push_back(this->root->Find("Pillar3_" + to_string(pillarCount)));
+			pillarCount++;
+		}
+		pillarCount = 0;
+		while (this->root->Find("Pillar4_" + to_string(pillarCount))) {
+			pillarList.push_back(this->root->Find("Pillar4_" + to_string(pillarCount)));
+			pillarCount++;
+		}
+	}
+	{
+		int boardCount = 0;
+		while (this->root->Find("GlitingBoard_" + to_string(boardCount))) {
+			glitingBoardList.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+			if (boardCount < 5) {
+				glitingBoardList1.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = false;
+			}
+			else if (boardCount < 10) {
+				glitingBoardList2.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = true;
+			}
+			else if (boardCount < 15) {
+				glitingBoardList1.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = false;
+			}
+			else if (boardCount < 20) {
+				glitingBoardList2.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = true;
+			}
+			else if (boardCount < 25) {
+				glitingBoardList1.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = false;
+			}
+			else if (boardCount < 30) {
+				glitingBoardList2.push_back(this->root->Find("GlitingBoard_" + to_string(boardCount)));
+				this->root->Find("GlitingBoard_" + to_string(boardCount))->visible = true;
+			}
+			boardCount++;
+		}
+	}
 
-	}*/
-	wallSpeed = new float[pillarCount]; 
-	isUp = new bool[pillarCount];
-	for (int i = 0; i < pillarCount; i++) {
-		wallSpeed[i] = RANDOM->Float(3, 10);
-		isUp[i] = false;
+	int upDownBoardCount = 0;
+	while (this->root->Find("UpDownBoard_" + to_string(upDownBoardCount))) {
+		upDownBoardList.push_back(this->root->Find("UpDownBoard_" + to_string(upDownBoardCount)));
+	}
+	pillarUnderSpeed = new float[pillarUnderList.size()];
+	upDownBoardSpeed = new float[upDownBoardList.size()];
+	isPillarUnderUp = new bool[pillarUnderList.size()];
+	isUpDownBoardUp = new bool[upDownBoardList.size()];
+	for (int i = 0; i < pillarUnderList.size(); i++) {
+		pillarUnderSpeed[i] = RANDOM->Float(1, 20);
+		isPillarUnderUp[i] = false;
+	}
+	for (int i = 0; i < upDownBoardList.size(); i++) {
+		upDownBoardSpeed[i] = RANDOM->Float(2, 20);
+		isUpDownBoardUp[i] = RANDOM->Int(0, 1);
 	}
 }
 

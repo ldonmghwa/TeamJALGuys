@@ -1,11 +1,11 @@
-<Root Name="Pillar1Root" Visible="true" ObType="1">
+<Root Name="Pillar4Root" Visible="true" ObType="1">
     <Transform>
         <Position X="0" Y="0" Z="0"/>
         <Scale X="1" Y="1" Z="1"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <Children Size="9"/>
-    <Child0 Name="Pillar1_0" Visible="true" ObType="0">
+    <Child0 Name="Pillar4_0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -16,7 +16,7 @@
         </Transform>
         <Children Size="0"/>
     </Child0>
-    <Child1 Name="Pillar1_1" Visible="true" ObType="0">
+    <Child1 Name="Pillar4_1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -27,7 +27,7 @@
         </Transform>
         <Children Size="0"/>
     </Child1>
-    <Child2 Name="Pillar1_2" Visible="true" ObType="0">
+    <Child2 Name="Pillar4_2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -38,7 +38,7 @@
         </Transform>
         <Children Size="0"/>
     </Child2>
-    <Child3 Name="Pillar1_3" Visible="true" ObType="0">
+    <Child3 Name="Pillar4_3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -49,7 +49,7 @@
         </Transform>
         <Children Size="0"/>
     </Child3>
-    <Child4 Name="Pillar1_4" Visible="true" ObType="0">
+    <Child4 Name="Pillar4_4" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -60,7 +60,7 @@
         </Transform>
         <Children Size="0"/>
     </Child4>
-    <Child5 Name="Pillar1_under0" Visible="true" ObType="0">
+    <Child5 Name="Pillar4_under0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -71,7 +71,7 @@
         </Transform>
         <Children Size="0"/>
     </Child5>
-    <Child6 Name="Pillar1_under1" Visible="true" ObType="0">
+    <Child6 Name="Pillar4_under1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -82,7 +82,7 @@
         </Transform>
         <Children Size="0"/>
     </Child6>
-    <Child7 Name="Pillar1_under2" Visible="true" ObType="0">
+    <Child7 Name="Pillar4_under2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
@@ -93,7 +93,7 @@
         </Transform>
         <Children Size="0"/>
     </Child7>
-    <Child8 Name="Pillar1_under3" Visible="true" ObType="0">
+    <Child8 Name="Pillar4_under3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>

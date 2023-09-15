@@ -1,0 +1,107 @@
+<Root Name="Pillar3Root" Visible="true" ObType="1">
+	<Transform>
+		<Position X="0" Y="0" Z="0"/>
+		<Scale X="1" Y="1" Z="1"/>
+		<Rotation X="0" Y="0" Z="0"/>
+	</Transform>
+	<Children Size="9"/>
+	<Child0 Name="Pillar3_0" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="-20" Y="3.5" Z="0"/>
+			<Scale X="0.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child0>
+	<Child1 Name="Pillar3_1" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="-10" Y="3.5" Z="0"/>
+			<Scale X="0.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child1>
+	<Child2 Name="Pillar3_2" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="0" Y="3.5" Z="0"/>
+			<Scale X="0.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child2>
+	<Child3 Name="Pillar3_3" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="10" Y="3.5" Z="0"/>
+			<Scale X="0.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child3>
+	<Child4 Name="Pillar3_4" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="20" Y="3.5" Z="0"/>
+			<Scale X="0.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child4>
+	<Child5 Name="Pillar3_under0" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="-15" Y="-2.5999999" Z="0"/>
+			<Scale X="4.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child5>
+	<Child6 Name="Pillar3_under1" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="-5" Y="-2.5999999" Z="0"/>
+			<Scale X="4.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child6>
+	<Child7 Name="Pillar3_under2" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="5" Y="-2.5999999" Z="0"/>
+			<Scale X="4.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child7>
+	<Child8 Name="Pillar3_under3" Visible="true" ObType="0">
+		<Mesh File="6.Cube.mesh"/>
+		<Shader File="6.Cube.hlsl"/>
+		<Texture File="bono.jpg"/>
+		<Transform>
+			<Position X="15" Y="-2.5999999" Z="0"/>
+			<Scale X="4.5" Y="3" Z="0.5"/>
+			<Rotation X="0" Y="0" Z="0"/>
+		</Transform>
+		<Children Size="0"/>
+	</Child8>
+</Root>

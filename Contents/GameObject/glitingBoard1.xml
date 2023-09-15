@@ -8,8 +8,8 @@
     </Collider>
     <Texture File="bono.png"/>
     <Transform>
-        <Position X="0" Y="0" Z="10.75"/>
-        <Scale X="2.5" Y="0.5" Z="3"/>
+        <Position X="-5.9000001" Y="0" Z="10.75"/>
+        <Scale X="4" Y="0.5" Z="3"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <Children Size="0"/>
