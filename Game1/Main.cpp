@@ -62,6 +62,7 @@ void Main::PreRender()
 
 void Main::Render()
 {
+    Camera::main->Set();
     SCENE->Render();
 }
 

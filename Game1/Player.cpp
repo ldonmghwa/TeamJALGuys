@@ -14,8 +14,9 @@ Player::~Player()
 
 void Player::Init()
 {
-	body->SetWorldPosY(8.0f);
+	body->SetWorldPosY(5.0f);
 	moveSpeed = 10.0f;
+	jumpmoveSpeed = moveSpeed - 3.0f;
 	gravity = 0;
 }
 //State 변경
@@ -35,17 +36,14 @@ void Player::Control()
 		if (INPUT->KeyPress('D')) {
 			state = PlayerState::RUN;
 		}
-
 		if (diveCool > 0) diveCool -= DELTA;
-	}
-	//Jump
-	if (INPUT->KeyDown(VK_SPACE)) {
-		state = PlayerState::JUMP;
+		diveTime = 0.3f;
 	}
 	//Dash
 	if (diveCool <= 0) {
 		if (INPUT->KeyDown('F')) {
 			state = PlayerState::DIVE;
+			diveCool = 0.8f;
 		}
 	}
 	if (INPUT->KeyUp('W')) {
@@ -68,35 +66,57 @@ void Player::Control()
 void Player::Move()
 {
 	switch (state) {
-	case PlayerState::IDLE:
-		diveTime = 0.3f;
+		case PlayerState::IDLE:
+			diveTime = 0.3f;
 		break;
-	case PlayerState::RUN:
-		if (INPUT->KeyPress('W')) {
-			body->MoveWorldPos(body->GetForward() * moveSpeed * DELTA);
-		}
-		if (INPUT->KeyPress('A')) {
-			body->MoveWorldPos(-body->GetRight() * moveSpeed * DELTA);
-		}
-		if (INPUT->KeyPress('S')) {
-			body->MoveWorldPos(-body->GetForward() * moveSpeed * DELTA);
-		}
-		if (INPUT->KeyPress('D')) {
-			body->MoveWorldPos(body->GetRight() * moveSpeed * DELTA);
-		}
+		case PlayerState::RUN:
+			if (INPUT->KeyPress('W')) {
+				body->MoveWorldPos(body->GetForward() * moveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('A')) {
+				body->MoveWorldPos(-body->GetRight() * moveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('S')) {
+				body->MoveWorldPos(-body->GetForward() * moveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('D')) {
+				body->MoveWorldPos(body->GetRight() * moveSpeed * DELTA);
+			}
+		break;
+		case PlayerState::JUMP:
+			if (INPUT->KeyPress('W')) {
+				body->MoveWorldPos(body->GetForward() * jumpmoveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('A')) {
+				body->MoveWorldPos(-body->GetRight() * jumpmoveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('S')) {
+				body->MoveWorldPos(-body->GetForward() * jumpmoveSpeed * DELTA);
+			}
+			if (INPUT->KeyPress('D')) {
+				body->MoveWorldPos(body->GetRight() * jumpmoveSpeed * DELTA);
+			}
+		break;
+		case PlayerState::DIVE:
+			if (diveTime >= 0) {
+				body->MoveWorldPos(body->GetForward() * divePower * DELTA);
+			}
+			else {
+				state = PlayerState::IDLE;
+			}
+			diveTime -= DELTA;
 		break;
 	}
+
 	//점프
-	if (INPUT->KeyDown(VK_SPACE)) {
-		//y축 위치 1 띄워서 island 변수 false로 만들고
-		body->SetWorldPosY(body->GetWorldPos().y + 0.5f);
-		//점프파워 음수로 할당
-		gravity = -jumpPower;
+	if (isLand) {
+		if (INPUT->KeyDown(VK_SPACE)) {
+			body->SetWorldPosY(body->GetWorldPos().y + 0.5f);
+			gravity = -jumpPower;
+		}
 	}
-	//다이빙
-	if (INPUT->KeyDown('F')) {
-		body->MoveWorldPos(body->GetForward() * divePower * DELTA);
-	}
+
+	
 }
 
 void Player::Motion()
@@ -117,32 +137,29 @@ void Player::Motion()
 
 void Player::Update()
 {
+	ShowCursor(true);
+
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
 	if (isLand) gravity = 0;
 	else gravity += 25.0f * DELTA;
-	
-	
 
-	//POINT ptMouse;
-	//ptMouse.x = App.GetHalfWidth();
-	//ptMouse.y = App.GetHalfHeight();
-	//Vector3 Rot;
-	//Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-	//Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-	//player->body->rotation.y += Rot.y;
-	//Camera::main->rotation.x += Rot.x;
-	//ClientToScreen(App.GetHandle(), &ptMouse);
-	//SetCursorPos(ptMouse.x, ptMouse.y);
-
+	//카메라 고정 풀기
 	if (INPUT->KeyDown(VK_F10)) PCamActive = not PCamActive;
 
-	ShowCursor(true);
-
 	if (PCamActive) {
-		Move();
+		POINT ptMouse;
+		ptMouse.x = App.GetHalfWidth();
+		ptMouse.y = App.GetHalfHeight();
+		Vector3 Rot;
+		Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
+		Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
+		player->body->rotation.y += Rot.y;
+		Camera::main->rotation.x += Rot.x;
+		ClientToScreen(App.GetHandle(), &ptMouse);
+		SetCursorPos(ptMouse.x, ptMouse.y);
 
-		// cursor->visible = false;
+		Move();
 	}
 	else {
 		gravity = 0;
@@ -165,12 +182,17 @@ void Player::Update()
 		if (INPUT->KeyPress('E')) {
 			body->MoveWorldPos(body->GetUp() * 50 * DELTA);
 		}
+		if (INPUT->KeyPress(VK_RBUTTON))
+		{
+			Vector3 Rot;
+			Rot.x = INPUT->movePosition.y * 0.001f;
+			Rot.y = INPUT->movePosition.x * 0.001f;
+			body->Find("PCam")->rotation += Rot;
+		}
 	}
 	oldPosition = body->GetWorldPos();
 
-
 	Control();
-
 
 	body->Update();
 }
