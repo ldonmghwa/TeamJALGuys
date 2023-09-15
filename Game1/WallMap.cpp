@@ -32,7 +32,26 @@ void WallMap::Update()
 			if (pillarUnderList[i]->GetLocalPos().y < -3.0f) isPillarUnderUp[i] = true;
 		}
 	}
-
+	for (int i = 0; i < upDownBoardList.size(); i++) {
+		if (isUpDownBoardUp[i]) {
+			upDownBoardList[i]->MoveWorldPos(Vector3(0, 1, 0) * upDownBoardSpeed[i] * DELTA);
+			if (upDownBoardList[i]->GetLocalPos().y > 5.0f) isUpDownBoardUp[i] = false;
+		}
+		else {
+			upDownBoardList[i]->MoveWorldPos(Vector3(0, -1, 0) * upDownBoardSpeed[i] * DELTA);
+			if (upDownBoardList[i]->GetLocalPos().y < -5.0f) isUpDownBoardUp[i] = true;
+		}
+	}
+	for (int i = 0; i < leftRightBoardList.size(); i++) {
+		if (isLeftRightBoardGo[i]) {
+			leftRightBoardList[i]->MoveWorldPos(Vector3(1, 0, 0) * leftRightBoardSpeed[i] * DELTA);
+			if (leftRightBoardList[i]->GetLocalPos().x > 19.0f) isLeftRightBoardGo[i] = false;
+		}
+		else {
+			leftRightBoardList[i]->MoveWorldPos(Vector3(-1, 0, 0) * leftRightBoardSpeed[i] * DELTA);
+			if (leftRightBoardList[i]->GetLocalPos().x < -19.0f) isLeftRightBoardGo[i] = true;
+		}
+	}
 	glitingBoardActiveTime -= DELTA;
 	if (glitingBoardActiveTime < 0) {
 		for (int i = 0; i < 30; i++) glitingBoardList[i]->visible = not glitingBoardList[i]->visible;
@@ -123,11 +142,19 @@ void WallMap::LoadFile(string _file)
 	int upDownBoardCount = 0;
 	while (this->root->Find("UpDownBoard_" + to_string(upDownBoardCount))) {
 		upDownBoardList.push_back(this->root->Find("UpDownBoard_" + to_string(upDownBoardCount)));
+		upDownBoardCount++;
+	}
+	int leftRightBoardCount = 0;
+	while (this->root->Find("LeftRightBoard_" + to_string(leftRightBoardCount))) {
+		leftRightBoardList.push_back(this->root->Find("LeftRightBoard_" + to_string(leftRightBoardCount)));
+		leftRightBoardCount++;
 	}
 	pillarUnderSpeed = new float[pillarUnderList.size()];
 	upDownBoardSpeed = new float[upDownBoardList.size()];
+	leftRightBoardSpeed = new float[leftRightBoardList.size()];
 	isPillarUnderUp = new bool[pillarUnderList.size()];
 	isUpDownBoardUp = new bool[upDownBoardList.size()];
+	isLeftRightBoardGo = new bool[leftRightBoardList.size()];
 	for (int i = 0; i < pillarUnderList.size(); i++) {
 		pillarUnderSpeed[i] = RANDOM->Float(1, 20);
 		isPillarUnderUp[i] = false;
@@ -135,6 +162,10 @@ void WallMap::LoadFile(string _file)
 	for (int i = 0; i < upDownBoardList.size(); i++) {
 		upDownBoardSpeed[i] = RANDOM->Float(2, 20);
 		isUpDownBoardUp[i] = RANDOM->Int(0, 1);
+	}
+	for (int i = 0; i < leftRightBoardList.size(); i++) {
+		leftRightBoardSpeed[i] = RANDOM->Float(15, 30);
+		isLeftRightBoardGo[i] = RANDOM->Int(0, 1);
 	}
 }
 

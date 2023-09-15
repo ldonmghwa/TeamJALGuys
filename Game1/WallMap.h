@@ -11,12 +11,13 @@ public:
     vector<GameObject*>   upDownBoardList;
     vector<GameObject*>   leftRightBoardList;
 private:
-    bool* isPillarUnderUp;
-    bool* isUpDownBoardUp;
+    bool*                 isPillarUnderUp;
+    bool*                 isUpDownBoardUp;
+    bool*                 isLeftRightBoardGo;
     bool                  isGlitingBoardChange = false;
-    int                   count = 0;
-    float* pillarUnderSpeed;
-    float* upDownBoardSpeed;
+    float*                pillarUnderSpeed;
+    float*                upDownBoardSpeed;
+    float*                leftRightBoardSpeed;
     float                 glitingBoardActiveTime;
     vector<GameObject*>   glitingBoardList1;
     vector<GameObject*>   glitingBoardList2;
