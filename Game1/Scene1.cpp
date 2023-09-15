@@ -6,8 +6,6 @@
 
 Scene1::Scene1()
 {
-    
-	Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
     grid = Grid::Create();
 
     map = WallMap::Create();
@@ -23,7 +21,6 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init();
-    
     //플레이어 위치잡는것 하나 추가하기
 }
 
@@ -34,8 +31,6 @@ void Scene1::Release()
 
 void Scene1::Update()
 {
-    Camera::main->ControlMainCam();
-
     ImGui::Begin("Hierarchy");
     grid->RenderHierarchy();
     //cam1->RenderHierarchy();
@@ -45,24 +40,11 @@ void Scene1::Update()
     ImGui::End();
 
 
-    if (player->PCamActive) {
-        POINT ptMouse;
-        ptMouse.x = App.GetHalfWidth();
-        ptMouse.y = App.GetHalfHeight();
-        Vector3 Rot;
-        Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-        Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-        player->body->rotation.y += Rot.y;
-        Camera::main->rotation.x += Rot.x;
-        ClientToScreen(App.GetHandle(), &ptMouse);
-        SetCursorPos(ptMouse.x, ptMouse.y);
-    }
+   
 
     grid->Update();
     map->Update();
-    Camera::main->Update();
     player->Update();
-  
 }
 
 void Scene1::LateUpdate()
@@ -74,7 +56,7 @@ void Scene1::LateUpdate()
 
 void Scene1::Render()
 {
-    Camera::main->Set();
+    //Camera::main->Set();
     grid->Render();
     map->Render();
     player->Render();

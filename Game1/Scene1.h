@@ -2,7 +2,6 @@
 class Scene1 : public Scene
 {
 private:
-	Camera* cam1;
 	Grid* grid;
 	class WallMap* map;
 	
