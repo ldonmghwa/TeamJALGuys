@@ -16,7 +16,7 @@ Main::Main()
     SC2 = new Scene2();
    /* grid = Grid::Create();*/
 
-    //Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+    Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
 }
 
 Main::~Main()
@@ -45,7 +45,7 @@ void Main::Update()
     if (INPUT->KeyDown(VK_F1)) {
         SCENE->ChangeScene("SC1");
     }
-    else  if (INPUT->KeyDown(VK_F1)) {
+    else  if (INPUT->KeyDown(VK_F2)) {
         SCENE->ChangeScene("SC2");
     }
 
