@@ -22,8 +22,6 @@ void Scene2::Init()
 	player->Init();
 
 	player->body->SetWorldPosY(0);
-
-
 }
 
 void Scene2::Release()
@@ -41,7 +39,6 @@ void Scene2::Update()
 	ImGui::Begin("Hierarchy");
 
 	player->body->RenderHierarchy();
-
 	for (auto& it : GM->obstacleList)
 	{
 		it->root->RenderHierarchy();
@@ -54,7 +51,6 @@ void Scene2::Update()
 		it->Update();
 	}
 	player->Update();
-
 }
 
 void Scene2::LateUpdate()
@@ -75,7 +71,6 @@ void Scene2::Render()
 	{
 		it->Render();
 	}
-
 	player->Render();
 }
 

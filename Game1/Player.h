@@ -10,7 +10,6 @@ private:
 
 	float moveSpeed = 0;
 	float jumpmoveSpeed = 0;
-	float gravity = 0;
 	float diveTime = 0.3f;
 	float diveCool = 0;
 	const float jumpPower = 15.0f;
@@ -22,6 +21,7 @@ public:
 
 	bool isLand = 0;
 	bool PCamActive = 1;
+	float gravity = 0;
 public:
 	Player();
 	~Player();
