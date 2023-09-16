@@ -43,6 +43,14 @@ void Main::Release()
 
 void Main::Update()
 {
+    if (INPUT->KeyDown(VK_F1))
+    {
+        SCENE->ChangeScene("SC1");
+    }
+    if (INPUT->KeyDown(VK_F2))
+    {
+        SCENE->ChangeScene("SC2");
+    }
     SCENE->Update();
 }
 
