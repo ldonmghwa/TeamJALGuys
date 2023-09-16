@@ -137,8 +137,6 @@ void Player::Motion()
 
 void Player::Update()
 {
-	ShowCursor(true);
-
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
 	if (isLand) gravity = 0;
@@ -147,17 +145,16 @@ void Player::Update()
 	//카메라 고정 풀기
 	if (INPUT->KeyDown(VK_F10)) PCamActive = not PCamActive;
 
-	if (PCamActive) {
-		POINT ptMouse;
-		ptMouse.x = App.GetHalfWidth();
-		ptMouse.y = App.GetHalfHeight();
-		Vector3 Rot;
-		Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-		Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-		player->body->rotation.y += Rot.y;
-		Camera::main->rotation.x += Rot.x;
-		ClientToScreen(App.GetHandle(), &ptMouse);
-		SetCursorPos(ptMouse.x, ptMouse.y);
+	POINT ptMouse;
+	ptMouse.x = App.GetHalfWidth();
+	ptMouse.y = App.GetHalfHeight();
+	Vector3 Rot;
+	Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
+	Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
+	player->body->rotation.y += Rot.y;
+	Camera::main->rotation.x += Rot.x;
+	ClientToScreen(App.GetHandle(), &ptMouse);
+	SetCursorPos(ptMouse.x, ptMouse.y);
 
 		Move();
 	}
