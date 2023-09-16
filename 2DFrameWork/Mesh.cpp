@@ -505,33 +505,33 @@ void Mesh::SaveFile(string file)
 
 void Mesh::RenderDetail()
 {
-    for (int i = 0; i < vertexCount; i++)
-    {
-        if (vertexType == VertexType::PT)
-        {
-            if (i % 4 == 0)
-            {
-                string str = "Face" + to_string((i / 4));
-                ImGui::Text(str.c_str());
-            }
+    //for (int i = 0; i < vertexCount; i++)
+    //{
+    //    if (vertexType == VertexType::PT)
+    //    {
+    //        if (i % 4 == 0)
+    //        {
+    //            string str = "Face" + to_string((i / 4));
+    //            ImGui::Text(str.c_str());
+    //        }
 
-            VertexPT* vertex = (VertexPT*)vertices;
-            //string str = "pos" + to_string(i);
-            /*if (ImGui::SliderFloat3(str.c_str(), (float*)
-                &vertex[i].position, -10, 10))
-            {
-                D3D->GetDC()->UpdateSubresource
-                (vertexBuffer, 0, NULL, vertices, 0, 0);
-            }*/
-            string str = "uv" + to_string(i);
-            if (ImGui::InputFloat2(str.c_str(), (float*)
-                &vertex[i].uv))
-            {
-                D3D->GetDC()->UpdateSubresource
-                (vertexBuffer, 0, NULL, vertices, 0, 0);
-            }
-        }
-    }
+    //        VertexPT* vertex = (VertexPT*)vertices;
+    //        //string str = "pos" + to_string(i);
+    //        /*if (ImGui::SliderFloat3(str.c_str(), (float*)
+    //            &vertex[i].position, -10, 10))
+    //        {
+    //            D3D->GetDC()->UpdateSubresource
+    //            (vertexBuffer, 0, NULL, vertices, 0, 0);
+    //        }*/
+    //        string str = "uv" + to_string(i);
+    //        if (ImGui::InputFloat2(str.c_str(), (float*)
+    //            &vertex[i].uv))
+    //        {
+    //            D3D->GetDC()->UpdateSubresource
+    //            (vertexBuffer, 0, NULL, vertices, 0, 0);
+    //        }
+    //    }
+    //}
 
 
 }
