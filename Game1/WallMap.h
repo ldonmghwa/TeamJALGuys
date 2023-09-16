@@ -11,14 +11,15 @@ public:
     vector<GameObject*>   upDownBoardList;
     vector<GameObject*>   leftRightBoardList;
 private:
-    bool*                 isPillarUnderUp;
-    bool*                 isUpDownBoardUp;
-    bool*                 isLeftRightBoardGo;
+    bool* isPillarUnderUp;
+    bool* isUpDownBoardUp;
+    bool* isLeftRightBoardGo;
     bool                  isGlitingBoardChange = false;
-    float*                pillarUnderSpeed;
-    float*                upDownBoardSpeed;
-    float*                leftRightBoardSpeed;
+    float* pillarUnderSpeed;
+    float* upDownBoardSpeed;
+    float* leftRightBoardSpeed;
     float                 glitingBoardActiveTime;
+    float                 backUpGlitingBoardActiveTime;
     vector<GameObject*>   glitingBoardList1;
     vector<GameObject*>   glitingBoardList2;
     vector<GameObject*>   upDownBoardList1;
@@ -27,7 +28,7 @@ private:
     WallMap();
     virtual ~WallMap();
 public:
-    void	Update() override;
-    void    LoadFile(string _file);
+    void Update() override;
+    void LoadFile(string _file);
+    void LateUpdate();
 };
-
