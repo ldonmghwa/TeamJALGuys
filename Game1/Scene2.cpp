@@ -14,18 +14,20 @@ Scene2::Scene2()
 
 Scene2::~Scene2()
 {
+
 }
 
 void Scene2::Init()
 {
+	player->Init();
 
+	player->body->SetWorldPosY(0);
 
 
 }
 
 void Scene2::Release()
 {
-	grid->Update();
 
 	for (auto& it : GM->obstacleList)
 	{
@@ -35,23 +37,32 @@ void Scene2::Release()
 
 void Scene2::Update()
 {
+	
 	ImGui::Begin("Hierarchy");
+
+	player->body->RenderHierarchy();
 
 	for (auto& it : GM->obstacleList)
 	{
-	    it->root->RenderHierarchy();
+		it->root->RenderHierarchy();
 	}
 	ImGui::End();
 
+	grid->Update();
 	for (auto& it : GM->obstacleList)
 	{
 		it->Update();
 	}
+	player->Update();
+
 }
 
 void Scene2::LateUpdate()
 {
-
+	for (auto& it : GM->obstacleList)
+	{
+		it->LateUpdate();
+	}
 
 
 }
@@ -59,11 +70,13 @@ void Scene2::LateUpdate()
 void Scene2::Render()
 {
 	grid->Render();
-	
+
 	for (auto& it : GM->obstacleList)
 	{
 		it->Render();
 	}
+
+	player->Render();
 }
 
 void Scene2::PreRender()
