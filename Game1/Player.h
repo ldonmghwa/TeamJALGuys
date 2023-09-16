@@ -30,7 +30,7 @@ public:
 public:
 	Player();
 	~Player();
-	void Init();
+	void Init(Vector3 pos);
 	void Control();
 	void Move();
 	void Motion();

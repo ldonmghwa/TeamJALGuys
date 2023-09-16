@@ -21,7 +21,7 @@ Scene1::~Scene1()
 
 void Scene1::Init()
 {
-    player->Init();
+    player->Init(Vector3(0,2,-80));
     //플레이어 위치잡는것 하나 추가하기
 }
 
