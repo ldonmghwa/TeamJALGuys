@@ -37,7 +37,7 @@ void WallMap::Update()
 			if (pillarUnderList[i]->GetLocalPos().y < -3.0f) isPillarUnderUp[i] = true;
 		}
 	}
-	/*for (int i = 0; i < upDownBoardList.size(); i++) {
+	for (int i = 0; i < upDownBoardList.size(); i++) {
 		if (isUpDownBoardUp[i]) {
 			upDownBoardList[i]->MoveWorldPos(Vector3(0, 1, 0) * upDownBoardSpeed[i] * DELTA);
 			if (upDownBoardList[i]->GetLocalPos().y > 5.0f) isUpDownBoardUp[i] = false;
@@ -46,7 +46,7 @@ void WallMap::Update()
 			upDownBoardList[i]->MoveWorldPos(Vector3(0, -1, 0) * upDownBoardSpeed[i] * DELTA);
 			if (upDownBoardList[i]->GetLocalPos().y < -5.0f) isUpDownBoardUp[i] = true;
 		}
-	}*/
+	}
 	for (int i = 0; i < leftRightBoardList.size(); i++) {
 		if (isLeftRightBoardGo[i]) {
 			leftRightBoardList[i]->MoveWorldPos(Vector3(1, 0, 0) * leftRightBoardSpeed[i] * DELTA);
