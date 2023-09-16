@@ -15,9 +15,9 @@
         </Collider>
         <Texture File="watermelon.jpg"/>
         <Transform>
-            <Position X="0" Y="18.200001" Z="-111.15"/>
+            <Position X="0" Y="30" Z="0"/>
             <Scale X="5" Y="5" Z="5"/>
-            <Rotation X="0" Y="0" Z="160.95111"/>
+            <Rotation X="0" Y="0" Z="387.67841"/>
         </Transform>
         <Children Size="2"/>
         <Child0 Name="obstacle1Rootchild1" Visible="true" ObType="0">
@@ -61,7 +61,7 @@
         </Collider>
         <Texture File="bono3.png"/>
         <Transform>
-            <Position X="0" Y="18.200001" Z="-111.15"/>
+            <Position X="0" Y="30" Z="0"/>
             <Scale X="50.5" Y="1" Z="3"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
