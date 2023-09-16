@@ -1,8 +1,9 @@
 #include "stdafx.h"
 #include "Scene1.h"
+#include "Player.h"
 #include "Map.h"
 #include "WallMap.h"
-#include "Player.h"
+
 
 Scene1::Scene1()
 {
