@@ -7,7 +7,6 @@
 #include "Obstacle2.h"
 #include "Map.h"
 #include "WallMap.h"
-#include "Player.h"
 #include "Main.h"
 
 Main::Main()
