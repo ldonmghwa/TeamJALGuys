@@ -25,10 +25,11 @@ private:
     vector<GameObject*>   upDownBoardList1;
     vector<GameObject*>   upDownBoardList2;
 
-    GameObject* ground0;
-    GameObject* ground1;
-    GameObject* ground2;
-    GameObject* ground3;
+    GameObject*           ground0;
+    GameObject*           ground1;
+    GameObject*           ground2;
+    GameObject*           ground3;
+    GameObject*           goal;
 private:
     WallMap();
     virtual ~WallMap();

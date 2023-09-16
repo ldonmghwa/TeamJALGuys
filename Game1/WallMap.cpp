@@ -11,7 +11,7 @@ WallMap* WallMap::Create(string name)
 
 WallMap::WallMap() : Map()
 {
-	glitingBoardActiveTime = 0.5f;
+	glitingBoardActiveTime = 1.5f;
 	backUpGlitingBoardActiveTime = glitingBoardActiveTime;
 }
 
@@ -31,6 +31,7 @@ void WallMap::Init()
 	ground1 = this->root->Find("Ground1");
 	ground2 = this->root->Find("Ground2");
 	ground3 = this->root->Find("Ground3");
+	goal = this->root->Find("Goal");
 }
 
 void WallMap::Update()
@@ -151,7 +152,6 @@ void WallMap::LoadFile(string _file)
 			boardCount++;
 		}
 	}
-
 	int upDownBoardCount = 0;
 	while (this->root->Find("UpDownBoard_" + to_string(upDownBoardCount))) {
 		upDownBoardList.push_back(this->root->Find("UpDownBoard_" + to_string(upDownBoardCount)));
@@ -189,5 +189,12 @@ void WallMap::LateUpdate()
 	else if (player->body->Intersect(ground1)) player->isLand = true;
 	else if (player->body->Intersect(ground2)) player->isLand = true;
 	else if (player->body->Intersect(ground3)) player->isLand = true;
+	else if (player->body->Intersect(goal)) player->isLand = true;
 	else player->isLand = false;
+
+	for (int i = 0; i < pillarUnderList.size(); i++) {
+		if(pillarUnderList[i]->Intersect(player->body)) {
+			player->body->MoveWorldPos(-player->body->GetForward() * 1.0f);
+		}
+	}
 }

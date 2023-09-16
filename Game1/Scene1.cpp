@@ -10,7 +10,7 @@ Scene1::Scene1()
     grid = Grid::Create();
 
     map = WallMap::Create();
-    map->LoadFile("Maptest.xml");
+    map->LoadFile("Map1.xml");
     map->name = "Map";
 
 }
