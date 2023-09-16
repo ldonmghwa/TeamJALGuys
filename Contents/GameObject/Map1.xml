@@ -182,7 +182,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="-4.1079249" Z="0"/>
+                <Position X="-15" Y="3.9426901" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -198,7 +198,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="-5.4334946" Z="0"/>
+                <Position X="-5" Y="-5.2500424" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -214,7 +214,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="0.46035618" Z="0"/>
+                <Position X="5" Y="7.511723" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -230,7 +230,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="-6.9989891" Z="0"/>
+                <Position X="15" Y="-4.410737" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -334,7 +334,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="3.1701689" Z="0"/>
+                <Position X="-15" Y="-2.6611691" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -350,7 +350,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="2.1944203" Z="0"/>
+                <Position X="-5" Y="7.5039892" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -366,7 +366,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="4.0614543" Z="0"/>
+                <Position X="5" Y="0.41317123" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -382,7 +382,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="-0.45923346" Z="0"/>
+                <Position X="15" Y="5.911849" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -486,7 +486,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="5.9046354" Z="0"/>
+                <Position X="-15" Y="4.2690644" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -502,7 +502,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="2.2898235" Z="0"/>
+                <Position X="-5" Y="-4.4719605" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -518,7 +518,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="1.0512587" Z="0"/>
+                <Position X="5" Y="-6.4568324" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -534,7 +534,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="1.7777165" Z="0"/>
+                <Position X="15" Y="-2.7476695" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -638,7 +638,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-15" Y="-3.8889005" Z="0"/>
+                <Position X="-15" Y="4.5244365" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -654,7 +654,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="-5" Y="6.5900536" Z="0"/>
+                <Position X="-5" Y="4.6927819" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -670,7 +670,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="5" Y="-3.0524573" Z="0"/>
+                <Position X="5" Y="2.1768615" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -686,7 +686,7 @@
             </Collider>
             <Texture File="bono.jpg"/>
             <Transform>
-                <Position X="15" Y="-1.1557069" Z="0"/>
+                <Position X="15" Y="0.33981919" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -796,7 +796,7 @@
             </Transform>
             <Children Size="0"/>
         </Child5>
-        <Child6 Name="GlitingBoard_14" Visible="true" ObType="0">
+        <Child6 Name="GlitingBoard_14" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -828,7 +828,7 @@
             </Transform>
             <Children Size="0"/>
         </Child7>
-        <Child8 Name="GlitingBoard_16" Visible="false" ObType="0">
+        <Child8 Name="GlitingBoard_16" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -860,7 +860,7 @@
             </Transform>
             <Children Size="0"/>
         </Child9>
-        <Child10 Name="GlitingBoard_18" Visible="false" ObType="0">
+        <Child10 Name="GlitingBoard_18" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -876,7 +876,7 @@
             </Transform>
             <Children Size="0"/>
         </Child10>
-        <Child11 Name="GlitingBoard_19" Visible="false" ObType="0">
+        <Child11 Name="GlitingBoard_19" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -924,7 +924,7 @@
             </Transform>
             <Children Size="0"/>
         </Child13>
-        <Child14 Name="GlitingBoard_21" Visible="true" ObType="0">
+        <Child14 Name="GlitingBoard_21" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -940,7 +940,7 @@
             </Transform>
             <Children Size="0"/>
         </Child14>
-        <Child15 Name="GlitingBoard_22" Visible="true" ObType="0">
+        <Child15 Name="GlitingBoard_22" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1004,7 +1004,7 @@
             </Transform>
             <Children Size="0"/>
         </Child18>
-        <Child19 Name="GlitingBoard_26" Visible="false" ObType="0">
+        <Child19 Name="GlitingBoard_26" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1052,7 +1052,7 @@
             </Transform>
             <Children Size="0"/>
         </Child21>
-        <Child22 Name="GlitingBoard_29" Visible="false" ObType="0">
+        <Child22 Name="GlitingBoard_29" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1068,7 +1068,7 @@
             </Transform>
             <Children Size="0"/>
         </Child22>
-        <Child23 Name="GlitingBoard_3" Visible="true" ObType="0">
+        <Child23 Name="GlitingBoard_3" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1100,7 +1100,7 @@
             </Transform>
             <Children Size="0"/>
         </Child24>
-        <Child25 Name="GlitingBoard_5" Visible="false" ObType="0">
+        <Child25 Name="GlitingBoard_5" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1116,7 +1116,7 @@
             </Transform>
             <Children Size="0"/>
         </Child25>
-        <Child26 Name="GlitingBoard_6" Visible="false" ObType="0">
+        <Child26 Name="GlitingBoard_6" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1132,7 +1132,7 @@
             </Transform>
             <Children Size="0"/>
         </Child26>
-        <Child27 Name="GlitingBoard_7" Visible="false" ObType="0">
+        <Child27 Name="GlitingBoard_7" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1148,7 +1148,7 @@
             </Transform>
             <Children Size="0"/>
         </Child27>
-        <Child28 Name="GlitingBoard_8" Visible="false" ObType="0">
+        <Child28 Name="GlitingBoard_8" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1164,7 +1164,7 @@
             </Transform>
             <Children Size="0"/>
         </Child28>
-        <Child29 Name="GlitingBoard_9" Visible="false" ObType="0">
+        <Child29 Name="GlitingBoard_9" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1191,9 +1191,14 @@
         <Child0 Name="UpDownBoard_0" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="-12.5" Y="-3.6767375" Z="0"/>
+                <Position X="-12.5" Y="-3.3035703" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1202,9 +1207,14 @@
         <Child1 Name="UpDownBoard_1" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="0" Y="0.040972881" Z="0"/>
+                <Position X="0" Y="2.2090504" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1213,9 +1223,14 @@
         <Child2 Name="UpDownBoard_10" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="0" Y="0.74724591" Z="31.5"/>
+                <Position X="0" Y="-1.824315" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1224,9 +1239,14 @@
         <Child3 Name="UpDownBoard_11" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="12.5" Y="0.75292987" Z="31.5"/>
+                <Position X="12.5" Y="0.0043025911" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1235,9 +1255,14 @@
         <Child4 Name="UpDownBoard_2" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="12.5" Y="-1.013652" Z="0"/>
+                <Position X="12.5" Y="3.1914897" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1246,9 +1271,14 @@
         <Child5 Name="UpDownBoard_3" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="-12.5" Y="4.8089018" Z="10.5"/>
+                <Position X="-12.5" Y="4.4808106" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1257,9 +1287,14 @@
         <Child6 Name="UpDownBoard_4" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="0" Y="4.9998183" Z="10.5"/>
+                <Position X="0" Y="-3.7211185" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1268,9 +1303,14 @@
         <Child7 Name="UpDownBoard_5" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="12.5" Y="-4.7851539" Z="10.5"/>
+                <Position X="12.5" Y="-2.1931217" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1279,9 +1319,14 @@
         <Child8 Name="UpDownBoard_6" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="-12.5" Y="2.8258142" Z="21"/>
+                <Position X="-12.5" Y="-2.8171237" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1290,9 +1335,14 @@
         <Child9 Name="UpDownBoard_7" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="0" Y="-2.8028646" Z="21"/>
+                <Position X="0" Y="0.35550588" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1301,9 +1351,14 @@
         <Child10 Name="UpDownBoard_8" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="12.5" Y="1.9646275" Z="21"/>
+                <Position X="12.5" Y="-2.5577056" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1312,9 +1367,14 @@
         <Child11 Name="UpDownBoard_9" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
             <Texture File="watermelon.png"/>
             <Transform>
-                <Position X="-12.5" Y="-2.7040789" Z="31.5"/>
+                <Position X="-12.5" Y="-4.8184204" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1338,7 +1398,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="1.1621156" Y="0" Z="0"/>
+                <Position X="-9.8955078" Y="0" Z="0"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1354,7 +1414,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="12.154522" Y="0" Z="9"/>
+                <Position X="-12.90287" Y="0" Z="9"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1370,7 +1430,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="5.9838104" Y="0" Z="18"/>
+                <Position X="8.6462059" Y="0" Z="18"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1386,7 +1446,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="-7.4507041" Y="0" Z="27"/>
+                <Position X="14.92045" Y="0" Z="27"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1402,7 +1462,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="-16.47447" Y="0" Z="36"/>
+                <Position X="-4.8833127" Y="0" Z="36"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1418,7 +1478,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="16.568043" Y="0" Z="45"/>
+                <Position X="17.026506" Y="0" Z="45"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1434,7 +1494,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="14.259325" Y="0" Z="54"/>
+                <Position X="-13.819142" Y="0" Z="54"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1450,7 +1510,7 @@
             </Collider>
             <Texture File="bono3.png"/>
             <Transform>
-                <Position X="-0.88280261" Y="0" Z="63"/>
+                <Position X="17.413998" Y="0" Z="63"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
