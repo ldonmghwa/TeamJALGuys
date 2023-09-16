@@ -30,11 +30,11 @@ void WallMap::Update()
 	for (int i = 0; i < pillarUnderList.size(); i++) {
 		if (isPillarUnderUp[i]) {
 			pillarUnderList[i]->MoveWorldPos(Vector3(0, 1, 0) * pillarUnderSpeed[i] * DELTA);
-			if (pillarUnderList[i]->GetLocalPos().y > 3.0f) isPillarUnderUp[i] = false;
+			if (pillarUnderList[i]->GetLocalPos().y > 7.0f) isPillarUnderUp[i] = false;
 		}
 		else {
 			pillarUnderList[i]->MoveWorldPos(Vector3(0, -1, 0) * pillarUnderSpeed[i] * DELTA);
-			if (pillarUnderList[i]->GetLocalPos().y < -3.0f) isPillarUnderUp[i] = true;
+			if (pillarUnderList[i]->GetLocalPos().y < -7.0f) isPillarUnderUp[i] = true;
 		}
 	}
 	for (int i = 0; i < upDownBoardList.size(); i++) {
@@ -70,45 +70,56 @@ void WallMap::Update()
 void WallMap::LoadFile(string _file)
 {
 	Map::LoadFile(_file);
+	this->root->Find("Wall0")->scale.y = 20.0f;
+	this->root->Find("Wall1")->scale.y = 20.0f;
+	this->root->Find("Wall2")->scale.y = 20.0f;
 	{
 		int pillarUnderCount = 0;
 		while (this->root->Find("Pillar1_under" + to_string(pillarUnderCount))) {
 			pillarUnderList.push_back(this->root->Find("Pillar1_under" + to_string(pillarUnderCount)));
+			pillarUnderList.back()->scale.y = 7;
 			pillarUnderCount++;
 		}
 		pillarUnderCount = 0;
 		while (this->root->Find("Pillar2_under" + to_string(pillarUnderCount))) {
 			pillarUnderList.push_back(this->root->Find("Pillar2_under" + to_string(pillarUnderCount)));
+			pillarUnderList.back()->scale.y = 7;
 			pillarUnderCount++;
 		}
 		pillarUnderCount = 0;
 		while (this->root->Find("Pillar3_under" + to_string(pillarUnderCount))) {
 			pillarUnderList.push_back(this->root->Find("Pillar3_under" + to_string(pillarUnderCount)));
+			pillarUnderList.back()->scale.y = 7;
 			pillarUnderCount++;
 		}
 		pillarUnderCount = 0;
 		while (this->root->Find("Pillar4_under" + to_string(pillarUnderCount))) {
 			pillarUnderList.push_back(this->root->Find("Pillar4_under" + to_string(pillarUnderCount)));
+			pillarUnderList.back()->scale.y = 7;
 			pillarUnderCount++;
 		}
 		int pillarCount = 0;
 		while (this->root->Find("Pillar1_" + to_string(pillarCount))) {
 			pillarList.push_back(this->root->Find("Pillar1_" + to_string(pillarCount)));
+			pillarList.back()->scale.y = 10;
 			pillarCount++;
 		}
 		pillarCount = 0;
 		while (this->root->Find("Pillar2_" + to_string(pillarCount))) {
 			pillarList.push_back(this->root->Find("Pillar2_" + to_string(pillarCount)));
+			pillarList.back()->scale.y = 10;
 			pillarCount++;
 		}
 		pillarCount = 0;
 		while (this->root->Find("Pillar3_" + to_string(pillarCount))) {
 			pillarList.push_back(this->root->Find("Pillar3_" + to_string(pillarCount)));
+			pillarList.back()->scale.y = 10;
 			pillarCount++;
 		}
 		pillarCount = 0;
 		while (this->root->Find("Pillar4_" + to_string(pillarCount))) {
 			pillarList.push_back(this->root->Find("Pillar4_" + to_string(pillarCount)));
+			pillarList.back()->scale.y = 10;
 			pillarCount++;
 		}
 	}
@@ -161,11 +172,11 @@ void WallMap::LoadFile(string _file)
 	isUpDownBoardUp = new bool[upDownBoardList.size()];
 	isLeftRightBoardGo = new bool[leftRightBoardList.size()];
 	for (int i = 0; i < pillarUnderList.size(); i++) {
-		pillarUnderSpeed[i] = RANDOM->Float(40, 60);
+		pillarUnderSpeed[i] = RANDOM->Float(20, 50);
 		isPillarUnderUp[i] = false;
 	}
 	for (int i = 0; i < upDownBoardList.size(); i++) {
-		upDownBoardSpeed[i] = RANDOM->Float(60, 80);
+		upDownBoardSpeed[i] = RANDOM->Float(10, 20);
 		isUpDownBoardUp[i] = RANDOM->Int(0, 1);
 	}
 	for (int i = 0; i < leftRightBoardList.size(); i++) {

@@ -10,9 +10,9 @@
         <Shader File="6.Cube.hlsl"/>
         <Texture File="bono.jpg"/>
         <Transform>
-			<Position X="-20" Y="3.5" Z="0"/>
-            <Scale X="0.5" Y="3" Z="0.5"/>
-            <Rotation X="0" Y="0" Z="0"/>
+			  <Position X="-20" Y="3.5" Z="0"/>
+        <Scale X="0.5" Y="3" Z="0.5"/>
+        <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
     </Child0>
