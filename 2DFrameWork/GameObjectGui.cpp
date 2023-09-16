@@ -134,9 +134,11 @@ void Transform::RenderDetail()
 			SetLocalPos(loc);
 	}
 
-	ImGui::SliderAngle("rotationX", &rotation.x);
-	ImGui::SliderAngle("rotationY", &rotation.y);
-	ImGui::SliderAngle("rotationZ", &rotation.z);
+	Vector3 temp = rotation / ToRadian;
+	if (ImGui::DragFloat3("rotation", (float*)&temp, 0.05f))
+	{
+		rotation = temp * ToRadian;
+	}
 	ImGui::DragFloat3("scale", (float*)&scale, 0.05f);
 
 }
