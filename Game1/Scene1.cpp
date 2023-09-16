@@ -22,6 +22,9 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init();
+    //player->body->SetWorldPosZ(-1.00f);
+    player->body->SetWorldPosZ(68.00f);
+    player->body->SetWorldPosY(25.0f);
     map->Init();
     //플레이어 위치잡는것 하나 추가하기
 }

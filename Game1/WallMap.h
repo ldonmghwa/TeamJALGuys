@@ -18,8 +18,10 @@ private:
     float*                pillarUnderSpeed;
     float*                upDownBoardSpeed;
     float*                leftRightBoardSpeed;
-    float                 glitingBoardActiveTime;
-    float                 backUpGlitingBoardActiveTime;
+    float*                glitingBoardActiveTime;
+    float*                backUpGlitingBoardActiveTime;
+    float                 landingYPos;
+    float                 playerScaleY;
     vector<GameObject*>   glitingBoardList1;
     vector<GameObject*>   glitingBoardList2;
     vector<GameObject*>   upDownBoardList1;
