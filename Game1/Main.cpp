@@ -19,11 +19,11 @@ Main::Main()
     cam1->height = App.GetHeight();
 
     map = WallMap::Create();
-    map->LoadFile("Map1.xml");
+    map->LoadFile("Map1_1.xml");
     map->name = "Map";
 
     obstacle1 = Actor::Create();
-    obstacle1->LoadFile("board2.xml");
+    obstacle1->LoadFile("board.xml");
     obstacle1->name = "temp";
     obstacle2 = Actor::Create();
     obstacle2->LoadFile("glitingBoard2.xml");
@@ -31,8 +31,10 @@ Main::Main()
     obstacle1Root = Actor::Create();
     //obstacle1Root->LoadFile("BoardRoot.xml");
     obstacle1Root->name = "boardRoot";
-    //map->AddObstacle("LeftRightBoard.xml");
+    map->AddObstacle("UpDownBoard_1.xml");
     float startpos = -16.0f;
+    float stratsacle = 6.0f;
+    float scale123 = 4.0f;
     /*for (int i = 0; i < 30; i++) {
         GameObject* temp = GameObject::Create();
         temp->mesh = obstacle1->root->mesh;
@@ -77,31 +79,31 @@ Main::Main()
         obstacle1Root->AddChild(temp);
     }*/
 
-    //for (int i = 0; i < 30; i++) {
+    //for (int i = 0; i < 20; i++) {
     //    GameObject* temp = GameObject::Create();
     //    temp->texture = obstacle1->root->texture;
     //    temp->mesh = obstacle1->root->mesh;
     //    temp->shader = obstacle1->root->shader;
     //    temp->scale = obstacle1->root->scale;
     //    temp->name = "UpDownBoard_" + to_string(i);
-    //    temp->collider = obstacle1->collider;
-    //    if (i < 6) {
-    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * i);
+    //    //temp->collider = obstacle1->collider;
+    //    if (i < 4) {
+    //        temp->SetLocalPosX(-obstacle1->scale.x * stratsacle + obstacle1->scale.x * scale123 * i);
     //    }
-    //    else if(i < 12){
-    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * (i - 6));
+    //    else if(i < 8){
+    //        temp->SetLocalPosX(-obstacle1->scale.x * stratsacle + obstacle1->scale.x * scale123 * (i - 4));
     //        temp->SetLocalPosZ(obstacle1->scale.z * 5.5f);
     //    }
-    //    else if (i < 18) {
-    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * (i - 12));
+    //    else if (i < 12) {
+    //        temp->SetLocalPosX(-obstacle1->scale.x * stratsacle + obstacle1->scale.x * scale123 * (i - 8));
     //        temp->SetLocalPosZ(obstacle1->scale.z * 5.5f * 2);
     //    }
-    //    else if (i < 24) {
-    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * (i - 18));
+    //    else if (i < 16) {
+    //        temp->SetLocalPosX(-obstacle1->scale.x * stratsacle + obstacle1->scale.x * scale123 * (i - 12));
     //        temp->SetLocalPosZ(obstacle1->scale.z * 5.5f * 3);
     //    }
-    //    else if (i < 30) {
-    //        temp->SetLocalPosX(-obstacle1->scale.x * 6.3f + obstacle1->scale.x * 2.5f * (i - 24));
+    //    else if (i < 20) {
+    //        temp->SetLocalPosX(-obstacle1->scale.x * stratsacle + obstacle1->scale.x * scale123 * (i - 16));
     //        temp->SetLocalPosZ(obstacle1->scale.z * 5.5f * 4);
     //    }
     //    //temp->SetLocalPosZ(-obstacle1->scale.z * 5.0f + obstacle1->scale.z * 5.0f * i);
