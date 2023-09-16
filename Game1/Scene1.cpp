@@ -22,6 +22,7 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init();
+    map->Init();
     //플레이어 위치잡는것 하나 추가하기
 }
 
@@ -37,11 +38,7 @@ void Scene1::Update()
     //cam1->RenderHierarchy();
     map->RenderHierarchy();
     player->body->RenderHierarchy();
-
     ImGui::End();
-
-
-   
 
     grid->Update();
     map->Update();
@@ -50,9 +47,7 @@ void Scene1::Update()
 
 void Scene1::LateUpdate()
 {
-    //Ground 충돌
-    if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    else player->isLand = false;
+    map->LateUpdate();
 }
 
 void Scene1::Render()
