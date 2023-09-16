@@ -70,9 +70,6 @@ void WallMap::Update()
 void WallMap::LoadFile(string _file)
 {
 	Map::LoadFile(_file);
-	this->root->Find("Wall0")->scale.y = 20.0f;
-	this->root->Find("Wall1")->scale.y = 20.0f;
-	this->root->Find("Wall2")->scale.y = 20.0f;
 	{
 		int pillarUnderCount = 0;
 		while (this->root->Find("Pillar1_under" + to_string(pillarUnderCount))) {
