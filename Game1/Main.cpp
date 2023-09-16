@@ -15,19 +15,9 @@ Main::Main()
     SCIntro = new SceneIntro();
     SC1 = new Scene1();
     SC2 = new Scene2();
-   /* grid = Grid::Create();*/
+    /* grid = Grid::Create();*/
 
-   /* Camera::main = static_cast<Camera*>(player->body->Find("PCam"));*/
-  
-
-   /* map = WallMap::Create();
-    map->LoadFile("Map1.xml");
-    map->name = "Map";*/
-    
-    /*GM->obstacleList.push_back(new Obstacle1());
-    GM->obstacleList.push_back(new Obstacle2());*/
-    
-    
+    Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
 }
 
 Main::~Main()
@@ -37,63 +27,22 @@ Main::~Main()
 
 void Main::Init()
 {
-    
+
     SCENE->AddScene("SCIntro", SCIntro);
     SCENE->AddScene("SC1", SC1);
     SCENE->AddScene("SC2", SC2);
 
-    
+
     SCENE->ChangeScene("SC1");
-    
+
 }
 
 void Main::Release()
 {
-    /*for (auto& it : GM->obstacleList)
-    {
-        it->Release();
-    }*/
 }
 
 void Main::Update()
 {
-    //Camera::main->ControlMainCam();
-    //ImGui::Begin("Hierarchy");
-    //grid->RenderHierarchy();
-    ////cam1->RenderHierarchy();
-    //map->RenderHierarchy();
-    //player->body->RenderHierarchy();
-    //
-    ////안준환 장애물 장애물 리스트순회
-    //for (auto& it : GM->obstacleList)
-    //{
-    //    it->root->RenderHierarchy();
-    //}
-    //ImGui::End();
-     
-
-   /* if (player->PCamActive) {
-        POINT ptMouse;
-        ptMouse.x = App.GetHalfWidth();
-        ptMouse.y = App.GetHalfHeight();
-        Vector3 Rot;
-        Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-        Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-        player->body->rotation.y += Rot.y;
-        Camera::main->rotation.x += Rot.x;
-        ClientToScreen(App.GetHandle(), &ptMouse);
-        SetCursorPos(ptMouse.x, ptMouse.y);
-    }
-
-    grid->Update();
-    map->Update();
-    Camera::main->Update();
-    player->Update();
-    for (auto& it : GM->obstacleList)
-    {
-        it->Update();
-    }*/
-
     if (INPUT->KeyDown(VK_F1))
     {
         SCENE->ChangeScene("SC1");
@@ -102,45 +51,28 @@ void Main::Update()
     {
         SCENE->ChangeScene("SC2");
     }
-    
-    SCENE->Update();
 
+    SCENE->Update();
 }
 
 void Main::LateUpdate()
 {
-    ////Ground 충돌
-    //if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    //else player->isLand = false;
+    SCENE->LateUpdate();
 }
 void Main::PreRender()
 {
 }
 
 void Main::Render()
-{/*
+{
     Camera::main->Set();
-    grid->Render();
-    map->Render();
-    player->Render();
-    for (auto& it : GM->obstacleList)
-    {
-        it->Render();
-    }*/
     SCENE->Render();
 }
 
 void Main::ResizeScreen()
 {
-   /* Camera::main->viewport.x = 0.0f;
-    Camera::main->viewport.y = 0.0f;
-    Camera::main->viewport.width = App.GetWidth();
-    Camera::main->viewport.height = App.GetHeight();
-    Camera::main->width = App.GetWidth();
-    Camera::main->height = App.GetHeight();*/
     SCENE->ResizeScreen();
 }
-
 int WINAPI wWinMain(HINSTANCE instance, HINSTANCE prevInstance, LPWSTR param, int command)
 {
     App.SetAppName(L"Game1");
