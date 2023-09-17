@@ -16,6 +16,7 @@ SceneIntro::~SceneIntro()
 
 void SceneIntro::Init()
 {
+	SOUND->SetVolume("titlebgm", 0.4f);
 }
 
 void SceneIntro::Release()
@@ -29,8 +30,8 @@ void SceneIntro::Update()
 
 	title->RenderHierarchy();
 
-	SOUND->Play("titlebgm");
-	SOUND->SetVolume("titlebgm", 0.7f);
+	//SOUND->Play("titlebgm");
+	
 
 	switch (select) {
 	case 0:

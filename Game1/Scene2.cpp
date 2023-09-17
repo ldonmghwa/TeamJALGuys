@@ -27,6 +27,11 @@ Scene2::Scene2()
 	GM->obstacleList.push_back(new Obstacle3(Vector3(-15,7,490)));
 	GM->obstacleList.push_back(new Obstacle3(Vector3(15, 7, 580)));
 	
+	wall = Actor::Create();
+	wall->LoadFile("Sc2Room.xml");
+	wall->name = "SC2Room";
+
+	SOUND->AddSound("Sc2.mp3", "Sc2",true);
 }
 
 Scene2::~Scene2()
@@ -37,6 +42,8 @@ Scene2::~Scene2()
 void Scene2::Init()
 {
 	player->Init(ground->Find("checkpoint1")->GetLocalPos());
+	SOUND->SetVolume("Sc2", 0.4f);
+	//SOUND->Play("Sc2");
 }
 
 void Scene2::Release()
@@ -62,6 +69,7 @@ void Scene2::Update()
 		it->root->RenderHierarchy();
 	}
 	ground->RenderHierarchy();
+	wall->RenderHierarchy();
 
 	temp->RenderHierarchy();
 	ImGui::End();
@@ -94,6 +102,7 @@ void Scene2::Update()
 	
 	player->Update();
 	temp->Update();
+	wall->Update();
 }
 
 void Scene2::LateUpdate()
@@ -124,6 +133,7 @@ void Scene2::LateUpdate()
 
 void Scene2::Render()
 {
+	wall->Render();
 	grid->Render();
 
 	ground->Render();

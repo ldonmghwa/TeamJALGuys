@@ -6,6 +6,8 @@ private:
 	Actor* obstacle;
 	Actor* ground;
 	Actor* temp;
+	Actor* wallskin;
+	Actor* wall;
 	bool   isCheck1;
 	bool   isCheck2;
 public:

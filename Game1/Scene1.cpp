@@ -20,7 +20,7 @@ Scene1::Scene1()
     wall->LoadFile("Sc1Room.xml");
     wall->name = "SC1Room";
    
-    SOUND->AddSound("Sc1.mp3", "Sc1");
+    SOUND->AddSound("Sc1.mp3", "Sc1",true);
 }
 
 Scene1::~Scene1()
@@ -30,9 +30,10 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init(Vector3(0, 25, -50));
+    player->body->rotation.y = -361.0f * ToRadian;
     map->Init();
-    SOUND->Play("Sc1");
-    SOUND->SetVolume("Sc1", 0.7f);
+    //SOUND->Play("Sc1");
+    SOUND->SetVolume("Sc1", 0.4f);
     mapEndingTime = 3.0f;
 }
 
@@ -73,6 +74,7 @@ void Scene1::LateUpdate()
         if (mapEndingTime < 0)
         {
             mapEndingTime = 3.0f;
+            SOUND->Stop("Sc1");
             SCENE->ChangeScene("SC2");
         }
     }
