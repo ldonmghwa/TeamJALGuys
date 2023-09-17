@@ -199,9 +199,7 @@ void Player::Motion()
 
 void Player::Update()
 {
-	cout << second1 << endl;
-	cout << second1 << endl;
-	ShowCursor(false);
+	//ShowCursor(false);
 	
 	/*ImGui::Text("second1 %d", second1);
 	ImGui::Text("second10 %d", second10);

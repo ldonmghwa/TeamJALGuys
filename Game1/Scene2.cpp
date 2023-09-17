@@ -31,6 +31,11 @@ Scene2::Scene2()
 	wall->LoadFile("Sc2Room.xml");
 	wall->name = "SC2Room";
 
+	ending = UI::Create();
+	ending->LoadFile("EndingUI.xml");
+	ending->visible = false;
+	ending->name = "ending";
+	gameEndTime = 2.0f;
 	SOUND->AddSound("Sc2.mp3", "Sc2",true);
 }
 
@@ -55,7 +60,7 @@ void Scene2::Release()
 		it->Release();
 	}
 	ground->Release();
-	
+	ending->Release();
 }
 
 void Scene2::Update()
@@ -71,7 +76,7 @@ void Scene2::Update()
 	}
 	ground->RenderHierarchy();
 	wall->RenderHierarchy();
-
+	ending->RenderHierarchy();
 	temp->RenderHierarchy();
 	ImGui::End();
 
@@ -101,17 +106,18 @@ void Scene2::Update()
 		wall->Find("Back")->SetWorldPosZ(player->body->GetWorldPos().z + 400.0f);
 	}
 	
-
-	grid->Update();
-	ground->Update();
-	for (auto& it : GM->obstacleList)
-	{
-		it->Update();
+	if (!isGameEnd) {
+		grid->Update();
+		ground->Update();
+		for (auto& it : GM->obstacleList)
+		{
+			it->Update();
+		}
+		player->Update();
+		temp->Update();
+		wall->Update();
+		ending->Update();
 	}
-	
-	player->Update();
-	temp->Update();
-	wall->Update();
 }
 
 void Scene2::LateUpdate()
@@ -144,14 +150,19 @@ void Scene2::LateUpdate()
 		it->LateUpdate();
 	}
 	
-	
-
+	if (player->body->GetWorldPos().z > 550.0f) {
+		isGameEnd = true;
+		gameEndTime -= DELTA;
+		if (gameEndTime < 0) {
+			gameEndTime = 2.0f;
+			ending->visible = true;
+		}
+	}
 }
 
 void Scene2::Render()
 {
 	wall->Render();
-	grid->Render();
 
 	ground->Render();
 
@@ -162,7 +173,7 @@ void Scene2::Render()
 
 	player->Render();
 	temp->Render();
-	
+	ending->Render();
 }
 
 void Scene2::PreRender()

@@ -25,9 +25,6 @@ void SceneIntro::Release()
 
 void SceneIntro::Update()
 {
-	ImGui::Text("select %d", select);
-	ShowCursor(true);
-
 	title->RenderHierarchy();
 
 	SOUND->Play("titlebgm");
