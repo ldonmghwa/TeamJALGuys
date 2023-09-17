@@ -80,7 +80,23 @@ void WallMap::Update()
 			}
 		}
 	}
+	/*if (isUpDownBoardLanding) {
+		player->body->SetWorldPos(
+			Vector3(
+				playerLandPos.x,
+				player->body->scale.y + landingBoard->scale.y * 2.0f + landingBoard->GetWorldPos().y,
+				playerLandPos.z
+			)
+		);
 
+
+		if (INPUT->KeyDown(VK_SPACE)) {
+			player->isLand = false;
+			player->body->SetWorldPosY(landingBoard->GetWorldPos().y + player->body->scale.y * 2.0f);
+			player->gravity = -15.0f;
+			isUpDownBoardLanding = false;
+		}
+	}*/
 	/*glitingBoardActiveTime -= DELTA;
 	if (glitingBoardActiveTime < 0) {
 		for (int i = 0; i < glitingBoardList.size(); i++) glitingBoardList[i]->visible = not glitingBoardList[i]->visible;
@@ -197,7 +213,7 @@ void WallMap::LoadFile(string _file)
 			isPillarUnderUp[i] = false;
 		}
 		for (int i = 0; i < upDownBoardList.size(); i++) {
-			upDownBoardSpeed[i] = RANDOM->Float(20, 30);
+			upDownBoardSpeed[i] = RANDOM->Float(2, 10);
 			isUpDownBoardUp[i] = RANDOM->Int(0, 1);
 		}
 		for (int i = 0; i < leftRightBoardList.size(); i++) {
@@ -214,8 +230,8 @@ void WallMap::LoadFile(string _file)
 
 void WallMap::LateUpdate()
 {
-	/*ImGui::Text("pl pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
-	if (player->body->Intersect(ground0)) player->isLand = true;
+	//ImGui::Text("pl pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
+	/*if (player->body->Intersect(ground0)) player->isLand = true;
 	else if (player->body->Intersect(ground1)) player->isLand = true;
 	else if (player->body->Intersect(ground2)) player->isLand = true;
 	else if (player->body->Intersect(ground3)) player->isLand = true;
@@ -237,7 +253,15 @@ void WallMap::LateUpdate()
 			if (glitingBoardList[i]->visible) player->isLand = true;
 			else player->isLand = false;
 		}
+	}
+	for (int i = 0; i < upDownBoardList.size(); i++) {
+		if (upDownBoardList[i]->Intersect(player->body)) {
+			playerLandPos = player->body->GetWorldPos();
+			landingBoard = upDownBoardList[i];
+			isUpDownBoardLanding = true;
+			player->isLand = true;
+			break;
+		}
 	}*/
-
 }
 

@@ -15,23 +15,30 @@ private:
     bool*                 isUpDownBoardUp;
     bool*                 isLeftRightBoardGo;
     bool                  isGlitingBoardChange = false;
+    bool                  isUpDownBoardLanding = false;
+    bool                  isUpDownBoardUpP = false;
     float*                pillarUnderSpeed;
     float*                upDownBoardSpeed;
+    float                 upDownBoardSpeedP;
     float*                leftRightBoardSpeed;
     float*                glitingBoardActiveTime;
     float*                backUpGlitingBoardActiveTime;
     float                 landingYPos;
     float                 playerScaleY;
+
+
     vector<GameObject*>   glitingBoardList1;
     vector<GameObject*>   glitingBoardList2;
     vector<GameObject*>   upDownBoardList1;
     vector<GameObject*>   upDownBoardList2;
 
+    Vector3               playerLandPos;
     GameObject*           ground0;
     GameObject*           ground1;
     GameObject*           ground2;
     GameObject*           ground3;
     GameObject*           goal;
+    GameObject*           landingBoard;
 private:
     WallMap();
     virtual ~WallMap();
