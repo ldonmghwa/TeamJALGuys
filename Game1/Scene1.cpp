@@ -32,7 +32,7 @@ void Scene1::Init()
     player->Init(Vector3(0, 25, -50));
     map->Init();
     SOUND->Play("Sc1");
-    SOUND->SetVolume("Sc1", 0.7f);
+    SOUND->SetVolume("Sc1", 0.1f);
     mapEndingTime = 3.0f;
 }
 

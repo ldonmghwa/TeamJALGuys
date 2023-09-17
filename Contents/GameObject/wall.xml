@@ -47,8 +47,8 @@
         </Collider>
         <Texture File="stripe.png"/>
         <Transform>
-            <Position X="0" Y="0" Z="408.64999"/>
-            <Scale X="25" Y="1" Z="170"/>
+            <Position X="0" Y="0" Z="428.20001"/>
+            <Scale X="25" Y="1" Z="190"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
