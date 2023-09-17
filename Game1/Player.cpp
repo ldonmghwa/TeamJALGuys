@@ -6,15 +6,23 @@ Player::Player()
 	body = Actor::Create();
 	body->LoadFile("Player.xml");
 
-	Time = UI::Create();
-	Time->name = "Time";
-	Time->LoadFile("Time.xml");
+	Second1 = UI::Create();
+	Second1->LoadFile("Second1.xml");
+	Second1->name = "Second1";
+
+	Second10 = UI::Create();
+	Second10->LoadFile("Second10.xml");
+	Second10->name = "Second10";
+	
 
 	motionDir = 20.0f;
 	gravityPower = 40.0f;
 	jumpPower = 20.0f;
 	moveSpeed = 10.0f;
 	jumpmoveSpeed = moveSpeed - 2.0f;
+
+	SOUND->AddSound("jump.mp3", "jump");
+	SOUND->AddSound("dash.mp3", "dash");
 }
 
 Player::~Player()
@@ -155,6 +163,8 @@ void Player::Motion()
 		}
 	}
 	else if (state == PlayerState::JUMP) {
+		SOUND->Stop("dash");
+		SOUND->Play("jump");
 		body->Find("LhBody")->rotation.y = 0;
 		body->Find("RhBody")->rotation.y = 0;
 		if (motionJ) {
@@ -171,6 +181,8 @@ void Player::Motion()
 		}
 	}
 	else if (state == PlayerState::DIVE) {
+		SOUND->Stop("jump");
+		SOUND->Play("dash");
 		if (!motionD) {
 			body->Find("LhBody")->rotation = Vector3();
 			body->Find("RhBody")->rotation = Vector3();
@@ -187,9 +199,12 @@ void Player::Motion()
 
 void Player::Update()
 {
+	cout << second1 << endl;
+	cout << second1 << endl;
 	ShowCursor(true);
 	
-	ImGui::Text("state %d", (int)state);
+	ImGui::Text("second1 %d", second1);
+	ImGui::Text("second10 %d", second10);
 	ImGui::Text("time %f", playerTime);
 
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
@@ -244,21 +259,42 @@ void Player::Update()
 		}
 	}
 	oldPosition = body->GetWorldPos();
+	
 	playerTime += DELTA;
+
+	second1 = (int)playerTime % 10;
+	second10 = (int)playerTime / 10;
 
 	
 
 	Control();
 	Motion();
-	Time->RenderHierarchy();
 	body->Update();
-	Time->Update();
+	Second1->Update();
+	Second10->Update();
+}
+
+void Player::LateUpdate()
+{
+	/*if (second10 < 1) Second10->texture->LoadFile("0.jpg");
+	else if (second10 < 2) Second10->texture->LoadFile("1.jpg");
+	else if (second10 < 3) Second10->texture->LoadFile("2.jpg");
+	else if (second10 < 4) Second10->texture->LoadFile("3.jpg");
+	else if (second10 < 5) Second10->texture->LoadFile("4.jpg");
+
+	if (second1 < 1) Second1->texture->LoadFile("0.jpg");
+	else if (second1 < 2) Second1->texture->LoadFile("1.jpg");
+	else if (second1 < 3) Second1->texture->LoadFile("2.jpg");
+	else if (second1 < 4) Second1->texture->LoadFile("3.jpg");
+	else if (second1 < 5) Second1->texture->LoadFile("4.jpg");*/
+
 }
 
 void Player::Render()
 {
 	body->Render();
-	Time->Render();
+	Second1->Render();
+	Second10->Render();
 }
 
 

@@ -15,6 +15,8 @@ private:
 	float jumpPower = 0;
 	const float divePower = 30.0f;
 	float playerTime = 0;
+	int second1 = 0;
+	int second10 = 0;
 
 	bool gameStart = 0;
 	bool isJump = 0;
@@ -23,7 +25,8 @@ private:
 	bool motionD = 0;
 	float motionDir = 0;
 public:
-	UI* Time;
+	UI* Second1;
+	UI* Second10;
 	Actor* body;
 	float gravity = 0;
 
@@ -37,6 +40,7 @@ public:
 	void Move();
 	void Motion();
 	void Update();
+	void LateUpdate();
 	void Render();
 	Actor* GetBody() { return body; }
 	Vector3 GetWorldPos() { return body->GetWorldPos(); }

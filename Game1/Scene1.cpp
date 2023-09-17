@@ -19,6 +19,8 @@ Scene1::Scene1()
     wall = Actor::Create();
     wall->LoadFile("Sc1Room.xml");
     wall->name = "SC1Room";
+
+    SOUND->AddSound("Sc1.mp3", "Sc1");
 }
 
 Scene1::~Scene1()
@@ -29,6 +31,8 @@ void Scene1::Init()
 {
     player->Init(Vector3(0, 25, 68));
     map->Init();
+    SOUND->Play("Sc1");
+    SOUND->SetVolume("Sc1", 0.7f);
 }
 
 void Scene1::Release()
@@ -45,7 +49,8 @@ void Scene1::Update()
     player->body->RenderHierarchy();
     wallskin->RenderHierarchy();
     wall->RenderHierarchy();
-    player->Time->RenderHierarchy();
+    player->Second1->RenderHierarchy();
+    player->Second10->RenderHierarchy();
     ImGui::End();
 
 
@@ -64,6 +69,7 @@ void Scene1::LateUpdate()
     /*if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
     else if (player->body->Intersect(map->Find("groundtest"))) player->isLand = true;
     else player->isLand = false;*/
+   // player->LateUpdate();
 }
 
 void Scene1::Render()
