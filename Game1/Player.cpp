@@ -6,6 +6,10 @@ Player::Player()
 	body = Actor::Create();
 	body->LoadFile("Player.xml");
 
+	Time = UI::Create();
+	Time->name = "Time";
+	Time->LoadFile("Time.xml");
+
 	motionDir = 20.0f;
 	gravityPower = 40.0f;
 	jumpPower = 20.0f;
@@ -186,7 +190,7 @@ void Player::Update()
 	ShowCursor(true);
 	
 	ImGui::Text("state %d", (int)state);
-	ImGui::Text("island %d", isLand);
+	ImGui::Text("time %f", playerTime);
 
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
@@ -240,16 +244,21 @@ void Player::Update()
 		}
 	}
 	oldPosition = body->GetWorldPos();
+	playerTime += DELTA;
+
+	
 
 	Control();
 	Motion();
-
+	Time->RenderHierarchy();
 	body->Update();
+	Time->Update();
 }
 
 void Player::Render()
 {
 	body->Render();
+	Time->Render();
 }
 
 

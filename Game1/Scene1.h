@@ -4,7 +4,8 @@ class Scene1 : public Scene
 private:
 	Grid* grid;
 	class WallMap* map;
-	
+	Actor* wallskin;
+	Actor* wall;
 
 public:
 	Scene1();

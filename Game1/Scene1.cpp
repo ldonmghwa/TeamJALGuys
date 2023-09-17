@@ -13,6 +13,12 @@ Scene1::Scene1()
     map->LoadFile("Map1.xml");
     map->name = "Map";
 
+    wallskin = Actor::Create();
+    wallskin->LoadFile("Sc1Land.xml");
+    wallskin->name = "SC1Land";
+    wall = Actor::Create();
+    wall->LoadFile("Sc1Room.xml");
+    wall->name = "SC1Room";
 }
 
 Scene1::~Scene1()
@@ -37,12 +43,15 @@ void Scene1::Update()
     //cam1->RenderHierarchy();
     map->RenderHierarchy();
     player->body->RenderHierarchy();
-
+    wallskin->RenderHierarchy();
+    wall->RenderHierarchy();
+    player->Time->RenderHierarchy();
     ImGui::End();
 
 
    
-
+    wallskin->Update();
+    wall->Update();
     grid->Update();
     map->Update();
     player->Update();
@@ -62,6 +71,8 @@ void Scene1::Render()
     //Camera::main->Set();
     grid->Render();
     map->Render();
+    wallskin->Render();
+    wall->Render();
     player->Render();
 }
 

@@ -7,7 +7,6 @@ class Player : public Singleton<Player>
 private:
 	PlayerState state = PlayerState::IDLE;
 	Vector3 oldPosition = Vector3();
-
 	float moveSpeed = 0;
 	float jumpmoveSpeed = 0;
 	float gravityPower = 0;
@@ -15,13 +14,16 @@ private:
 	float diveCool = 0;
 	float jumpPower = 0;
 	const float divePower = 30.0f;
+	float playerTime = 0;
 
+	bool gameStart = 0;
 	bool isJump = 0;
 	bool motionR = 0;
 	bool motionJ = 0;
 	bool motionD = 0;
 	float motionDir = 0;
 public:
+	UI* Time;
 	Actor* body;
 	float gravity = 0;
 

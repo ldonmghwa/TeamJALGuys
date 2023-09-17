@@ -32,7 +32,7 @@ void Main::Init()
     SCENE->AddScene("SC2", SC2);
 
     
-    SCENE->ChangeScene("SC1");
+    SCENE->ChangeScene("SCIntro");
     
 }
 
