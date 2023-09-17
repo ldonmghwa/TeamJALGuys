@@ -1,4 +1,4 @@
-<Root Name="Map" Visible="true" ObType="1">
+<Root Name="Map1" Visible="true" ObType="1">
     <Transform>
         <Position X="0" Y="22" Z="0"/>
         <Scale X="1" Y="1" Z="1"/>
@@ -8,7 +8,7 @@
     <Child0 Name="Goal" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -24,7 +24,7 @@
     <Child1 Name="Ground0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -40,7 +40,7 @@
     <Child2 Name="Ground1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -56,7 +56,7 @@
     <Child3 Name="Ground2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -72,7 +72,7 @@
     <Child4 Name="Ground3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -182,7 +182,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="-4.982018" Z="0"/>
+                <Position X="-15" Y="7.6266346" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -198,7 +198,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="-5.026361" Z="0"/>
+                <Position X="-5" Y="-0.032437503" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -214,7 +214,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="-4.1581788" Z="0"/>
+                <Position X="5" Y="-2.3261347" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -230,7 +230,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="3.3391743" Z="0"/>
+                <Position X="15" Y="5.3011169" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -334,7 +334,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="5.0362654" Z="0"/>
+                <Position X="-15" Y="-0.88031" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -350,7 +350,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="7.9952588" Z="0"/>
+                <Position X="-5" Y="2.022078" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -366,7 +366,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="1.7951586" Z="0"/>
+                <Position X="5" Y="-3.8596113" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -382,7 +382,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="-0.22495563" Z="0"/>
+                <Position X="15" Y="-1.7186694" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -486,7 +486,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="-5.4458761" Z="0"/>
+                <Position X="-15" Y="2.2465796" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -502,7 +502,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="5.0929675" Z="0"/>
+                <Position X="-5" Y="-7.1046853" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -518,7 +518,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="-6.6116872" Z="0"/>
+                <Position X="5" Y="-5.7878933" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -534,7 +534,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="3.0580251" Z="0"/>
+                <Position X="15" Y="4.1973581" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -638,7 +638,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="1.2314906" Z="0"/>
+                <Position X="-15" Y="7.1265512" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -654,7 +654,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="-0.47432268" Z="0"/>
+                <Position X="-5" Y="0.26873717" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -670,7 +670,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="3.522589" Z="0"/>
+                <Position X="5" Y="-6.0911393" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -686,7 +686,7 @@
             </Collider>
             <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="-3.0673261" Z="0"/>
+                <Position X="15" Y="4.5064397" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -764,7 +764,7 @@
             </Transform>
             <Children Size="0"/>
         </Child3>
-        <Child4 Name="GlitingBoard_12" Visible="true" ObType="0">
+        <Child4 Name="GlitingBoard_12" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -796,7 +796,7 @@
             </Transform>
             <Children Size="0"/>
         </Child5>
-        <Child6 Name="GlitingBoard_14" Visible="true" ObType="0">
+        <Child6 Name="GlitingBoard_14" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -860,7 +860,7 @@
             </Transform>
             <Children Size="0"/>
         </Child9>
-        <Child10 Name="GlitingBoard_18" Visible="false" ObType="0">
+        <Child10 Name="GlitingBoard_18" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -876,7 +876,7 @@
             </Transform>
             <Children Size="0"/>
         </Child10>
-        <Child11 Name="GlitingBoard_19" Visible="true" ObType="0">
+        <Child11 Name="GlitingBoard_19" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -924,7 +924,7 @@
             </Transform>
             <Children Size="0"/>
         </Child13>
-        <Child14 Name="GlitingBoard_21" Visible="true" ObType="0">
+        <Child14 Name="GlitingBoard_21" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -940,7 +940,7 @@
             </Transform>
             <Children Size="0"/>
         </Child14>
-        <Child15 Name="GlitingBoard_22" Visible="false" ObType="0">
+        <Child15 Name="GlitingBoard_22" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -988,7 +988,7 @@
             </Transform>
             <Children Size="0"/>
         </Child17>
-        <Child18 Name="GlitingBoard_25" Visible="true" ObType="0">
+        <Child18 Name="GlitingBoard_25" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1004,7 +1004,7 @@
             </Transform>
             <Children Size="0"/>
         </Child18>
-        <Child19 Name="GlitingBoard_26" Visible="false" ObType="0">
+        <Child19 Name="GlitingBoard_26" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1020,7 +1020,7 @@
             </Transform>
             <Children Size="0"/>
         </Child19>
-        <Child20 Name="GlitingBoard_27" Visible="true" ObType="0">
+        <Child20 Name="GlitingBoard_27" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1036,7 +1036,7 @@
             </Transform>
             <Children Size="0"/>
         </Child20>
-        <Child21 Name="GlitingBoard_28" Visible="true" ObType="0">
+        <Child21 Name="GlitingBoard_28" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1132,7 +1132,7 @@
             </Transform>
             <Children Size="0"/>
         </Child26>
-        <Child27 Name="GlitingBoard_7" Visible="false" ObType="0">
+        <Child27 Name="GlitingBoard_7" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1148,7 +1148,7 @@
             </Transform>
             <Children Size="0"/>
         </Child27>
-        <Child28 Name="GlitingBoard_8" Visible="false" ObType="0">
+        <Child28 Name="GlitingBoard_8" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="false">
@@ -1198,7 +1198,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="-12.5" Y="-2.8767979" Z="0"/>
+                <Position X="-12.5" Y="0.5586279" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1214,7 +1214,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="0" Y="-0.61565441" Z="0"/>
+                <Position X="0" Y="4.2748284" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1230,7 +1230,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="0" Y="-1.8846674" Z="31.5"/>
+                <Position X="0" Y="-1.1327214" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1246,7 +1246,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="12.5" Y="1.9474167" Z="31.5"/>
+                <Position X="12.5" Y="3.1797276" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1262,7 +1262,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="12.5" Y="0.56625897" Z="0"/>
+                <Position X="12.5" Y="1.3277636" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1278,7 +1278,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="-12.5" Y="-2.9516909" Z="10.5"/>
+                <Position X="-12.5" Y="4.389317" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1294,7 +1294,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="0" Y="4.3810935" Z="10.5"/>
+                <Position X="0" Y="-3.0729871" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1310,7 +1310,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="12.5" Y="3.429544" Z="10.5"/>
+                <Position X="12.5" Y="0.083229363" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1326,7 +1326,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="-12.5" Y="-3.8800547" Z="21"/>
+                <Position X="-12.5" Y="3.448962" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1342,7 +1342,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="0" Y="4.7240543" Z="21"/>
+                <Position X="0" Y="-1.2716404" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1358,7 +1358,7 @@
             </Collider>
             <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="12.5" Y="-4.1368704" Z="21"/>
+                <Position X="12.5" Y="1.3140209" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1374,7 +1374,7 @@
             </Collider>
             <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="-12.5" Y="3.7698655" Z="31.5"/>
+                <Position X="-12.5" Y="1.1128073" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1398,7 +1398,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-9.0831337" Y="0" Z="0"/>
+                <Position X="12.947141" Y="0" Z="0"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1414,7 +1414,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="17.974056" Y="0" Z="9"/>
+                <Position X="-7.7421918" Y="0" Z="9"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1430,7 +1430,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-2.8101139" Y="0" Z="18"/>
+                <Position X="-12.001817" Y="0" Z="18"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1446,7 +1446,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-6.0306387" Y="0" Z="27"/>
+                <Position X="9.4411173" Y="0" Z="27"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1462,7 +1462,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="7.9211764" Y="0" Z="36"/>
+                <Position X="13.623075" Y="0" Z="36"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1478,7 +1478,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-11.076866" Y="0" Z="45"/>
+                <Position X="-3.3980656" Y="0" Z="45"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1494,7 +1494,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="18.831215" Y="0" Z="54"/>
+                <Position X="-7.0758009" Y="0" Z="54"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1510,7 +1510,7 @@
             </Collider>
             <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="3.0788395" Y="0" Z="63"/>
+                <Position X="11.375021" Y="0" Z="63"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1520,7 +1520,7 @@
     <Child12 Name="Wall0" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -1536,7 +1536,7 @@
     <Child13 Name="Wall1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -1552,7 +1552,7 @@
     <Child14 Name="Wall2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -1568,7 +1568,7 @@
     <Child15 Name="Wall3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -1584,7 +1584,7 @@
     <Child16 Name="Wall4" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>

@@ -24,7 +24,7 @@
     <Child2 Name="ground" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -40,7 +40,7 @@
     <Child3 Name="ground2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -56,7 +56,7 @@
     <Child4 Name="wall1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -71,7 +71,7 @@
     <Child5 Name="wall2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>

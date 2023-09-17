@@ -1,9 +1,9 @@
-<Root Name="SC1Room" Visible="true" ObType="1">
+<Root Name="SC2Room" Visible="true" ObType="1">
     <Mesh File="6.Rect.mesh"/>
     <Shader File="6.Cube.hlsl"/>
-    <Texture File="wallskin.png"/>
+    <Texture File="land.jpg"/>
     <Transform>
-        <Position X="0" Y="80" Z="-100"/>
+        <Position X="0" Y="0" Z="-100"/>
         <Scale X="200" Y="200" Z="1"/>
         <Rotation X="0" Y="3.1415758" Z="0"/>
     </Transform>
@@ -11,10 +11,10 @@
     <Child0 Name="Back" Visible="true" ObType="1">
         <Mesh File="6.Rect.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Texture File="wallskin.png"/>
+        <Texture File="wallskin21.png"/>
         <Transform>
-            <Position X="-2.3415778e-05" Y="0.00075003505" Z="-450"/>
-            <Scale X="2" Y="1" Z="1"/>
+            <Position X="-2.3415778e-05" Y="-0.105" Z="-450"/>
+            <Scale X="2" Y="1.2" Z="1"/>
             <Rotation X="0" Y="3.1415758" Z="0"/>
         </Transform>
         <Children Size="0"/>
@@ -22,9 +22,9 @@
     <Child1 Name="Roof" Visible="true" ObType="1">
         <Mesh File="6.Rect.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Texture File="roofskin.png"/>
+        <Texture File="sky.png"/>
         <Transform>
-            <Position X="-0.45133498" Y="2.5" Z="-100.95"/>
+            <Position X="-0.45133498" Y="3" Z="-100.95"/>
             <Scale X="500" Y="1000" Z="1"/>
             <Rotation X="4.7123637" Y="0" Z="0"/>
         </Transform>
@@ -32,7 +32,7 @@
         <Child0 Name="Roof2" Visible="true" ObType="1">
             <Mesh File="6.Rect.mesh"/>
             <Shader File="6.Cube.hlsl"/>
-            <Texture File="roofskin.png"/>
+            <Texture File="sky2.png"/>
             <Transform>
                 <Position X="0.0039999997" Y="0" Z="-0.75"/>
                 <Scale X="1" Y="1" Z="1"/>
@@ -44,9 +44,9 @@
     <Child2 Name="Side1" Visible="true" ObType="1">
         <Mesh File="6.Rect.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Texture File="wallskin.png"/>
+        <Texture File="wallskin21.png"/>
         <Transform>
-            <Position X="2.006326" Y="-0.0012499988" Z="-400"/>
+            <Position X="2.006326" Y="0.064499997" Z="-400"/>
             <Scale X="400" Y="1" Z="1"/>
             <Rotation X="0" Y="1.5707879" Z="0"/>
         </Transform>
@@ -55,9 +55,9 @@
     <Child3 Name="Side2" Visible="true" ObType="1">
         <Mesh File="6.Rect.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Texture File="wallskin.png"/>
+        <Texture File="wallskin21.png"/>
         <Transform>
-            <Position X="-1.9856787" Y="0" Z="-400"/>
+            <Position X="-1.9856787" Y="0.039249998" Z="-400"/>
             <Scale X="400" Y="1" Z="1"/>
             <Rotation X="0" Y="4.7123637" Z="0"/>
         </Transform>

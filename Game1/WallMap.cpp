@@ -149,7 +149,7 @@ void WallMap::Update()
 
 void WallMap::LateUpdate()
 {
-	ImGui::Text("player pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
+	//ImGui::Text("player pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
 	if (player->body->Intersect(ground0)) {
 		player->isLand = true; respawnPos = ground0->GetWorldPos();
 		respawnPos.z = -50;

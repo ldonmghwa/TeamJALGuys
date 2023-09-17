@@ -30,9 +30,9 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init(Vector3(0, 25, -50));
-    player->body->rotation.y = -361.0f * ToRadian;
+    //player->body->rotation.y = -361.0f * ToRadian;
     map->Init();
-    //SOUND->Play("Sc1");
+    SOUND->Play("Sc1");
     SOUND->SetVolume("Sc1", 0.4f);
     mapEndingTime = 3.0f;
 }
@@ -51,8 +51,6 @@ void Scene1::Update()
     player->body->RenderHierarchy();
     wallskin->RenderHierarchy();
     wall->RenderHierarchy();
-    player->Second1->RenderHierarchy();
-    player->Second10->RenderHierarchy();
     ImGui::End();
 
     if (!isTimeStop) {

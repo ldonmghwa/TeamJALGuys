@@ -1,16 +1,16 @@
 <Root Name="temp" Visible="true" ObType="1">
     <Mesh File="6.Sphere.mesh"/>
     <Shader File="6.Cube.hlsl"/>
-    <Collider ColliderType="0" Visible="true">
+    <Collider ColliderType="0" Visible="false">
         <Position X="0" Y="0" Z="0"/>
         <Scale X="6" Y="6" Z="6"/>
         <Rotation X="0" Y="0" Z="0"/>
     </Collider>
     <Texture File="rainbow.png"/>
     <Transform>
-        <Position X="-20" Y="7" Z="199.78854"/>
+        <Position X="0" Y="7" Z="386.05154"/>
         <Scale X="7" Y="7" Z="7"/>
-        <Rotation X="52.021992" Y="0" Z="52.021992"/>
+        <Rotation X="91.994743" Y="0" Z="91.994743"/>
     </Transform>
     <Children Size="0"/>
 </Root>

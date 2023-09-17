@@ -30,7 +30,7 @@ void SceneIntro::Update()
 
 	title->RenderHierarchy();
 
-	//SOUND->Play("titlebgm");
+	SOUND->Play("titlebgm");
 	
 
 	switch (select) {

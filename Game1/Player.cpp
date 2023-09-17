@@ -201,11 +201,11 @@ void Player::Update()
 {
 	cout << second1 << endl;
 	cout << second1 << endl;
-	ShowCursor(true);
+	ShowCursor(false);
 	
-	ImGui::Text("second1 %d", second1);
+	/*ImGui::Text("second1 %d", second1);
 	ImGui::Text("second10 %d", second10);
-	ImGui::Text("time %f", playerTime);
+	ImGui::Text("time %f", playerTime);*/
 
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
@@ -231,7 +231,7 @@ void Player::Update()
 	}
 	else {
 		gravity = 0;
-
+		ShowCursor(true);
 		if (INPUT->KeyPress('W')) {
 			body->MoveWorldPos(body->GetForward() * 50 * DELTA);
 		}
@@ -293,8 +293,8 @@ void Player::LateUpdate()
 void Player::Render()
 {
 	body->Render();
-	Second1->Render();
-	Second10->Render();
+	//Second1->Render();
+	//Second10->Render();
 }
 
 

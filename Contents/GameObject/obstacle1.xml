@@ -8,7 +8,7 @@
     <Child0 Name="floor1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -17,14 +17,14 @@
         <Transform>
             <Position X="0" Y="0" Z="100"/>
             <Scale X="30" Y="1.2" Z="30"/>
-            <Rotation X="0" Y="-41.639168" Z="0"/>
+            <Rotation X="0" Y="-79.537102" Z="0"/>
         </Transform>
         <Children Size="0"/>
     </Child0>
     <Child1 Name="floor2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -33,14 +33,14 @@
         <Transform>
             <Position X="-47" Y="0" Z="170"/>
             <Scale X="30" Y="1.2" Z="30"/>
-            <Rotation X="0" Y="-41.639168" Z="0"/>
+            <Rotation X="0" Y="-79.537102" Z="0"/>
         </Transform>
         <Children Size="0"/>
     </Child1>
     <Child2 Name="floor3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -49,14 +49,14 @@
         <Transform>
             <Position X="36" Y="0" Z="195"/>
             <Scale X="30" Y="1.2" Z="30"/>
-            <Rotation X="0" Y="-41.639168" Z="0"/>
+            <Rotation X="0" Y="-79.537102" Z="0"/>
         </Transform>
         <Children Size="0"/>
     </Child2>
     <Child3 Name="swing1" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -65,13 +65,13 @@
         <Transform>
             <Position X="0" Y="3" Z="100"/>
             <Scale X="2" Y="2" Z="2"/>
-            <Rotation X="0" Y="277.51212" Z="0"/>
+            <Rotation X="0" Y="530.16473" Z="0"/>
         </Transform>
         <Children Size="1"/>
         <Child0 Name="swingson1" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
-            <Collider ColliderType="2" Visible="true">
+            <Collider ColliderType="2" Visible="false">
                 <Position X="0" Y="0" Z="0"/>
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
@@ -88,7 +88,7 @@
     <Child4 Name="swing2" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -97,13 +97,13 @@
         <Transform>
             <Position X="-47" Y="3" Z="170"/>
             <Scale X="2" Y="2" Z="2"/>
-            <Rotation X="0" Y="277.51212" Z="0"/>
+            <Rotation X="0" Y="530.16473" Z="0"/>
         </Transform>
         <Children Size="1"/>
         <Child0 Name="swingson2" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
-            <Collider ColliderType="2" Visible="true">
+            <Collider ColliderType="2" Visible="false">
                 <Position X="0" Y="0" Z="0"/>
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
@@ -120,7 +120,7 @@
     <Child5 Name="swing3" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Collider ColliderType="2" Visible="true">
+        <Collider ColliderType="2" Visible="false">
             <Position X="0" Y="0" Z="0"/>
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
@@ -129,13 +129,13 @@
         <Transform>
             <Position X="36" Y="3" Z="195"/>
             <Scale X="2" Y="2" Z="2"/>
-            <Rotation X="0" Y="277.51212" Z="0"/>
+            <Rotation X="0" Y="530.16473" Z="0"/>
         </Transform>
         <Children Size="1"/>
         <Child0 Name="swingson3" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
-            <Collider ColliderType="2" Visible="true">
+            <Collider ColliderType="2" Visible="false">
                 <Position X="0" Y="0" Z="0"/>
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>

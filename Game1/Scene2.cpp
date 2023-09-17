@@ -42,8 +42,9 @@ Scene2::~Scene2()
 void Scene2::Init()
 {
 	player->Init(ground->Find("checkpoint1")->GetLocalPos());
+	player->body->rotation.y = 2.5f;
 	SOUND->SetVolume("Sc2", 0.4f);
-	//SOUND->Play("Sc2");
+	SOUND->Play("Sc2");
 }
 
 void Scene2::Release()
@@ -95,7 +96,10 @@ void Scene2::Update()
 	{
 		SCENE->ChangeScene("SC3", 1.5f);
 	}
-	
+
+	if (wall->Find("Back")->GetWorldPos().z <= 620.0f) {
+		wall->Find("Back")->SetWorldPosZ(player->body->GetWorldPos().z + 400.0f);
+	}
 	
 
 	grid->Update();
