@@ -38,9 +38,7 @@ void WallMap::Init()
 	wall4 = this->root->Find("Wall4");
 	deathFloor = this->root->Find("Wall3");
 	goal = this->root->Find("Goal");
-	respawnPos = Vector3(0, 25, 240);
-	//respawnPos = ground3->GetWorldPos();
-	//respawnPos.y += ground0->scale.y + player->body->scale.y;
+	respawnPos = Vector3(0, 25, -50);
 	player->body->SetWorldPos(respawnPos);
 }
 
