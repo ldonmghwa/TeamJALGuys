@@ -8,27 +8,51 @@
         <Rotation X="0" Y="0" Z="0"/>
     </Transform>
     <UI PivotX="0" PivotY="0"/>
-    <Children Size="2"/>
-    <Child0 Name="Quit" Visible="true" ObType="1">
+    <Children Size="4"/>
+    <Child0 Name="Cont" Visible="true" ObType="4">
+        <Mesh File="6.UI.mesh"/>
+        <Shader File="6.UI.hlsl"/>
+        <Texture File="Cont.png"/>
+        <Transform>
+            <Position X="-0.69999999" Y="-0.5" Z="0"/>
+            <Scale X="0.2" Y="0.1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <UI PivotX="0" PivotY="0"/>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="ContUi" Visible="false" ObType="4">
+        <Mesh File="6.UI.mesh"/>
+        <Shader File="6.UI.hlsl"/>
+        <Texture File="controlui.jpg"/>
+        <Transform>
+            <Position X="0.2" Y="0" Z="0"/>
+            <Scale X="0.5" Y="0.60000002" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <UI PivotX="0" PivotY="0"/>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="Quit" Visible="true" ObType="1">
         <Mesh File="6.UI.mesh"/>
         <Shader File="6.UI.hlsl"/>
         <Texture File="quit.png"/>
         <Transform>
-            <Position X="-0.69999999" Y="-0.60000002" Z="0"/>
+            <Position X="-0.69999999" Y="-0.80000001" Z="0"/>
             <Scale X="0.2" Y="0.1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child0>
-    <Child1 Name="Start" Visible="true" ObType="1">
+    </Child2>
+    <Child3 Name="Start" Visible="true" ObType="1">
         <Mesh File="6.UI.mesh"/>
         <Shader File="6.UI.hlsl"/>
         <Texture File="start.png"/>
         <Transform>
-            <Position X="-0.69999999" Y="-0.30000001" Z="0"/>
-            <Scale X="0.2" Y="0.1" Z="1"/>
+            <Position X="-0.69999999" Y="-0.2" Z="0"/>
+            <Scale X="0.22" Y="0.12" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>
-    </Child1>
+    </Child3>
 </Root>

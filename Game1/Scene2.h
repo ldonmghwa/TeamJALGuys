@@ -13,6 +13,7 @@ private:
 	bool   isCheck2;
 	bool   isGameEnd = false;
 	float  gameEndTime;
+	Actor* Sc2Cam;
 public:
 	Scene2();
 	~Scene2();

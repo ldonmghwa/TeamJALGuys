@@ -36,6 +36,12 @@ Scene2::Scene2()
 	ending->visible = false;
 	ending->name = "ending";
 	gameEndTime = 2.0f;
+
+	Sc2Cam = Actor::Create();
+	Sc2Cam->LoadFile("Sc2Cam.xml");
+	Sc2Cam->name = "Sc2Cam";
+
+
 	SOUND->AddSound("Sc2.mp3", "Sc2",true);
 }
 
@@ -47,8 +53,9 @@ Scene2::~Scene2()
 void Scene2::Init()
 {
 	player->Init(ground->Find("checkpoint1")->GetLocalPos());
-	player->body->rotation.y = 2.5f;
-	SOUND->SetVolume("Sc2", 0.4f);
+	player->body->rotation.y = -5.5f*ToRadian;
+	Sc2Cam->SetWorldPos(Vector3(-10, 100, -40));
+	SOUND->SetVolume("Sc2", 0.6f);
 	SOUND->Play("Sc2");
 }
 
@@ -78,7 +85,18 @@ void Scene2::Update()
 	wall->RenderHierarchy();
 	ending->RenderHierarchy();
 	temp->RenderHierarchy();
+	Sc2Cam->RenderHierarchy();
 	ImGui::End();
+
+	if (Sc2Cam->GetWorldPos().y >= 30) {
+		Camera::main = static_cast<Camera*>(Sc2Cam->Find("dronCam"));
+		Sc2Cam->rotation.x = 25.0f * ToRadian;
+		Sc2Cam->MoveWorldPos(Vector3(0, -1, 0) * 10.0f * DELTA);
+	}
+	else {
+		Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+
+	}
 
 	if (isCheck1)
 	{
@@ -105,6 +123,9 @@ void Scene2::Update()
 	if (wall->Find("Back")->GetWorldPos().z <= 620.0f) {
 		wall->Find("Back")->SetWorldPosZ(player->body->GetWorldPos().z + 400.0f);
 	}
+	if (wall->Find("mainLand")->GetWorldPos().z <= 340.0f) {
+		wall->Find("mainLand")->SetWorldPosZ(player->body->GetWorldPos().z + 120.0f);
+	}
 	
 	if (!isGameEnd) {
 		grid->Update();
@@ -117,6 +138,7 @@ void Scene2::Update()
 		temp->Update();
 		wall->Update();
 		ending->Update();
+		Sc2Cam->Update();
 	}
 }
 
@@ -174,6 +196,7 @@ void Scene2::Render()
 	player->Render();
 	temp->Render();
 	ending->Render();
+	Sc2Cam->Render();
 }
 
 void Scene2::PreRender()
@@ -182,4 +205,10 @@ void Scene2::PreRender()
 
 void Scene2::ResizeScreen()
 {
+	Camera::main->viewport.x = 0.0f;
+	Camera::main->viewport.y = 0.0f;
+	Camera::main->viewport.width = App.GetWidth();
+	Camera::main->viewport.height = App.GetHeight();
+	Camera::main->width = App.GetWidth();
+	Camera::main->height = App.GetHeight();
 }

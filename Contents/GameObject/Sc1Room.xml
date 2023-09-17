@@ -7,7 +7,7 @@
         <Scale X="200" Y="200" Z="1"/>
         <Rotation X="0" Y="3.1415758" Z="0"/>
     </Transform>
-    <Children Size="4"/>
+    <Children Size="5"/>
     <Child0 Name="Back" Visible="true" ObType="1">
         <Mesh File="6.Rect.mesh"/>
         <Shader File="6.Cube.hlsl"/>
@@ -63,4 +63,15 @@
         </Transform>
         <Children Size="0"/>
     </Child3>
+    <Child4 Name="mainLand" Visible="true" ObType="1">
+        <Mesh File="6.Rect.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="Sc2land.png"/>
+        <Transform>
+            <Position X="0" Y="-2" Z="-200"/>
+            <Scale X="1" Y="200" Z="1"/>
+            <Rotation X="1.5707879" Y="0" Z="3.1415758"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
 </Root>

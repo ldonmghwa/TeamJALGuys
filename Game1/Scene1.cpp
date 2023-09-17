@@ -19,7 +19,13 @@ Scene1::Scene1()
     wall = Actor::Create();
     wall->LoadFile("Sc1Room.xml");
     wall->name = "SC1Room";
-   
+
+    dron = Actor::Create();
+    dron->LoadFile("dronCam.xml");
+    dron->name = "dron";
+    Camera::main = static_cast<Camera*>(dron->Find("dronCam"));
+   // Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+
     SOUND->AddSound("Sc1.mp3", "Sc1",true);
 }
 
@@ -30,11 +36,13 @@ Scene1::~Scene1()
 void Scene1::Init()
 {
     player->Init(Vector3(0, 25, -50));
-    //player->body->rotation.y = -361.0f * ToRadian;
+    player->body->rotation.y = -361.0f * ToRadian;
     map->Init();
+    SOUND->SetVolume("Sc1", 0.6f);
     SOUND->Play("Sc1");
-    SOUND->SetVolume("Sc1", 0.4f);
     mapEndingTime = 3.0f;
+    dron->SetWorldPos(Vector3(0, 100, -40));
+  
 }
 
 void Scene1::Release()
@@ -51,13 +59,28 @@ void Scene1::Update()
     player->body->RenderHierarchy();
     wallskin->RenderHierarchy();
     wall->RenderHierarchy();
+    dron->RenderHierarchy();
+   
     ImGui::End();
+
+    if (dron->GetWorldPos().y >= 30) {
+        Camera::main = static_cast<Camera*>(dron->Find("dronCam"));
+        dron->rotation.x = 25.0f*ToRadian;
+        dron->MoveWorldPos(Vector3(0, -1, 0) * 10.0f * DELTA);
+    }
+    else {
+        Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+        
+    }
+       
+
 
     if (!isTimeStop) {
         wallskin->Update();
         wall->Update();
-        grid->Update();
+
         map->Update();
+        dron->Update();
         player->Update();
     }
 }
@@ -85,6 +108,8 @@ void Scene1::Render()
     wallskin->Render();
     wall->Render();
     player->Render();
+    dron->Render();
+    
 }
 
 void Scene1::PreRender()

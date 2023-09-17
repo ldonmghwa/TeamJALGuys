@@ -8,6 +8,7 @@ private:
 	Actor* wall;
 	float mapEndingTime;
 	bool isTimeStop = false;
+	Actor* dron;
 
 public:
 	Scene1();

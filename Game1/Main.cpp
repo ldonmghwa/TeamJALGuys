@@ -16,7 +16,7 @@ Main::Main()
     SC2 = new Scene2();
    /* grid = Grid::Create();*/
 
-    Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
+   // Camera::main = static_cast<Camera*>(player->body->Find("PCam"));
 }
 
 Main::~Main()
