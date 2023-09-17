@@ -21,8 +21,9 @@ Scene1::~Scene1()
 
 void Scene1::Init()
 {
-    player->Init(Vector3(0, 25, 68));
+    player->Init(Vector3(0, 25, -50));
     map->Init();
+    mapEndingTime = 3.0f;
 }
 
 void Scene1::Release()
@@ -38,15 +39,25 @@ void Scene1::Update()
     map->RenderHierarchy();
     player->body->RenderHierarchy();
     ImGui::End();
-
-    grid->Update();
-    map->Update();
-    player->Update();
+    if (!isTimeStop) {
+        grid->Update();
+        map->Update();
+        player->Update();
+    }
 }
 
 void Scene1::LateUpdate()
 {
     map->LateUpdate();
+    if (player->body->Intersect(map->goal) or player->body->GetWorldPos().z > 243.0f) {
+        isTimeStop = true;
+        mapEndingTime -= DELTA; 
+        if(mapEndingTime<0)
+        {
+            mapEndingTime = 3.0f;
+            SCENE->ChangeScene("SC2");
+        }
+    }
 }
 
 void Scene1::Render()
