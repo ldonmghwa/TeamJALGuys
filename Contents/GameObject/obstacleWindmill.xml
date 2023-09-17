@@ -13,11 +13,11 @@
             <Scale X="4" Y="4" Z="4"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.jpg"/>
+        <Texture File="pink.png"/>
         <Transform>
             <Position X="0" Y="30" Z="0"/>
             <Scale X="5" Y="5" Z="5"/>
-            <Rotation X="0" Y="0" Z="387.67841"/>
+            <Rotation X="0" Y="0" Z="671.94446"/>
         </Transform>
         <Children Size="2"/>
         <Child0 Name="obstacle1Rootchild1" Visible="true" ObType="0">
@@ -30,7 +30,7 @@
             </Collider>
             <Transform>
                 <Position X="0" Y="0" Z="0"/>
-                <Scale X="0.5" Y="9" Z="0.5"/>
+                <Scale X="0.5" Y="10" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
             <Children Size="0"/>
@@ -45,7 +45,7 @@
             </Collider>
             <Transform>
                 <Position X="0" Y="0" Z="0"/>
-                <Scale X="9" Y="0.5" Z="0.5"/>
+                <Scale X="10" Y="0.5" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
             <Children Size="0"/>
@@ -59,10 +59,10 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="bono3.png"/>
+        <Texture File="green.png"/>
         <Transform>
             <Position X="0" Y="30" Z="0"/>
-            <Scale X="50.5" Y="1" Z="3"/>
+            <Scale X="60" Y="1" Z="3"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Transform>
         <Children Size="0"/>

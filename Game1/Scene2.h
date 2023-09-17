@@ -2,9 +2,12 @@
 class Scene2 : public Scene
 {
 private:
-	Grid* grid;
+	Grid*  grid;
 	Actor* obstacle;
-
+	Actor* ground;
+	Actor* temp;
+	bool   isCheck1;
+	bool   isCheck2;
 public:
 	Scene2();
 	~Scene2();

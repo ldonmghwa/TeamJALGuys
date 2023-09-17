@@ -3,7 +3,7 @@ class GameManager : public Singleton<GameManager>
 {
 public:
 	list<class Obstacle*> obstacleList;
-
+	bool	isActive=false;
 	virtual ~GameManager();
 	virtual void Init();
 	virtual void Release();

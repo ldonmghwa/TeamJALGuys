@@ -1,9 +1,13 @@
 #pragma once
 class Obstacle1: public Obstacle
 {
+private:
+	float HitTime;
+	bool  isGoCircle;
 public:
 	Obstacle1();
 	~Obstacle1();
+	
 	virtual void Init();
 	virtual void Release(); //«ÿ¡¶
 	virtual void Update()override;
