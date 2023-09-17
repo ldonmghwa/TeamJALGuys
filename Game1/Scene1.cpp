@@ -10,7 +10,7 @@ Scene1::Scene1()
     grid = Grid::Create();
 
     map = WallMap::Create();
-    map->LoadFile("Maptest.xml");
+    map->LoadFile("Map1.xml");
     map->name = "Map";
 
 }
@@ -51,9 +51,10 @@ void Scene1::Update()
 void Scene1::LateUpdate()
 {
     //Ground Ãæµ¹
-    if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
+    map->LateUpdate();
+    /*if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
     else if (player->body->Intersect(map->Find("groundtest"))) player->isLand = true;
-    else player->isLand = false;
+    else player->isLand = false;*/
 }
 
 void Scene1::Render()

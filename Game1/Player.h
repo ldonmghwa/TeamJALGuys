@@ -10,7 +10,6 @@ private:
 
 	float moveSpeed = 0;
 	float jumpmoveSpeed = 0;
-	float gravity = 0;
 	float gravityPower = 0;
 	float diveTime = 0.3f;
 	float diveCool = 0;
@@ -24,6 +23,7 @@ private:
 	float motionDir = 0;
 public:
 	Actor* body;
+	float gravity = 0;
 
 	bool isLand = 0;
 	bool PCamActive = 1;
