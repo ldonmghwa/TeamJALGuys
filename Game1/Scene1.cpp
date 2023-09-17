@@ -11,7 +11,7 @@ Scene1::Scene1()
 
     map = WallMap::Create();
     map->LoadFile("Map1.xml");
-    map->name = "Map";
+    map->name = "Map1";
 
     wallskin = Actor::Create();
     wallskin->LoadFile("Sc1Land.xml");
@@ -19,7 +19,7 @@ Scene1::Scene1()
     wall = Actor::Create();
     wall->LoadFile("Sc1Room.xml");
     wall->name = "SC1Room";
-
+   
     SOUND->AddSound("Sc1.mp3", "Sc1");
 }
 
@@ -29,10 +29,11 @@ Scene1::~Scene1()
 
 void Scene1::Init()
 {
-    player->Init(Vector3(0, 25, 68));
+    player->Init(Vector3(0, 25, -50));
     map->Init();
     SOUND->Play("Sc1");
     SOUND->SetVolume("Sc1", 0.7f);
+    mapEndingTime = 3.0f;
 }
 
 void Scene1::Release()
@@ -53,23 +54,28 @@ void Scene1::Update()
     player->Second10->RenderHierarchy();
     ImGui::End();
 
-
-   
-    wallskin->Update();
-    wall->Update();
-    grid->Update();
-    map->Update();
-    player->Update();
+    if (!isTimeStop) {
+        wallskin->Update();
+        wall->Update();
+        grid->Update();
+        map->Update();
+        player->Update();
+    }
 }
 
 void Scene1::LateUpdate()
 {
     //Ground Ãæµ¹
     map->LateUpdate();
-    /*if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    else if (player->body->Intersect(map->Find("groundtest"))) player->isLand = true;
-    else player->isLand = false;*/
-   // player->LateUpdate();
+    if (player->body->Intersect(map->goal) or player->body->GetWorldPos().z > 243.0f) {
+        isTimeStop = true;
+        mapEndingTime -= DELTA;
+        if (mapEndingTime < 0)
+        {
+            mapEndingTime = 3.0f;
+            SCENE->ChangeScene("SC2");
+        }
+    }
 }
 
 void Scene1::Render()

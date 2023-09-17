@@ -6,6 +6,8 @@ private:
 	class WallMap* map;
 	Actor* wallskin;
 	Actor* wall;
+	float mapEndingTime;
+	bool isTimeStop = false;
 
 public:
 	Scene1();
