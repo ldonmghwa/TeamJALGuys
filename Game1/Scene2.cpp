@@ -19,7 +19,7 @@ Scene2::~Scene2()
 
 void Scene2::Init()
 {
-	player->Init();
+	player->Init(Vector3(0,8,100));
 
 	player->body->SetWorldPosY(0);
 }

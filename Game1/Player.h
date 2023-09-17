@@ -12,12 +12,17 @@ private:
 	float jumpmoveSpeed = 0;
 	float diveTime = 0.3f;
 	float diveCool = 0;
-	const float jumpPower = 15.0f;
+	float jumpPower = 0;
 	const float divePower = 30.0f;
 
 	bool isJump = 0;
+	bool motionR = 0;
+	bool motionJ = 0;
+	bool motionD = 0;
+	float motionDir = 0;
 public:
 	Actor* body;
+	float gravity = 0;
 
 	bool isLand = 0;
 	bool PCamActive = 1;
@@ -25,7 +30,7 @@ public:
 public:
 	Player();
 	~Player();
-	void Init();
+	void Init(Vector3 pos);
 	void Control();
 	void Move();
 	void Motion();

@@ -6,24 +6,26 @@ Player::Player()
 	body = Actor::Create();
 	body->LoadFile("Player.xml");
 
+	motionDir = 20.0f;
+	gravityPower = 40.0f;
+	jumpPower = 20.0f;
+	moveSpeed = 10.0f;
+	jumpmoveSpeed = moveSpeed - 2.0f;
 }
 
 Player::~Player()
 {
 }
 
-void Player::Init()
+void Player::Init(Vector3 pos)
 {
-	body->SetWorldPosY(5.0f);
-	moveSpeed = 10.0f;
-	jumpmoveSpeed = moveSpeed - 3.0f;
-	gravity = 0;
+	body->SetWorldPos(pos);
 }
 //State 변경
 void Player::Control()
 {
-	//Run
-	if (state != PlayerState::DIVE) {
+	//Run--------------------------------------------------------------------------
+	if (state == PlayerState::IDLE) {
 		if (INPUT->KeyPress('W')) {
 			state = PlayerState::RUN;
 		}
@@ -35,15 +37,6 @@ void Player::Control()
 		}
 		if (INPUT->KeyPress('D')) {
 			state = PlayerState::RUN;
-		}
-		if (diveCool > 0) diveCool -= DELTA;
-		diveTime = 0.3f;
-	}
-	//Dash
-	if (diveCool <= 0) {
-		if (INPUT->KeyDown('F')) {
-			state = PlayerState::DIVE;
-			diveCool = 0.8f;
 		}
 	}
 	if (INPUT->KeyUp('W')) {
@@ -58,9 +51,32 @@ void Player::Control()
 	if (INPUT->KeyUp('D')) {
 		state = PlayerState::IDLE;
 	}
+	//Dash--------------------------------------------------------------------------
+	if (diveCool <= 0) {
+		if (INPUT->KeyDown('F')) {
+			state = PlayerState::DIVE;
+			diveCool = 0.8f;
+		}
+	}
+	if (state != PlayerState::DIVE) {
+		if (diveCool > 0) diveCool -= DELTA;
+		diveTime = 0.3f;
+	}
 	if (diveTime <= 0) {
 		state = PlayerState::IDLE;
 	}
+	//Jump--------------------------------------------------------------------------
+	if (state == PlayerState::JUMP) {
+		if (isLand) state = PlayerState::IDLE;
+	}
+	if (state == PlayerState::IDLE || state == PlayerState::RUN) {
+		if (INPUT->KeyDown(VK_SPACE)) {
+			body->SetWorldPosY(body->GetWorldPos().y + 1.5f);
+			gravity = -jumpPower;
+			state = PlayerState::JUMP;
+		}
+	}
+	
 }
 //State에 따른 실제 움직임
 void Player::Move()
@@ -101,63 +117,96 @@ void Player::Move()
 			if (diveTime >= 0) {
 				body->MoveWorldPos(body->GetForward() * divePower * DELTA);
 			}
-			else {
-				state = PlayerState::IDLE;
-			}
 			diveTime -= DELTA;
 		break;
 	}
-
-	//점프
-	if (isLand) {
-		if (INPUT->KeyDown(VK_SPACE)) {
-			body->SetWorldPosY(body->GetWorldPos().y + 0.5f);
-			gravity = -jumpPower;
-		}
-	}
-
-	
 }
 
 void Player::Motion()
 {
-	if (state == PlayerState::IDLE) {
+	if (body->Find("LhBody")->rotation.y <= -motionDir *ToRadian) motionR = true;
+	else if(body->Find("LhBody")->rotation.y >= motionDir * ToRadian)motionR = false;
+	if (body->Find("LhBody")->rotation.z <= -motionDir * ToRadian) motionJ = true;
+	else if (body->Find("LhBody")->rotation.z >= motionDir * ToRadian)motionJ = false;
 
+	if (state == PlayerState::IDLE) {
+		body->Find("LhBody")->rotation = Vector3();
+		body->Find("RhBody")->rotation = Vector3();
+		motionD = false;
 	}
 	else if (state == PlayerState::RUN) {
-
+		body->Find("LhBody")->rotation.z = 0;
+		body->Find("RhBody")->rotation.z = 0;
+		if (motionR) {
+			body->Find("LhBody")->rotation.y += 2.5f * DELTA;
+		}
+		else {
+			body->Find("LhBody")->rotation.y -= 2.5f * DELTA;
+		}
+		if (motionR) {
+			body->Find("RhBody")->rotation.y += 2.5f * DELTA;
+		}
+		else {
+			body->Find("RhBody")->rotation.y -= 2.5f * DELTA;
+		}
 	}
 	else if (state == PlayerState::JUMP) {
-
+		body->Find("LhBody")->rotation.y = 0;
+		body->Find("RhBody")->rotation.y = 0;
+		if (motionJ) {
+			body->Find("LhBody")->rotation.z += 5.1f * DELTA;
+		}
+		else {
+			body->Find("LhBody")->rotation.z -= 5.1f * DELTA;
+		}
+		if (motionJ) {
+			body->Find("RhBody")->rotation.z -= 5.1f * DELTA;
+		}
+		else {
+			body->Find("RhBody")->rotation.z += 5.1f * DELTA;
+		}
 	}
-	else if (state == PlayerState::CRASH) {
-
+	else if (state == PlayerState::DIVE) {
+		if (!motionD) {
+			body->Find("LhBody")->rotation = Vector3();
+			body->Find("RhBody")->rotation = Vector3();
+		}
+		motionD = true;
+		if (body->Find("LhBody")->rotation.y>=-38.0f*ToRadian) {
+			body->Find("LhBody")->rotation.y -= 4.1f * DELTA;
+		}
+		if (body->Find("RhBody")->rotation.y <= 38.0f * ToRadian) {
+			body->Find("RhBody")->rotation.y += 4.1f * DELTA;
+		}
 	}
 }
 
 void Player::Update()
 {
 	ShowCursor(true);
+	
+	ImGui::Text("state %d", (int)state);
+	ImGui::Text("island %d", isLand);
 
 	//중력 & 떨어지는 움직임(어떤 상황에서도 작용)
 	body->MoveWorldPos(-body->GetUp() * gravity * DELTA);
 	if (isLand) gravity = 0;
-	else gravity += 25.0f * DELTA;
+	else gravity += gravityPower * DELTA;
 
 	//카메라 고정 풀기
 	if (INPUT->KeyDown(VK_F10)) PCamActive = not PCamActive;
 
 	if (PCamActive) {
-		POINT ptMouse;
-		ptMouse.x = App.GetHalfWidth();
-		ptMouse.y = App.GetHalfHeight();
-		Vector3 Rot;
-		Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
-		Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
-		player->body->rotation.y += Rot.y;
-		Camera::main->rotation.x += Rot.x;
-		ClientToScreen(App.GetHandle(), &ptMouse);
-		SetCursorPos(ptMouse.x, ptMouse.y);
+	POINT ptMouse;
+	ptMouse.x = App.GetHalfWidth();
+	ptMouse.y = App.GetHalfHeight();
+	Vector3 Rot;
+	Rot.x = (INPUT->position.y - ptMouse.y) * 0.001f;
+	Rot.y = (INPUT->position.x - ptMouse.x) * 0.001f;
+	player->body->rotation.y += Rot.y;
+	Camera::main->rotation.x += Rot.x;
+	ClientToScreen(App.GetHandle(), &ptMouse);
+	SetCursorPos(ptMouse.x, ptMouse.y);
 
 		Move();
 	}
@@ -193,6 +242,7 @@ void Player::Update()
 	oldPosition = body->GetWorldPos();
 
 	Control();
+	Motion();
 
 	body->Update();
 }
