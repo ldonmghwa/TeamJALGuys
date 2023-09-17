@@ -109,7 +109,6 @@ void WallMap::Update()
 
 void WallMap::LateUpdate()
 {
-	ImGui::Text("pl pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
 	if (player->body->Intersect(ground0)) player->isLand = true;
 	else if (player->body->Intersect(ground1)) player->isLand = true;
 	else if (player->body->Intersect(ground2)) player->isLand = true;
