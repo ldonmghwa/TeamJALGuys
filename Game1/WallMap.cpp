@@ -173,7 +173,7 @@ void WallMap::LateUpdate()
 	if (player->body->Intersect(wall0)) player->body->MoveWorldPos(Vector3(0.0f, 0.0f, 1.0f) * 0.1f);
 	if (player->body->Intersect(wall1)) player->body->MoveWorldPos(Vector3(-1.0f, 0.0f, 0.0f) * 0.1f);
 	if (player->body->Intersect(wall2)) player->body->MoveWorldPos(Vector3(1.0f, 0.0f, 0.0f) * 0.1f);
-	if (player->body->Intersect(wall2)) player->body->MoveWorldPos(Vector3(0.0f, 0.0f, 1.0f) * 0.1f);
+	if (player->body->Intersect(wall4)) player->body->MoveWorldPos(Vector3(0.0f, 0.0f, 1.0f) * 0.1f);
 
 	for (int i = 0; i < pillarUnderList.size(); i++) {
 		if (pillarUnderList[i]->Intersect(player->body)) {
