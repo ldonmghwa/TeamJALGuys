@@ -81,7 +81,6 @@ void Scene1::LateUpdate()
 void Scene1::Render()
 {
     //Camera::main->Set();
-    grid->Render();
     map->Render();
     wallskin->Render();
     wall->Render();

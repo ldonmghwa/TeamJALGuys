@@ -8,8 +8,11 @@ private:
 	Actor* temp;
 	Actor* wallskin;
 	Actor* wall;
+	UI*    ending;
 	bool   isCheck1;
 	bool   isCheck2;
+	bool   isGameEnd = false;
+	float  gameEndTime;
 public:
 	Scene2();
 	~Scene2();
