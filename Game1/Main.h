@@ -6,6 +6,7 @@ private:
 	Scene* SCIntro;
 	Scene* SC1;
 	Scene* SC2;
+	Scene* SC3;
 	
 	
 public:
