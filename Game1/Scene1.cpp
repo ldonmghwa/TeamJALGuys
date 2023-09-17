@@ -11,8 +11,16 @@ Scene1::Scene1()
 
     map = WallMap::Create();
     map->LoadFile("Map1.xml");
-    map->name = "Map";
+    map->name = "Map1";
 
+    wallskin = Actor::Create();
+    wallskin->LoadFile("Sc1Land.xml");
+    wallskin->name = "SC1Land";
+    wall = Actor::Create();
+    wall->LoadFile("Sc1Room.xml");
+    wall->name = "SC1Room";
+   
+    SOUND->AddSound("Sc1.mp3", "Sc1");
 }
 
 Scene1::~Scene1()
@@ -21,8 +29,11 @@ Scene1::~Scene1()
 
 void Scene1::Init()
 {
-    player->Init();
-    //플레이어 위치잡는것 하나 추가하기
+    player->Init(Vector3(0, 25, -50));
+    map->Init();
+    SOUND->Play("Sc1");
+    SOUND->SetVolume("Sc1", 0.7f);
+    mapEndingTime = 3.0f;
 }
 
 void Scene1::Release()
@@ -37,22 +48,34 @@ void Scene1::Update()
     //cam1->RenderHierarchy();
     map->RenderHierarchy();
     player->body->RenderHierarchy();
-
+    wallskin->RenderHierarchy();
+    wall->RenderHierarchy();
+    player->Second1->RenderHierarchy();
+    player->Second10->RenderHierarchy();
     ImGui::End();
 
-
-   
-
-    grid->Update();
-    map->Update();
-    player->Update();
+    if (!isTimeStop) {
+        wallskin->Update();
+        wall->Update();
+        grid->Update();
+        map->Update();
+        player->Update();
+    }
 }
 
 void Scene1::LateUpdate()
 {
     //Ground 충돌
-    if (player->body->Intersect(map->Find("Ground0"))) player->isLand = true;
-    else player->isLand = false;
+    map->LateUpdate();
+    if (player->body->Intersect(map->goal) or player->body->GetWorldPos().z > 243.0f) {
+        isTimeStop = true;
+        mapEndingTime -= DELTA;
+        if (mapEndingTime < 0)
+        {
+            mapEndingTime = 3.0f;
+            SCENE->ChangeScene("SC2");
+        }
+    }
 }
 
 void Scene1::Render()
@@ -60,6 +83,8 @@ void Scene1::Render()
     //Camera::main->Set();
     grid->Render();
     map->Render();
+    wallskin->Render();
+    wall->Render();
     player->Render();
 }
 

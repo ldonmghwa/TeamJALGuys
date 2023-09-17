@@ -1,0 +1,44 @@
+<Root Name="SC1Land" Visible="true" ObType="1">
+    <Mesh File="6.Rect.mesh"/>
+    <Shader File="6.Cube.hlsl"/>
+    <Texture File="land.jpg"/>
+    <Transform>
+        <Position X="0" Y="6.6500001" Z="27.299999"/>
+        <Scale X="19.9" Y="30" Z="1"/>
+        <Rotation X="1.5707879" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="3"/>
+    <Child0 Name="Land1" Visible="true" ObType="1">
+        <Mesh File="6.Rect.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="land2.jpg"/>
+        <Transform>
+            <Position X="0" Y="1.915" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="Land2" Visible="true" ObType="1">
+        <Mesh File="6.Rect.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="land3.jpg"/>
+        <Transform>
+            <Position X="0" Y="3.8566329" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="Land3" Visible="true" ObType="1">
+        <Mesh File="6.Rect.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Texture File="land4.jpg"/>
+        <Transform>
+            <Position X="0" Y="6.1466331" Z="0"/>
+            <Scale X="1" Y="1.3" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child2>
+</Root>

@@ -4,7 +4,10 @@ class Scene1 : public Scene
 private:
 	Grid* grid;
 	class WallMap* map;
-	
+	Actor* wallskin;
+	Actor* wall;
+	float mapEndingTime;
+	bool isTimeStop = false;
 
 public:
 	Scene1();

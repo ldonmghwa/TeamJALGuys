@@ -2,8 +2,8 @@
 class SceneIntro : public Scene
 {
 private:
-
-
+	UI* title;
+	int select = 0;
 public:
 	SceneIntro();
 	~SceneIntro();

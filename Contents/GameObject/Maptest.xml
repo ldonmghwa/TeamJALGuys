@@ -1,0 +1,344 @@
+<Root Name="Map" Visible="true" ObType="1">
+    <Transform>
+        <Position X="0" Y="0" Z="0"/>
+        <Scale X="1" Y="1" Z="1"/>
+        <Rotation X="0" Y="0" Z="0"/>
+    </Transform>
+    <Children Size="5"/>
+    <Child0 Name="Ground0" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Texture File="watermelon.jpg"/>
+        <Transform>
+            <Position X="0" Y="0" Z="-36"/>
+            <Scale X="20" Y="0.5" Z="10"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child0>
+    <Child1 Name="Ground1" Visible="true" ObType="0">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Texture File="watermelon.jpg"/>
+        <Transform>
+            <Position X="0" Y="0" Z="-4"/>
+            <Scale X="20" Y="0.5" Z="10"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child1>
+    <Child2 Name="ObstacleRoot0" Visible="true" ObType="1">
+        <Transform>
+            <Position X="0" Y="0" Z="-37.450001"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="9"/>
+        <Child0 Name="Pillar1_0" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-20" Y="3.5" Z="0"/>
+                <Scale X="0.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+        <Child1 Name="Pillar1_1" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-10" Y="3.5" Z="0"/>
+                <Scale X="0.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child1>
+        <Child2 Name="Pillar1_2" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="0" Y="3.5" Z="0"/>
+                <Scale X="0.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child2>
+        <Child3 Name="Pillar1_3" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="10" Y="3.5" Z="0"/>
+                <Scale X="0.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child3>
+        <Child4 Name="Pillar1_4" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="20" Y="3.5" Z="0"/>
+                <Scale X="0.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child4>
+        <Child5 Name="Pillar1_under0" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-15" Y="1.972634" Z="0"/>
+                <Scale X="4.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child5>
+        <Child6 Name="Pillar1_under1" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-5" Y="2.3879542" Z="0"/>
+                <Scale X="4.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child6>
+        <Child7 Name="Pillar1_under2" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="5" Y="0.21881275" Z="0"/>
+                <Scale X="4.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child7>
+        <Child8 Name="Pillar1_under3" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="15" Y="-0.57695276" Z="0"/>
+                <Scale X="4.5" Y="3" Z="0.5"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child8>
+    </Child2>
+    <Child3 Name="ObstacleRoot1" Visible="true" ObType="1">
+        <Transform>
+            <Position X="0" Y="0" Z="-23"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="8"/>
+        <Child0 Name="Board_0" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.png"/>
+            <Transform>
+                <Position X="-15" Y="0" Z="6"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child0>
+        <Child1 Name="Board_1" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.png"/>
+            <Transform>
+                <Position X="-5" Y="0" Z="0"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child1>
+        <Child2 Name="Board_2" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.png"/>
+            <Transform>
+                <Position X="5" Y="0" Z="6"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child2>
+        <Child3 Name="Board_3" Visible="true" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.png"/>
+            <Transform>
+                <Position X="15" Y="0" Z="0"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child3>
+        <Child4 Name="Board_4" Visible="false" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-15" Y="0" Z="0"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child4>
+        <Child5 Name="Board_5" Visible="false" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="-5" Y="0" Z="6"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child5>
+        <Child6 Name="Board_6" Visible="false" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="5" Y="0" Z="0"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child6>
+        <Child7 Name="Board_7" Visible="false" ObType="0">
+            <Mesh File="6.Cube.mesh"/>
+            <Shader File="6.Cube.hlsl"/>
+            <Collider ColliderType="2" Visible="true">
+                <Position X="0" Y="0" Z="0"/>
+                <Scale X="1" Y="1" Z="1"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Collider>
+            <Texture File="bono.jpg"/>
+            <Transform>
+                <Position X="15" Y="0" Z="6"/>
+                <Scale X="5" Y="0.5" Z="3"/>
+                <Rotation X="0" Y="0" Z="0"/>
+            </Transform>
+            <Children Size="0"/>
+        </Child7>
+    </Child3>
+    <Child4 Name="groundtest" Visible="true" ObType="1">
+        <Mesh File="6.Cube.mesh"/>
+        <Shader File="6.Cube.hlsl"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Texture File="watermelon.jpg"/>
+        <Transform>
+            <Position X="0.050000001" Y="0" Z="-66"/>
+            <Scale X="20" Y="0.5" Z="20"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Transform>
+        <Children Size="0"/>
+    </Child4>
+</Root>

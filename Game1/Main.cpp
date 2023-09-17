@@ -7,7 +7,6 @@
 #include "Obstacle2.h"
 #include "Map.h"
 #include "WallMap.h"
-#include "Player.h"
 #include "Main.h"
 
 Main::Main()
@@ -33,7 +32,7 @@ void Main::Init()
     SCENE->AddScene("SC2", SC2);
 
     
-    SCENE->ChangeScene("SC1");
+    SCENE->ChangeScene("SCIntro");
     
 }
 
@@ -43,12 +42,10 @@ void Main::Release()
 
 void Main::Update()
 {
-    if (INPUT->KeyDown(VK_F1))
-    {
+    if (INPUT->KeyDown(VK_F1)) {
         SCENE->ChangeScene("SC1");
     }
-    if (INPUT->KeyDown(VK_F2))
-    {
+    else  if (INPUT->KeyDown(VK_F2)) {
         SCENE->ChangeScene("SC2");
     }
     if (INPUT->KeyDown(VK_F3))
@@ -62,7 +59,7 @@ void Main::Update()
 
 void Main::LateUpdate()
 {
-   SCENE->LateUpdate();
+    SCENE->LateUpdate();
 }
 void Main::PreRender()
 {
