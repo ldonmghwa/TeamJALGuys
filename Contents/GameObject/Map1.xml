@@ -13,7 +13,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="skin2.png"/>
+        <Texture File="map1_texture10.png"/>
         <Transform>
             <Position X="0" Y="0" Z="247.55"/>
             <Scale X="20" Y="0.5" Z="3.55"/>
@@ -29,7 +29,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.jpg"/>
+        <Texture File="map1_texture11.png"/>
         <Transform>
             <Position X="0" Y="0" Z="-31"/>
             <Scale X="20" Y="0.5" Z="30"/>
@@ -45,7 +45,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.jpg"/>
+        <Texture File="map1_texture11.png"/>
         <Transform>
             <Position X="0" Y="0" Z="70"/>
             <Scale X="20" Y="0.5" Z="10"/>
@@ -61,7 +61,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.jpg"/>
+        <Texture File="map1_texture11.png"/>
         <Transform>
             <Position X="0" Y="0" Z="141"/>
             <Scale X="20" Y="0.5" Z="8"/>
@@ -77,7 +77,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.jpg"/>
+        <Texture File="map1_texture11.png"/>
         <Transform>
             <Position X="0" Y="0" Z="238"/>
             <Scale X="20" Y="0.5" Z="6"/>
@@ -100,7 +100,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -116,7 +116,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -132,7 +132,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="0" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -148,7 +148,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -164,7 +164,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -180,9 +180,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="3.9426901" Z="0"/>
+                <Position X="-15" Y="1.8235" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -196,9 +196,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="-5.2500424" Z="0"/>
+                <Position X="-5" Y="8.9798584" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -212,9 +212,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="7.511723" Z="0"/>
+                <Position X="5" Y="0.5109024" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -228,9 +228,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="-4.410737" Z="0"/>
+                <Position X="15" Y="0.41757149" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -252,7 +252,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -268,7 +268,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -284,7 +284,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="0" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -300,7 +300,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -316,7 +316,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -332,9 +332,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="-2.6611691" Z="0"/>
+                <Position X="-15" Y="-4.5634861" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -348,9 +348,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="7.5039892" Z="0"/>
+                <Position X="-5" Y="-4.8274546" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -364,9 +364,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="0.41317123" Z="0"/>
+                <Position X="5" Y="-4.7845321" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -380,9 +380,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="5.911849" Z="0"/>
+                <Position X="15" Y="8.1867189" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -404,7 +404,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -420,7 +420,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -436,7 +436,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="0" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -452,7 +452,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -468,7 +468,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -484,9 +484,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="4.2690644" Z="0"/>
+                <Position X="-15" Y="2.2783029" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -500,9 +500,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="-4.4719605" Z="0"/>
+                <Position X="-5" Y="-5.2131605" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -516,9 +516,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="-6.4568324" Z="0"/>
+                <Position X="5" Y="0.32323778" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -532,9 +532,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="-2.7476695" Z="0"/>
+                <Position X="15" Y="-4.4764118" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -556,7 +556,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -572,7 +572,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="-10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -588,7 +588,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="0" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -604,7 +604,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="10" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -620,7 +620,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture15.png"/>
             <Transform>
                 <Position X="20" Y="3.5" Z="0"/>
                 <Scale X="0.5" Y="10" Z="0.5"/>
@@ -636,9 +636,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-15" Y="4.5244365" Z="0"/>
+                <Position X="-15" Y="-5.9011555" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -652,9 +652,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="-5" Y="4.6927819" Z="0"/>
+                <Position X="-5" Y="6.7872653" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -668,9 +668,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="5" Y="2.1768615" Z="0"/>
+                <Position X="5" Y="7.6778998" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -684,9 +684,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture12.png"/>
             <Transform>
-                <Position X="15" Y="0.33981919" Z="0"/>
+                <Position X="15" Y="5.9674006" Z="0"/>
                 <Scale X="4.5" Y="7" Z="0.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -708,7 +708,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="0"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -716,7 +716,7 @@
             </Transform>
             <Children Size="0"/>
         </Child0>
-        <Child1 Name="GlitingBoard_1" Visible="true" ObType="0">
+        <Child1 Name="GlitingBoard_1" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -724,7 +724,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="6"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -740,7 +740,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="12"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -748,7 +748,7 @@
             </Transform>
             <Children Size="0"/>
         </Child2>
-        <Child3 Name="GlitingBoard_11" Visible="true" ObType="0">
+        <Child3 Name="GlitingBoard_11" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -756,7 +756,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="18"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -764,7 +764,7 @@
             </Transform>
             <Children Size="0"/>
         </Child3>
-        <Child4 Name="GlitingBoard_12" Visible="true" ObType="0">
+        <Child4 Name="GlitingBoard_12" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -772,7 +772,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="12"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -780,7 +780,7 @@
             </Transform>
             <Children Size="0"/>
         </Child4>
-        <Child5 Name="GlitingBoard_13" Visible="true" ObType="0">
+        <Child5 Name="GlitingBoard_13" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -788,7 +788,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="18"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -804,7 +804,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="12"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -812,7 +812,7 @@
             </Transform>
             <Children Size="0"/>
         </Child6>
-        <Child7 Name="GlitingBoard_15" Visible="false" ObType="0">
+        <Child7 Name="GlitingBoard_15" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -820,7 +820,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="18"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -836,7 +836,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="12"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -852,7 +852,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="18"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -868,7 +868,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="12"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -884,7 +884,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="18"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -892,7 +892,7 @@
             </Transform>
             <Children Size="0"/>
         </Child11>
-        <Child12 Name="GlitingBoard_2" Visible="true" ObType="0">
+        <Child12 Name="GlitingBoard_2" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -900,7 +900,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="0"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -908,7 +908,7 @@
             </Transform>
             <Children Size="0"/>
         </Child12>
-        <Child13 Name="GlitingBoard_20" Visible="true" ObType="0">
+        <Child13 Name="GlitingBoard_20" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -916,7 +916,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="24"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -932,7 +932,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="30"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -948,7 +948,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="24"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -956,7 +956,7 @@
             </Transform>
             <Children Size="0"/>
         </Child15>
-        <Child16 Name="GlitingBoard_23" Visible="true" ObType="0">
+        <Child16 Name="GlitingBoard_23" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -964,7 +964,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="30"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -972,7 +972,7 @@
             </Transform>
             <Children Size="0"/>
         </Child16>
-        <Child17 Name="GlitingBoard_24" Visible="true" ObType="0">
+        <Child17 Name="GlitingBoard_24" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -980,7 +980,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="24"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -996,7 +996,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="30"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1012,7 +1012,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="24"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1020,7 +1020,7 @@
             </Transform>
             <Children Size="0"/>
         </Child19>
-        <Child20 Name="GlitingBoard_27" Visible="false" ObType="0">
+        <Child20 Name="GlitingBoard_27" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1028,7 +1028,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="30"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1036,7 +1036,7 @@
             </Transform>
             <Children Size="0"/>
         </Child20>
-        <Child21 Name="GlitingBoard_28" Visible="false" ObType="0">
+        <Child21 Name="GlitingBoard_28" Visible="true" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1044,7 +1044,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="24"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1060,7 +1060,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="30"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1076,7 +1076,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="6"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1084,7 +1084,7 @@
             </Transform>
             <Children Size="0"/>
         </Child23>
-        <Child24 Name="GlitingBoard_4" Visible="true" ObType="0">
+        <Child24 Name="GlitingBoard_4" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1092,7 +1092,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.png"/>
+            <Texture File="map1_texture17.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="0"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1108,7 +1108,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-16" Y="0" Z="6"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1116,7 +1116,7 @@
             </Transform>
             <Children Size="0"/>
         </Child25>
-        <Child26 Name="GlitingBoard_6" Visible="true" ObType="0">
+        <Child26 Name="GlitingBoard_6" Visible="false" ObType="0">
             <Mesh File="6.Cube.mesh"/>
             <Shader File="6.Cube.hlsl"/>
             <Collider ColliderType="2" Visible="true">
@@ -1124,7 +1124,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="-8" Y="0" Z="0"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1140,7 +1140,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="0" Y="0" Z="6"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1156,7 +1156,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="8" Y="0" Z="0"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1172,7 +1172,7 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono.jpg"/>
+            <Texture File="map1_texture18.png"/>
             <Transform>
                 <Position X="16" Y="0" Z="6"/>
                 <Scale X="4" Y="0.5" Z="3"/>
@@ -1196,9 +1196,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="-12.5" Y="-3.3035703" Z="0"/>
+                <Position X="-12.5" Y="-2.3444788" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1212,9 +1212,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="0" Y="2.2090504" Z="0"/>
+                <Position X="0" Y="4.605401" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1228,9 +1228,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="0" Y="-1.824315" Z="31.5"/>
+                <Position X="0" Y="-0.33021975" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1244,9 +1244,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="12.5" Y="0.0043025911" Z="31.5"/>
+                <Position X="12.5" Y="2.0724444" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1260,9 +1260,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="12.5" Y="3.1914897" Z="0"/>
+                <Position X="12.5" Y="-3.509959" Z="0"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1276,9 +1276,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="-12.5" Y="4.4808106" Z="10.5"/>
+                <Position X="-12.5" Y="4.7937465" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1292,9 +1292,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="0" Y="-3.7211185" Z="10.5"/>
+                <Position X="0" Y="-3.6208169" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1308,9 +1308,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="12.5" Y="-2.1931217" Z="10.5"/>
+                <Position X="12.5" Y="2.1355228" Z="10.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1324,9 +1324,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="-12.5" Y="-2.8171237" Z="21"/>
+                <Position X="-12.5" Y="2.1683261" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1340,9 +1340,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="0" Y="0.35550588" Z="21"/>
+                <Position X="0" Y="3.8212357" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1356,9 +1356,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture8.png"/>
             <Transform>
-                <Position X="12.5" Y="-2.5577056" Z="21"/>
+                <Position X="12.5" Y="4.4859748" Z="21"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1372,9 +1372,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="watermelon.png"/>
+            <Texture File="map1_texture9.png"/>
             <Transform>
-                <Position X="-12.5" Y="-4.8184204" Z="31.5"/>
+                <Position X="-12.5" Y="-3.3529918" Z="31.5"/>
                 <Scale X="2.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1396,9 +1396,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-9.8955078" Y="0" Z="0"/>
+                <Position X="-6.4051423" Y="0" Z="0"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1412,9 +1412,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-12.90287" Y="0" Z="9"/>
+                <Position X="9.6594219" Y="0" Z="9"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1428,9 +1428,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="8.6462059" Y="0" Z="18"/>
+                <Position X="-4.136313" Y="0" Z="18"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1444,9 +1444,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="14.92045" Y="0" Z="27"/>
+                <Position X="11.685368" Y="0" Z="27"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1460,9 +1460,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-4.8833127" Y="0" Z="36"/>
+                <Position X="3.5016673" Y="0" Z="36"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1476,9 +1476,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="17.026506" Y="0" Z="45"/>
+                <Position X="-15.696836" Y="0" Z="45"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1492,9 +1492,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="-13.819142" Y="0" Z="54"/>
+                <Position X="-12.24078" Y="0" Z="54"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1508,9 +1508,9 @@
                 <Scale X="1" Y="1" Z="1"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Collider>
-            <Texture File="bono3.png"/>
+            <Texture File="map1_texture19.png"/>
             <Transform>
-                <Position X="17.413998" Y="0" Z="63"/>
+                <Position X="5.8408661" Y="0" Z="63"/>
                 <Scale X="1.5" Y="0.5" Z="1.5"/>
                 <Rotation X="0" Y="0" Z="0"/>
             </Transform>
@@ -1525,7 +1525,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="skin1.png"/>
+        <Texture File="map1_texture14.png"/>
         <Transform>
             <Position X="0" Y="4.5" Z="-61.950001"/>
             <Scale X="20" Y="20" Z="1"/>
@@ -1541,7 +1541,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="skin1.png"/>
+        <Texture File="map1_texture14.png"/>
         <Transform>
             <Position X="21" Y="4.5" Z="94.050003"/>
             <Scale X="1" Y="20" Z="157"/>
@@ -1557,7 +1557,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="skin1.png"/>
+        <Texture File="map1_texture14.png"/>
         <Transform>
             <Position X="-21" Y="4.5" Z="94.050003"/>
             <Scale X="1" Y="20" Z="157"/>
@@ -1573,7 +1573,7 @@
             <Scale X="1" Y="1" Z="1"/>
             <Rotation X="0" Y="0" Z="0"/>
         </Collider>
-        <Texture File="watermelon.png"/>
+        <Texture File="map1_texture2.png"/>
         <Transform>
             <Position X="0" Y="-15" Z="94.050003"/>
             <Scale X="20" Y="0.5" Z="157"/>
@@ -1584,7 +1584,12 @@
     <Child16 Name="Wall4" Visible="true" ObType="0">
         <Mesh File="6.Cube.mesh"/>
         <Shader File="6.Cube.hlsl"/>
-        <Texture File="skin3.png"/>
+        <Collider ColliderType="2" Visible="true">
+            <Position X="0" Y="0" Z="0"/>
+            <Scale X="1" Y="1" Z="1"/>
+            <Rotation X="0" Y="0" Z="0"/>
+        </Collider>
+        <Texture File="map1_texture11.png"/>
         <Transform>
             <Position X="0" Y="-7.9499998" Z="-2"/>
             <Scale X="20" Y="7.5" Z="1"/>

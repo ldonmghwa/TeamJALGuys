@@ -32,7 +32,16 @@ void WallMap::Init()
 	ground1 = this->root->Find("Ground1");
 	ground2 = this->root->Find("Ground2");
 	ground3 = this->root->Find("Ground3");
+	wall0 = this->root->Find("Wall0");
+	wall1 = this->root->Find("Wall1");
+	wall2 = this->root->Find("Wall2");
+	wall4 = this->root->Find("Wall4");
+	deathFloor = this->root->Find("Wall3");
 	goal = this->root->Find("Goal");
+	respawnPos = Vector3(0, 25, 240);
+	//respawnPos = ground3->GetWorldPos();
+	//respawnPos.y += ground0->scale.y + player->body->scale.y;
+	//player->body->SetWorldPos(respawnPos);
 }
 
 void WallMap::Update()
@@ -81,30 +90,136 @@ void WallMap::Update()
 		}
 	}
 	/*if (isUpDownBoardLanding) {
-		player->body->SetWorldPos(
-			Vector3(
-				playerLandPos.x,
-				player->body->scale.y + landingBoard->scale.y * 2.0f + landingBoard->GetWorldPos().y,
-				playerLandPos.z
-			)
-		);
-
-
+		if (INPUT->KeyPress('W') or INPUT->KeyPress('A') or INPUT->KeyPress('S') or INPUT->KeyPress('D')) {
+			landingBoardSub = player->body->GetWorldPos() - landingBoard->GetWorldPos();
+			playerLandPos.x = player->body->GetWorldPos().x;
+			playerLandPos.z = player->body->GetWorldPos().z;
+			player->body->SetWorldPosY(landingBoard->GetWorldPos().y + player->body->scale.y * 2.0f);
+			player->body->MoveWorldPos(player->body->GetForward() * DELTA);
+		}
+		else {
+			player->body->SetWorldPos(
+				Vector3(
+					playerLandPos.x,
+					player->body->scale.y + landingBoard->scale.y * 2.0f + landingBoard->GetWorldPos().y,
+					playerLandPos.z
+				)
+			);
+		}
+		if (landingBoardSub.x > landingBoard->scale.x + 0.2f or landingBoardSub.z > landingBoard->scale.z + 0.2f) {
+			player->isLand = false;
+			isUpDownBoardLanding = false;
+			player->gravity = 0.0f;
+		}
 		if (INPUT->KeyDown(VK_SPACE)) {
 			player->isLand = false;
 			player->body->SetWorldPosY(landingBoard->GetWorldPos().y + player->body->scale.y * 2.0f);
-			player->gravity = -15.0f;
+			player->gravity = -5.0f;
 			isUpDownBoardLanding = false;
 		}
+	}
+	if (isLeftRightBoardLanding) {
+		if (INPUT->KeyPress('W') or INPUT->KeyPress('A') or INPUT->KeyPress('S') or INPUT->KeyPress('D')) {
+			landingBoardSub = player->body->GetWorldPos() - landingBoard->GetWorldPos();
+			playerLandPos.z = player->body->GetWorldPos().z;
+			player->body->SetWorldPosY(landingBoard->GetWorldPos().y + player->body->scale.y * 2.0f);
+			player->body->MoveWorldPos(player->body->GetForward() * DELTA);
+		}
+		else {
+			player->body->SetWorldPos(
+				Vector3(
+					landingBoard->GetWorldPos().x + landingBoardSub.x,
+					player->body->scale.y + landingBoard->scale.y * 2.0f + landingBoard->GetWorldPos().y,
+					playerLandPos.z
+				)
+			);
+		}
+		if (landingBoardSub.x > landingBoard->scale.x + 0.1f or landingBoardSub.z > landingBoard->scale.z + 0.2f) {
+			player->isLand = false;
+			isLeftRightBoardLanding = false;
+			player->gravity = 0.0f;
+		}
+		if (INPUT->KeyDown(VK_SPACE)) {
+			player->isLand = false;
+			player->body->SetWorldPosY(landingBoard->GetWorldPos().y + player->body->scale.y * 2.0f);
+			player->gravity = -5.0f;
+			isLeftRightBoardLanding = false;
+		}
 	}*/
-	/*glitingBoardActiveTime -= DELTA;
-	if (glitingBoardActiveTime < 0) {
-		for (int i = 0; i < glitingBoardList.size(); i++) glitingBoardList[i]->visible = not glitingBoardList[i]->visible;
-		glitingBoardActiveTime = backUpGlitingBoardActiveTime;
-		isGlitingBoardChange = not isGlitingBoardChange;
-	}*/
-
 	Map::Update();
+}
+
+void WallMap::LateUpdate()
+{
+	//ImGui::Text("player pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
+	/*if (player->body->Intersect(ground0)) {
+		player->isLand = true; respawnPos = ground0->GetWorldPos();
+		respawnPos.z = -50;
+		respawnPos.y += ground0->scale.y + player->body->scale.y;
+	}
+	else if (player->body->Intersect(ground1)) {
+		player->isLand = true; respawnPos = ground1->GetWorldPos();
+		respawnPos.y += ground1->scale.y + player->body->scale.y;
+	}
+	else if (player->body->Intersect(ground2)) {
+		player->isLand = true; respawnPos = ground2->GetWorldPos();
+		respawnPos.y += ground2->scale.y + player->body->scale.y;
+	}
+	else if (player->body->Intersect(ground3)) {
+		player->isLand = true; respawnPos = ground3->GetWorldPos();
+		respawnPos.y += ground3->scale.y + player->body->scale.y;
+	}
+	else if (player->body->Intersect(goal)) player->isLand = true;
+	else player->isLand = false;
+
+	if (player->body->Intersect(wall0)) player->body->MoveWorldPos(Vector3(0.0f, 0.0f, 1.0f) * 0.1f);
+	if (player->body->Intersect(wall1)) player->body->MoveWorldPos(Vector3(-1.0f, 0.0f, 0.0f) * 0.1f);
+	if (player->body->Intersect(wall2)) player->body->MoveWorldPos(Vector3(1.0f, 0.0f, 0.0f) * 0.1f);
+	if (player->body->Intersect(wall2)) player->body->MoveWorldPos(Vector3(0.0f, 0.0f, 1.0f) * 0.1f);
+
+	for (int i = 0; i < pillarUnderList.size(); i++) {
+		if (pillarUnderList[i]->Intersect(player->body)) {
+			player->body->MoveWorldPos(Vector3(0.0f, 0.0f, -1.0f) * 0.1f);
+		}
+	}
+	for (int i = 0; i < pillarList.size(); i++) {
+		if (pillarList[i]->Intersect(player->body)) {
+			player->body->MoveWorldPos(Vector3(0.0f, 0.0f, -1.0f) * 0.1f);
+		}
+	}
+	for (int i = 0; i < glitingBoardList.size(); i++) {
+		if (glitingBoardList[i]->Intersect(player->body)) {
+			if (glitingBoardList[i]->visible) player->isLand = true;
+			else {
+				player->isLand = false;
+				respawnPos = Vector3(0, 25, -3);
+			}
+		}
+	}
+	for (int i = 0; i < upDownBoardList.size(); i++) {
+		if (upDownBoardList[i]->Intersect(player->body)) {
+			playerLandPos = player->body->GetWorldPos();
+			landingBoardSub = playerLandPos - upDownBoardList[i]->GetWorldPos();
+			landingBoard = upDownBoardList[i];
+			isUpDownBoardLanding = true;
+			player->isLand = true;
+			break;
+		}
+	}
+	for (int i = 0; i < leftRightBoardList.size(); i++) {
+		if (leftRightBoardList[i]->Intersect(player->body)) {
+			playerLandPos = player->body->GetWorldPos();
+			landingBoardSub = playerLandPos - leftRightBoardList[i]->GetWorldPos();
+			landingBoard = leftRightBoardList[i];
+			isLeftRightBoardLanding = true;
+			player->isLand = true;
+			break;
+		}
+	}
+	if (player->body->Intersect(deathFloor)) {
+		player->body->SetWorldPos(respawnPos);
+		player->isLand = true;
+	}*/
 }
 
 void WallMap::LoadFile(string _file)
@@ -217,51 +332,12 @@ void WallMap::LoadFile(string _file)
 			isUpDownBoardUp[i] = RANDOM->Int(0, 1);
 		}
 		for (int i = 0; i < leftRightBoardList.size(); i++) {
-			leftRightBoardSpeed[i] = RANDOM->Float(50, 60);
+			leftRightBoardSpeed[i] = RANDOM->Float(2, 10);
 			isLeftRightBoardGo[i] = RANDOM->Int(0, 1);
 		}
 		for (int i = 0; i < glitingBoardList.size(); i++) {
 			glitingBoardActiveTime[i] = RANDOM->Float(2.0f, 6.5f);
-			//glitingBoardActiveTime[i] = 100.0f;
 			backUpGlitingBoardActiveTime[i] = glitingBoardActiveTime[i];
 		}
 	}
 }
-
-void WallMap::LateUpdate()
-{
-	//ImGui::Text("pl pos: %f, %f, %f", player->body->GetWorldPos().x, player->body->GetWorldPos().y, player->body->GetWorldPos().z);
-	/*if (player->body->Intersect(ground0)) player->isLand = true;
-	else if (player->body->Intersect(ground1)) player->isLand = true;
-	else if (player->body->Intersect(ground2)) player->isLand = true;
-	else if (player->body->Intersect(ground3)) player->isLand = true;
-	else if (player->body->Intersect(goal)) player->isLand = true;
-	else player->isLand = false;
-
-	for (int i = 0; i < pillarUnderList.size(); i++) {
-		if (pillarUnderList[i]->Intersect(player->body)) {
-			player->body->MoveWorldPos(Vector3(0.0f, 0.0f, -1.0f) * 0.1f);
-		}
-	}
-	for (int i = 0; i < pillarList.size(); i++) {
-		if (pillarList[i]->Intersect(player->body)) {
-			player->body->MoveWorldPos(Vector3(0.0f, 0.0f, -1.0f) * 0.1f);
-		}
-	}
-	for (int i = 0; i < glitingBoardList.size(); i++) {
-		if (glitingBoardList[i]->Intersect(player->body)) {
-			if (glitingBoardList[i]->visible) player->isLand = true;
-			else player->isLand = false;
-		}
-	}
-	for (int i = 0; i < upDownBoardList.size(); i++) {
-		if (upDownBoardList[i]->Intersect(player->body)) {
-			playerLandPos = player->body->GetWorldPos();
-			landingBoard = upDownBoardList[i];
-			isUpDownBoardLanding = true;
-			player->isLand = true;
-			break;
-		}
-	}*/
-}
-
