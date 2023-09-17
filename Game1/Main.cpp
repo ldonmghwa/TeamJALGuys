@@ -48,6 +48,11 @@ void Main::Update()
     else  if (INPUT->KeyDown(VK_F2)) {
         SCENE->ChangeScene("SC2");
     }
+    if (INPUT->KeyDown(VK_F3))
+    {
+        SCENE->ChangeScene("SC3");
+    }
+    
 
     SCENE->Update();
 }

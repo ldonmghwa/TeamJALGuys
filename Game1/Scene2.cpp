@@ -90,6 +90,11 @@ void Scene2::Update()
 		}
 
 	}
+
+	if (player->body->GetWorldPos().z > 590)
+	{
+		SCENE->ChangeScene("SC3", 1.5f);
+	}
 	
 	
 
@@ -120,7 +125,15 @@ void Scene2::LateUpdate()
 		player->isLand = true;
 	}
 	else player->isLand = false;
-	
+
+	if (ground->Find("wall1")->Intersect(player->body))
+	{
+		player->body->MoveWorldPos(Vector3(1, 0, 0) * 0.1);
+	}
+	if (ground->Find("wall2")->Intersect(player->body))
+	{
+		player->body->MoveWorldPos(Vector3(-1, 0, 0) * 0.1);
+	}
 	
 	for (auto& it : GM->obstacleList)
 	{

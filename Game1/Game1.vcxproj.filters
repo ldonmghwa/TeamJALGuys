@@ -21,6 +21,7 @@
     <ClInclude Include="Scene2.h" />
     <ClInclude Include="Obstacle3.h" />
     <ClInclude Include="Obstacle3Sphere.h" />
+    <ClInclude Include="Scene3.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Main.cpp" />
@@ -42,6 +43,7 @@
     <ClCompile Include="Scene2.cpp" />
     <ClCompile Include="Obstacle3.cpp" />
     <ClCompile Include="Obstacle3Sphere.cpp" />
+    <ClCompile Include="Scene3.cpp" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="GameObject">
