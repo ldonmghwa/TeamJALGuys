@@ -36,9 +36,7 @@ Scene2::~Scene2()
 
 void Scene2::Init()
 {
-	player->Init();
-	player->body->SetWorldPos(ground->Find("checkpoint1")->GetLocalPos());
-	
+	player->Init(ground->Find("checkpoint1")->GetLocalPos());
 }
 
 void Scene2::Release()
